@@ -36,6 +36,7 @@ readers pick word by word and save their own translation.
 | `root_entry` | 30,087 | The project's own numbering: one row per distinct unpointed base word, Hebrew alphabetical order |
 | `root_form` | 57,724 | Numbered prefix/suffix patterns beneath each root |
 | `root_vowel` | 126,869 | Numbered pointed (vocalized) forms beneath each (root, form); `words.root_code` = `root.fix.vowel` |
+| `lexicon` | 126,869 | One row per `root_vowel` entry: KJV renderings (word-level, most frequent first), YLT verse contexts (verse-level), and the verse list where the form is found |
 
 **Numbering.** The project's primary word numbering is root-based (built
 2026-09-21, replacing Kit's earlier numbering), in three tiers: every distinct

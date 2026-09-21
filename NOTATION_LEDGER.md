@@ -115,6 +115,14 @@ code `root_code = root_id.root_form_seq.root_vowel_seq`.
 - Strong's numbers are retained as a foreign key into the public-domain
   lexicons (KJV/gloss dropdowns), but the root code is the project's primary
   word numbering.
+- **Lexicon (2026-09-21).** New `lexicon` table, one row per ROOT_VOWEL entry
+  (126,869 rows): `kjv_renderings` (distinct KJV words aligned to the form's
+  word_ids, most frequent first, `|`-separated; word-level, 71,122 entries have
+  at least one), `ylt_contexts` (the YLT verse texts for every verse where the
+  form occurs, `Ref — text` entries separated by `‖`; YLT is verse-level in our
+  sources, not a per-word gloss — 126,046 entries have at least one), and
+  `found_verses` (the verse references, `;`-separated, canonical order).
+  Builder: `build_lexicon.py`.
 
 ## 9. Unresolved items
 

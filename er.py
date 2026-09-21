@@ -89,6 +89,9 @@ rootform = geom(28, 42, 30, [("root_id", "PK/FK"), ("form_seq", "PK"),
 rootvowel = geom(64, 42, 30, [("root_id", "PK/FK"), ("form_seq", "PK/FK"),
                               ("vowel_seq", "PK"), ("vowel_pattern", ""),
                               ("word_count", "")], cols=2)
+lexicon = geom(81, 10, 17, [("root_id", "PK/FK"), ("form_seq", "PK/FK"),
+                            ("vowel_seq", "PK/FK"), ("kjv_renderings", ""),
+                            ("ylt_contexts", ""), ("found_verses", "")])
 
 # edges before boxes
 draw_edge(ax, [(book["right"], 106), (book["cx"], 116.5), (verse["cx"], 116.5),
@@ -106,12 +109,14 @@ draw_edge(ax, [(rootentry["right"], 50), (rootform["left"], 50)], "1", "N")   # 
 draw_edge(ax, [(rootform["right"], 50), (rootvowel["left"], 50)], "1", "N")   # ROOT_FORM -> ROOT_VOWEL
 draw_edge(ax, [(rootvowel["right"], 50), (97, 50), (97, 88), (word["right"], 88)],
           "1", "N")                                                           # ROOT_VOWEL -> WORD
+draw_edge(ax, [(rootvowel["cx"], rootvowel["bottom"]),
+               (lexicon["cx"], lexicon["top"])], "1", "N")                     # ROOT_VOWEL -> LEXICON
 
 for g, t in [(book, "BOOK"), (word, "WORD"), (verse, "VERSE"), (note, "NOTE"),
               (kjv, "KJV_RENDERING"), (gloss, "GLOSS"), (ylt, "YLT_VERSE"),
               (user, "APP_USER"), (utrans, "USER_TRANSLATION"), (tchoice, "TRANSLATION_CHOICE"),
               (rootentry, "ROOT_ENTRY"), (rootform, "ROOT_FORM"),
-              (rootvowel, "ROOT_VOWEL")]:
+              (rootvowel, "ROOT_VOWEL"), (lexicon, "LEXICON")]:
     draw_box(ax, g, t)
 
 ax.text(50, 8, "PK = primary key    FK = foreign key    1 = one side    N = many side",
@@ -119,6 +124,8 @@ ax.text(50, 8, "PK = primary key    FK = foreign key    1 = one side    N = many
 ax.text(50, 4, "WORD.root_code (root.fix.vowel) is the project's own numbering: every distinct unpointed base word\n"
         "is a ROOT_ENTRY in Hebrew alphabetical order; each prefix/suffix pattern beneath it is a numbered ROOT_FORM; "
         "each distinct pointed (vocalized) form beneath that is a numbered ROOT_VOWEL. "
+        "LEXICON hangs one row off each ROOT_VOWEL: the KJV renderings (word-level, most frequent first), "
+        "the YLT verse texts where the form occurs (verse-level), and the verse list. "
         "WORD.strongs_num \u2192 GLOSS.strongs_num still drives the per-word dropdown.",
         ha="center", fontsize=10, style="italic", color="#555")
 fig.savefig("/home/hatch/workspace/bible-project/er_diagram.png", dpi=110, bbox_inches="tight")
