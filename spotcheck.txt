@@ -1,0 +1,710 @@
+=== Genesis 25:34 ===
+  [1] וְיַעֲקֹ֞ב (ויעקב) strongs=H3290 src=oshb aram=0
+      KJV: Then; Jacob
+      gloss[bdb]: Jacob
+      gloss[strongs_he]: Jaakob, the Israelitish patriarch
+  [2] נָתַ֣ן (נתנ) strongs=None src=None aram=0
+  [3] לְעֵשָׂ֗ו (לעשו) strongs=H6215 src=oshb aram=0
+      KJV: Esau; thus; Esau
+      gloss[bdb]: Esau
+      gloss[strongs_he]: Esav, a son of Isaac, including his posterity
+  [4] לֶ֚חֶם (לחמ) strongs=None src=None aram=0
+  [5] וּנְזִ֣יד (ונזיד) strongs=H5138 src=oshb aram=0
+      KJV: and; pottage
+      gloss[bdb]: thing sodden; boiled; pottage
+      gloss[strongs_he]: something boiled, i.e. soup
+  [6] עֲדָשִׁ֔ים (עדשימ) strongs=None src=None aram=0
+  [7] וַיֹּ֣אכַל (ויאכל) strongs=H398 src=oshb aram=0
+      KJV: and; he; did; eat
+      gloss[bdb]: eat; eat, eat, devour, devour, consume, devour, slay, devour, consume, destroy, devour; ea
+      gloss[strongs_he]: to eat (literally or figuratively)
+  [8] וַיֵּ֔שְׁתְּ (וישת) strongs=H8354 src=oshb aram=0
+      KJV: and; drink
+      gloss[bdb]: drink; is, drunk
+      gloss[strongs_he]: to imbibe (literally or figuratively)
+  [9] וַיָּ֖קָם (ויקמ) strongs=None src=None aram=0
+  [10] וַיֵּלַ֑ךְ (וילכ) strongs=None src=None aram=0
+  [11] וַיִּ֥בֶז (ויבז) strongs=H959 src=oshb aram=0
+      KJV: despised
+      gloss[bdb]: despise; despise, regard with contempt; despised, vile, worthless, despicable, contemptibl
+      gloss[strongs_he]: to disesteem
+  [12] עֵשָׂ֖ו (עשו) strongs=H6215 src=oshb aram=0
+      KJV: Esau; thus; Esau
+      gloss[bdb]: Esau
+      gloss[strongs_he]: Esav, a son of Isaac, including his posterity
+  [13] אֶת־הַבְּכֹרָֽה׃ (את-הבכרה) strongs=H1062 src=oshb aram=0
+      KJV: birthright
+      gloss[bdb]: right of first-born
+      gloss[strongs_he]: the firstling of man or beast; abstractly primogeniture
+  YLT: and Jacob hath given to Esau bread and pottage of lentiles, and he eateth, and drinketh, and riseth, and goeth; and Esau despiseth the birthright.
+
+=== Exodus 26:14 ===
+  [1] וְעָשִׂ֤יתָ (ועשית) strongs=H6213 src=oshb aram=0
+      KJV: And; thou; shalt; make
+      gloss[bdb]: do, make; do, deal, do, act, act with effect, make, produce, yield, prepare, make, attend 
+      gloss[strongs_he]: to do or make, in the broadest sense and widest application
+  [2] מִכְסֶה֙ (מכסה) strongs=H4372 src=oshb aram=0
+      KJV: a; covering; and; a; covering
+      gloss[bdb]: covering
+      gloss[strongs_he]: a covering, i.e. weatherboarding
+  [3] לָאֹ֔הֶל (לאהל) strongs=H168 src=oshb aram=0
+      KJV: for; the; tent
+      gloss[bdb]: tent; tent; dwelling, habitation; the sacred tent
+      gloss[strongs_he]: a tent (as clearly conspicuous from a distance)
+  [4] עֹרֹ֥ת (ערת) strongs=H5785 src=oshb aram=0
+      KJV: skins; skins
+      gloss[bdb]: skin; hide
+      gloss[strongs_he]: skin (as naked); by implication, hide, leather
+  [5] אֵילִ֖ם (אילמ) strongs=None src=None aram=0
+  [6] מְאָדָּמִ֑ים (מאדמימ) strongs=None src=None aram=0
+  [7] וּמִכְסֵ֛ה (ומכסה) strongs=H4372 src=oshb aram=0
+      KJV: a; covering; and; a; covering
+      gloss[bdb]: covering
+      gloss[strongs_he]: a covering, i.e. weatherboarding
+  [8] עֹרֹ֥ת (ערת) strongs=H5785 src=oshb aram=0
+      KJV: skins; skins
+      gloss[bdb]: skin; hide
+      gloss[strongs_he]: skin (as naked); by implication, hide, leather
+  [9] תְּחָשִׁ֖ים (תחשימ) strongs=None src=None aram=0
+  [10] מִלְמָֽעְלָה׃ (מלמעלה) strongs=H4605 src=oshb aram=0
+      KJV: above
+      gloss[bdb]: higher part; above; upward
+      gloss[strongs_he]: properly,the upper part, used only adverbially with prefix upward, above, overhead, from t
+  YLT: and thou hast made a covering for the tent, of rams' skins made red, and a covering of badgers' skins above.
+
+=== Numbers 13:1 ===
+  [1] וַיְדַבֵּ֥ר (וידבר) strongs=H1696 src=oshb aram=0
+      KJV: spake
+      gloss[bdb]: speak; speak; speak with one another, talk; speak; in the day when she may be spoken for; 
+      gloss[strongs_he]: perhaps properly, to arrange; but used figuratively (of words), to speak; rarely (in a des
+  [2] יְהוָ֖ה (יהוה) strongs=H3068 src=oshb aram=0
+      KJV: And; the; LORD
+      gloss[bdb]: Yahweh, the one bringing into being, life-giver
+      gloss[strongs_he]: (the) self-Existent or Eternal; Jeho-vah, Jewish national name of God
+  [3] אֶל־מֹשֶׁ֥ה (אל-משה) strongs=H4872 src=oshb aram=0
+      KJV: unto; Moses
+      gloss[bdb]: Moses
+      gloss[strongs_he]: Mosheh, the Israelite lawgiver
+  [4] לֵּאמֹֽר׃ (לאמר) strongs=H559 src=oshb aram=0
+      KJV: saying
+      gloss[bdb]: utter, say; Say, Say in the heart, Promise, Command; Say; Say in the heart; Promise; Comma
+      gloss[strongs_he]: to say (used with great latitude)
+  YLT: And Jehovah speaketh unto Moses, saying,
+
+=== Numbers 14:36 ===
+  [1] וְהָ֣אֲנָשִׁ֔ים (והאנשימ) strongs=None src=None aram=0
+  [2] אֲשֶׁר־שָׁלַ֥ח (אשר-שלח) strongs=None src=None aram=0
+  [3] מֹשֶׁ֖ה (משה) strongs=H4872 src=oshb aram=0
+      KJV: which; Moses
+      gloss[bdb]: Moses
+      gloss[strongs_he]: Mosheh, the Israelite lawgiver
+  [4] לָת֣וּר (לתור) strongs=H8446 src=oshb aram=0
+      KJV: to; search
+      gloss[bdb]: seek out, spy out, explore; seek out, select, spy out, explore, go about; seek out, select
+      gloss[strongs_he]: to meander (causatively, guide) about, especially for trade or reconnoitring
+  [5] אֶת־הָאָ֑רֶץ (את-הארצ) strongs=None src=None aram=0
+  [6] וַיָּשֻׁ֗בוּ (וישבו) strongs=H7725 src=oshb aram=0
+      KJV: who; returned
+      gloss[bdb]: turn back, return; turn back, return, turn back, return, come, go back, return unto, retur
+      gloss[strongs_he]: to turn back (hence, away) transitively or intransitively, literally or figuratively (not 
+  [7] וילונו (וילונו) strongs=H3885 src=oshb aram=0
+      KJV: to; murmur
+      gloss[bdb]: murmur; murmur; murmur, cause to murmur; lodge, pass the night, abide; lodge, pass the nig
+      gloss[strongs_he]: to stop (usually over night); by implication, to stay permanently; hence (in a bad sense) 
+  [8] וַיַּלִּ֤ינוּ (וילינו) strongs=H3885 src=oshb aram=0
+      KJV: to; murmur
+      gloss[bdb]: murmur; murmur; murmur, cause to murmur; lodge, pass the night, abide; lodge, pass the nig
+      gloss[strongs_he]: to stop (usually over night); by implication, to stay permanently; hence (in a bad sense) 
+  [9] עָלָיו֙ (עליו) strongs=H5921 src=oshb aram=0
+      gloss[bdb]: forasmuch as; height; upon, on the ground of, according to, on account of, on behalf of, c
+      gloss[strongs_he]: above, over, upon, or against (yet always in this last relation with a downward aspect) in
+  [10] אֶת־כָּל־הָ֣עֵדָ֔ה (את-כל-העדה) strongs=H5712 src=oshb aram=0
+      KJV: and; made; all; the; congregation
+      gloss[bdb]: congregation; company assembled together by appointment; acting concertedly
+      gloss[strongs_he]: a stated assemblage (specifically, a concourse, or generally, a family or crowd)
+  [11] לְהוֹצִ֥יא (להוציא) strongs=H3318 src=oshb aram=0
+      KJV: against; him; by; bringing; up
+      gloss[bdb]: go, come out; go, come out, forth, go forth, depart, going forth, go forth, go forward, pr
+      gloss[strongs_he]: to go (causatively, bring) out, in a great variety of applications, literally and figurati
+  [12] דִבָּ֖ה (דבה) strongs=H1681 src=oshb aram=0
+      KJV: a; slander
+      gloss[bdb]: whispering; defamation; evil report
+      gloss[strongs_he]: slander
+  [13] עַל־הָאָֽרֶץ׃ (על-הארצ) strongs=None src=None aram=0
+  YLT: And the men whom Moses hath sent to spy the land, and they turn back and cause all the company to murmur against him, by bringing out an evil account concerning the land,
+
+=== Numbers 15:32 ===
+  [1] וַיִּהְי֥וּ (ויהיו) strongs=H1961 src=oshb aram=0
+      gloss[bdb]: fall out, come to pass, become, be; Fall out, happen, occur, take place, come about, come 
+      gloss[strongs_he]: to exist, i.e. be or become, come to pass (always emphatic, and not a mere copula or auxil
+  [2] בְנֵֽי־יִשְׂרָאֵ֖ל (בני-ישראל) strongs=H3478 src=oshb aram=0
+      KJV: of; Israel
+      gloss[bdb]: Israel, Ēl persisteth, persevereth
+      gloss[strongs_he]: he will rule as God; Jisraël, a symbolical name of Jacob; also (typically) of his posterit
+  [3] בַּמִּדְבָּ֑ר (במדבר) strongs=H4057 src=oshb aram=0
+      KJV: were; in; the; wilderness
+      gloss[bdb]: mouth; wilderness; uninhabited land; large tracts
+      gloss[strongs_he]: a pasture (i.e. open field, whither cattle are driven); by implication, a desert; also spe
+  [4] וַֽיִּמְצְא֗וּ (וימצאו) strongs=H4672 src=oshb aram=0
+      KJV: they; found
+      gloss[bdb]: attain to, find; find, find out, come upon, light upon; find; find out; come upon, light u
+      gloss[strongs_he]: properly, to come forth to, i.e. appear or exist; transitively, to attain, i.e. find or ac
+  [5] אִ֛ישׁ (איש) strongs=H376 src=oshb aram=0
+      KJV: a; man
+      gloss[bdb]: man
+      gloss[strongs_he]: a man as an individual or a male person; often used as an adjunct to a more definite term 
+  [6] מְקֹשֵׁ֥שׁ (מקשש) strongs=H7197 src=oshb aram=0
+      KJV: that; gathered
+      gloss[bdb]: gather stubble; sticks; gather stubble
+      gloss[strongs_he]: to forage for straw, stubble or wood; figuratively, to assemble
+  [7] עֵצִ֖ים (עצימ) strongs=None src=None aram=0
+  [8] בְּי֥וֹם (ביומ) strongs=None src=None aram=0
+  [9] הַשַּׁבָּֽת׃ (השבת) strongs=H7676 src=oshb aram=0
+      KJV: upon; the; sabbath
+      gloss[bdb]: Sabbath; sabbath; day of atonement; sabbath year; week; produce
+      gloss[strongs_he]: intermission, i.e (specifically) the Sabbath
+  YLT: And the sons of Israel are in the wilderness, and they find a man gathering wood on the sabbath-day,
+
+=== Joshua 12:15 ===
+  [1] מֶ֤לֶךְ (מלכ) strongs=None src=None aram=0
+  [2] לִבְנָה֙ (לבנה) strongs=H3841 src=oshb aram=0
+      KJV: of; Libnah
+      gloss[bdb]: לִבְנָה n.pr.loc. city in SW. Judah, exact site unknown, captured by Joshua station of Isr
+      gloss[strongs_he]: Libnah, a place in the Desert and one in Palestine
+  [3] אֶחָ֔ד (אחד) strongs=H259 src=oshb aram=0
+      KJV: one; one
+      gloss[bdb]: one; one; each, every; a certain; only, once; one, another, one, the other; first
+      gloss[strongs_he]: properly, united, i.e. one; or (as an ordinal) first
+  [4] מֶ֥לֶךְ (מלכ) strongs=None src=None aram=0
+  [5] עֲדֻלָּ֖ם (עדלמ) strongs=None src=None aram=0
+  [6] אֶחָֽד׃ (אחד) strongs=H259 src=oshb aram=0
+      KJV: one; one
+      gloss[bdb]: one; one; each, every; a certain; only, once; one, another, one, the other; first
+      gloss[strongs_he]: properly, united, i.e. one; or (as an ordinal) first
+  YLT: The king of Libnah, one; The king of Adullam, one;
+
+=== 1 Samuel 25:40 ===
+  [1] וַיָּבֹ֜אוּ (ויבאו) strongs=H935 src=oshb aram=0
+      KJV: were; come
+      gloss[bdb]: come in, come, go in, go; come in, come, go, walk, associate with, go; come in; come; go, 
+      gloss[strongs_he]: to go or come (in a wide variety of applications)
+  [2] עַבְדֵ֥י (עבדי) strongs=H5650 src=oshb aram=0
+      KJV: And; when; the; servants
+      gloss[bdb]: slave, servant; slave, servant; Subjects; Servants, worshippers; Servant; servant; thy ser
+      gloss[strongs_he]: a servant
+  [3] דָוִ֛ד (דוד) strongs=H1732 src=oshb aram=0
+      KJV: of; David; David
+      gloss[bdb]: David
+      gloss[strongs_he]: David, the youngest son of Jesse
+  [4] אֶל־אֲבִיגַ֖יִל (אל-אביגיל) strongs=H26 src=oshb aram=0
+      KJV: to; Abigail
+      gloss[bdb]: my father is joy
+      gloss[strongs_he]: Abigail or Abigal, the name of two Israelitesses
+  [5] הַכַּרְמֶ֑לָה (הכרמלה) strongs=H3760 src=oshb aram=0
+      KJV: to; Carmel
+      gloss[bdb]: Carmel
+      gloss[strongs_he]: Karmel, the name of a hill and of a town in Palestine
+  [6] וַיְדַבְּר֤וּ (וידברו) strongs=H1696 src=oshb aram=0
+      KJV: they; spake
+      gloss[bdb]: speak; speak; speak with one another, talk; speak; in the day when she may be spoken for; 
+      gloss[strongs_he]: perhaps properly, to arrange; but used figuratively (of words), to speak; rarely (in a des
+  [7] אֵלֶ֙יהָ֙ (אליה) strongs=H413 src=oshb aram=0
+      gloss[bdb]: motion to, direction towards; to, unto; into; towards; against; Unto, in addition to; in r
+      gloss[strongs_he]: near, with or among; often in general, to
+  [8] לֵאמֹ֔ר (לאמר) strongs=H559 src=oshb aram=0
+      KJV: unto; her; saying
+      gloss[bdb]: utter, say; Say, Say in the heart, Promise, Command; Say; Say in the heart; Promise; Comma
+      gloss[strongs_he]: to say (used with great latitude)
+  [9] דָּוִד֙ (דוד) strongs=H1732 src=oshb aram=0
+      KJV: of; David; David
+      gloss[bdb]: David
+      gloss[strongs_he]: David, the youngest son of Jesse
+  [10] שְׁלָחָ֣נוּ (שלחנו) strongs=H7971 src=oshb aram=0
+      KJV: sent
+      gloss[bdb]: send; send, send, stretch out, send away, let loose; send; send; stretch out; send away; l
+      gloss[strongs_he]: to send away, for, or out (in a great variety of applications)
+  [11] אֵלַ֔יִךְ (אליכ) strongs=None src=None aram=0
+  [12] לְקַחְתֵּ֥ךְ (לקחתכ) strongs=None src=None aram=0
+  [13] ל֖וֹ (לו) strongs=None src=None aram=0
+  [14] לְאִשָּֽׁה׃ (לאשה) strongs=H802 src=oshb aram=0
+      KJV: thee; to; him; to; wife
+      gloss[bdb]: woman, wife, female; woman; Wife; Female; each woman from her neighbor, each one
+      gloss[strongs_he]: a woman
+  YLT: And the servants of David come in unto Abigail at Carmel, and speak unto her, saying, 'David hath sent us unto thee to take thee to him for a wife.'
+
+=== 2 Samuel 8:18 ===
+  [1] וּבְנָיָ֙הוּ֙ (ובניהו) strongs=H1141 src=oshb aram=0
+      KJV: And; Benaiah
+      gloss[bdb]: Yah hath built up
+      gloss[strongs_he]: Benajah, the name of twelve Israelites
+  [2] בֶּן־יְה֣וֹיָדָ֔ע (בנ-יהוידע) strongs=None src=None aram=0
+  [3] וְהַכְּרֵתִ֖י (והכרתי) strongs=H3774 src=oshb aram=0
+      KJV: both; the; Cherethites
+      gloss[bdb]: Kerethites; Cretans
+      gloss[strongs_he]: a Kerethite or life-guardsman
+  [4] וְהַפְּלֵתִ֑י (והפלתי) strongs=H6432 src=oshb aram=0
+      KJV: and; the; Pelethites
+      gloss[bdb]: פְּלֵתִי adj.gent. from unknown n.pr.; only c. art. as n. coll. of David’s guard
+      gloss[strongs_he]: a courier (collectively) or official messenger
+  [5] וּבְנֵ֥י (ובני) strongs=H1121 src=oshb aram=0
+      KJV: the; son; sons
+      gloss[bdb]: son; son; children; youth, young men; the young; sparks, stars, arrows; member, son of (th
+      gloss[strongs_he]: a son (as a builder of the family name), in the widest sense (of literal and figurative re
+  [6] דָוִ֖ד (דוד) strongs=H1732 src=oshb aram=0
+      KJV: and; David’s
+      gloss[bdb]: David
+      gloss[strongs_he]: David, the youngest son of Jesse
+  [7] כֹּהֲנִ֥ים (כהנימ) strongs=None src=None aram=0
+  [8] הָיֽוּ׃ (היו) strongs=H1961 src=oshb aram=0
+      gloss[bdb]: fall out, come to pass, become, be; Fall out, happen, occur, take place, come about, come 
+      gloss[strongs_he]: to exist, i.e. be or become, come to pass (always emphatic, and not a mere copula or auxil
+  YLT: and Benaiah son of Jehoiada [is over] both the Cherethite and the Pelethite, and the sons of David have been ministers.
+
+=== 1 Kings 12:28 ===
+  [1] וַיִּוָּעַ֣ץ (ויועצ) strongs=None src=None aram=0
+  [2] הַמֶּ֔לֶךְ (המלכ) strongs=None src=None aram=0
+  [3] וַיַּ֕עַשׂ (ויעש) strongs=H6213 src=oshb aram=0
+      KJV: and; made
+      gloss[bdb]: do, make; do, deal, do, act, act with effect, make, produce, yield, prepare, make, attend 
+      gloss[strongs_he]: to do or make, in the broadest sense and widest application
+  [4] שְׁנֵ֖י (שני) strongs=H8147 src=oshb aram=0
+      KJV: two
+      gloss[bdb]: two
+      gloss[strongs_he]: two; also (as ordinal) twofold
+  [5] עֶגְלֵ֣י (עגלי) strongs=H5695 src=oshb aram=0
+      KJV: calves
+      gloss[bdb]: calf; rolling; circling
+      gloss[strongs_he]: a (male) calf (as frisking round), especially one nearly grown (i.e. a steer)
+  [6] זָהָ֑ב (זהב) strongs=H2091 src=oshb aram=0
+      KJV: gold
+      gloss[bdb]: gold; golden oil
+      gloss[strongs_he]: gold, figuratively, something gold-colored (i.e. yellow), as oil, a clear sky
+  [7] וַיֹּ֣אמֶר (ויאמר) strongs=H559 src=oshb aram=0
+      KJV: and; said
+      gloss[bdb]: utter, say; Say, Say in the heart, Promise, Command; Say; Say in the heart; Promise; Comma
+      gloss[strongs_he]: to say (used with great latitude)
+  [8] אֲלֵהֶ֗ם (אלהמ) strongs=None src=None aram=0
+  [9] רַב־לָכֶם֙ (רב-לכמ) strongs=None src=None aram=0
+  [10] מֵעֲל֣וֹת (מעלות) strongs=H5927 src=oshb aram=0
+      KJV: for; you; to; go; up; which; brought; thee; up
+      gloss[bdb]: go up, ascend, climb; go up, ascend, go up, go, come up, spring up, grow, shoot forth, go 
+      gloss[strongs_he]: to ascend, intransitively (be high) or actively (mount); used in a great variety of senses
+  [11] יְרוּשָׁלִַ֔ם (ירושלמ) strongs=None src=None aram=0
+  [12] הִנֵּ֤ה (הנה) strongs=H2009 src=oshb aram=0
+      gloss[bdb]: lo!; behold!
+      gloss[strongs_he]: lo!
+  [13] אֱלֹהֶ֙יךָ֙ (אלהיכ) strongs=None src=None aram=0
+  [14] יִשְׂרָאֵ֔ל (ישראל) strongs=H3478 src=oshb aram=0
+      KJV: O; Israel
+      gloss[bdb]: Israel, Ēl persisteth, persevereth
+      gloss[strongs_he]: he will rule as God; Jisraël, a symbolical name of Jacob; also (typically) of his posterit
+  [15] אֲשֶׁ֥ר (אשר) strongs=H834 src=oshb aram=0
+      gloss[bdb]: אֲשֶׁר part. of relation A sign of relation, bringing the clause introduced by it into rel
+      gloss[strongs_he]: who, which, what, that; also (as an adverb and a conjunction) when, where, how, because, i
+  [16] הֶעֱל֖וּךָ (העלוכ) strongs=None src=None aram=0
+  [17] מֵאֶ֥רֶץ (מארצ) strongs=None src=None aram=0
+  [18] מִצְרָֽיִם׃ (מצרימ) strongs=None src=None aram=0
+  YLT: And the king taketh counsel, and maketh two calves of gold, and saith unto them, 'Enough to you of going up to Jerusalem; lo, thy gods, O Israel, which brought thee up out of the land of Egypt.'
+
+=== 2 Kings 3:1 ===
+  [1] וִיהוֹרָ֣ם (ויהורמ) strongs=None src=None aram=0
+  [2] בֶּן־אַחְאָ֗ב (בנ-אחאב) strongs=None src=None aram=0
+  [3] מָלַ֤ךְ (מלכ) strongs=None src=None aram=0
+  [4] עַל־יִשְׂרָאֵל֙ (על-ישראל) strongs=None src=None aram=0
+  [5] בְּשֹׁ֣מְר֔וֹן (בשמרונ) strongs=None src=None aram=0
+  [6] בִּשְׁנַת֙ (בשנת) strongs=H8141 src=oshb aram=0
+      KJV: year; years
+      gloss[bdb]: year
+      gloss[strongs_he]: a year (as a revolution of time)
+  [7] שְׁמֹנֶ֣ה (שמנה) strongs=H8083 src=oshb aram=0
+      KJV: the; eighteenth
+      gloss[bdb]: eight
+      gloss[strongs_he]: a cardinal number, eight (as if a surplus above the 'perfect' seven); also (as ordinal) ei
+  [8] עֶשְׂרֵ֔ה (עשרה) strongs=H6240 src=oshb aram=0
+      KJV: the; eighteenth; twelve
+      gloss[bdb]: ten
+      gloss[strongs_he]: ten (only in combination), i.e. -teen; also (ordinal) -teenth
+  [9] לִיהוֹשָׁפָ֖ט (ליהושפט) strongs=H3092 src=oshb aram=0
+      KJV: of; Jehoshaphat
+      gloss[bdb]: hath judged
+      gloss[strongs_he]: Jehoshaphat, the name of six Israelites; also of a valley near Jerusalem
+  [10] מֶ֣לֶךְ (מלכ) strongs=None src=None aram=0
+  [11] יְהוּדָ֑ה (יהודה) strongs=H3063 src=oshb aram=0
+      KJV: of; Judah
+      gloss[bdb]: Judah; son of Jacob and Leah, tribe, nation; son of Jacob and Leah; tribe; nation; land of
+      gloss[strongs_he]: Jehudah (or Judah), the name of five Israelites; also of the tribe descended from the firs
+  [12] וַיִּמְלֹ֖ךְ (וימלכ) strongs=None src=None aram=0
+  [13] שְׁתֵּים־עֶשְׂרֵ֥ה (שתימ-עשרה) strongs=None src=None aram=0
+  [14] שָׁנָֽה׃ (שנה) strongs=H8141 src=oshb aram=0
+      KJV: year; years
+      gloss[bdb]: year
+      gloss[strongs_he]: a year (as a revolution of time)
+  YLT: And Jehoram son of Ahab hath reigned over Israel, in Samaria, in the eighteenth year of Jehoshaphat king of Judah, and he reigneth twelve years,
+
+=== 2 Chronicles 8:6 ===
+  [1] וְאֶֽת־בַּעֲלָ֗ת (ואת-בעלת) strongs=None src=None aram=0
+  [2] וְאֵ֨ת (ואת) strongs=H853 src=oshb aram=0
+      gloss[bdb]: mark of the accusative
+      gloss[strongs_he]: properly, self (but generally used to point out more definitely the object of a verb or pr
+  [3] כָּל־עָרֵ֤י (כל-ערי) strongs=None src=None aram=0
+  [4] הַֽמִּסְכְּנוֹת֙ (המסכנות) strongs=H4543 src=oshb aram=0
+      KJV: and; all; the; store
+      gloss[bdb]: supply; storage
+      gloss[strongs_he]: a magazine
+  [5] אֲשֶׁ֣ר (אשר) strongs=H834 src=oshb aram=0
+      gloss[bdb]: אֲשֶׁר part. of relation A sign of relation, bringing the clause introduced by it into rel
+      gloss[strongs_he]: who, which, what, that; also (as an adverb and a conjunction) when, where, how, because, i
+  [6] הָי֣וּ (היו) strongs=H1961 src=oshb aram=0
+      gloss[bdb]: fall out, come to pass, become, be; Fall out, happen, occur, take place, come about, come 
+      gloss[strongs_he]: to exist, i.e. be or become, come to pass (always emphatic, and not a mere copula or auxil
+  [7] לִשְׁלֹמֹ֔ה (לשלמה) strongs=H8010 src=oshb aram=0
+      KJV: that; Solomon; and; all; that; Solomon
+      gloss[bdb]: Solomon
+      gloss[strongs_he]: Shelomah, David's successor
+  [8] וְאֵת֙ (ואת) strongs=H853 src=oshb aram=0
+      gloss[bdb]: mark of the accusative
+      gloss[strongs_he]: properly, self (but generally used to point out more definitely the object of a verb or pr
+  [9] כָּל־עָרֵ֣י (כל-ערי) strongs=H5892 src=oshb aram=0
+      KJV: cities; cities; and; the; cities
+      gloss[bdb]: city, town; city, town; excitement
+      gloss[strongs_he]: a city (a place guarded by waking or a watch) in the widest sense (even of a mere encampme
+  [10] הָרֶ֔כֶב (הרכב) strongs=H7393 src=oshb aram=0
+      KJV: had; and; all; the; chariot
+      gloss[bdb]: chariotry; chariot; mill-stone; riders
+      gloss[strongs_he]: a vehicle; by implication, a team; by extension, cavalry; by analogy a rider, i.e. the upp
+  [11] וְאֵ֖ת (ואת) strongs=H853 src=oshb aram=0
+      gloss[bdb]: mark of the accusative
+      gloss[strongs_he]: properly, self (but generally used to point out more definitely the object of a verb or pr
+  [12] עָרֵ֣י (ערי) strongs=H5892 src=oshb aram=0
+      KJV: cities; cities; and; the; cities
+      gloss[bdb]: city, town; city, town; excitement
+      gloss[strongs_he]: a city (a place guarded by waking or a watch) in the widest sense (even of a mere encampme
+  [13] הַפָּרָשִׁ֑ים (הפרשימ) strongs=None src=None aram=0
+  [14] וְאֵ֣ת ׀ (ואת) strongs=H853 src=oshb aram=0
+      gloss[bdb]: mark of the accusative
+      gloss[strongs_he]: properly, self (but generally used to point out more definitely the object of a verb or pr
+  [15] כָּל־חֵ֣שֶׁק (כל-חשק) strongs=H2837 src=oshb aram=0
+      KJV: desired
+      gloss[bdb]: desire
+      gloss[strongs_he]: delight
+  [16] שְׁלֹמֹ֗ה (שלמה) strongs=H8010 src=oshb aram=0
+      KJV: that; Solomon; and; all; that; Solomon
+      gloss[bdb]: Solomon
+      gloss[strongs_he]: Shelomah, David's successor
+  [17] אֲשֶׁ֤ר (אשר) strongs=H834 src=oshb aram=0
+      gloss[bdb]: אֲשֶׁר part. of relation A sign of relation, bringing the clause introduced by it into rel
+      gloss[strongs_he]: who, which, what, that; also (as an adverb and a conjunction) when, where, how, because, i
+  [18] חָשַׁק֙ (חשק) strongs=H2836 src=oshb aram=0
+      KJV: desired
+      gloss[bdb]: furnish with fillets; rings; be attached to; love
+      gloss[strongs_he]: to cling, i.e. join, (figuratively) to love, delight in; elliptically; to deliver
+  [19] לִבְנ֤וֹת (לבנות) strongs=H1129 src=oshb aram=0
+      KJV: to; build
+      gloss[bdb]: build; build; be built, be rebuilt, established, established; be built, be rebuilt; be bui
+      gloss[strongs_he]: to build (literally and figuratively)
+  [20] בִּירֽוּשָׁלִַ֙ם֙ (בירושלמ) strongs=None src=None aram=0
+  [21] וּבַלְּבָנ֔וֹן (ובלבנונ) strongs=None src=None aram=0
+  [22] וּבְכֹ֖ל (ובכל) strongs=H3605 src=oshb aram=0
+      gloss[bdb]: the whole, all; the whole of, any, every; all things, all, all; all things, all; all; all
+      gloss[strongs_he]: properly, the whole; hence, all, any or every (in the singular only, but often in a plural
+  [23] אֶ֥רֶץ (ארצ) strongs=None src=None aram=0
+  [24] מֶמְשַׁלְתּֽוֹ׃ (ממשלתו) strongs=H4474 src=oshb aram=0
+      gloss[bdb]: dominion; ruler
+      gloss[strongs_he]: a ruler or (abstractly) rule
+  YLT: and Baalath, and all the cities of store that Solomon had, and all the cities of the chariot, and the cities of the horsemen, and all the desire of Solomon that he desired to build in Jerusalem, and in Lebanon, and in all the land of his dominion.
+
+=== 2 Chronicles 8:14 ===
+  [1] וַיַּעֲמֵ֣ד (ויעמד) strongs=H5975 src=oshb aram=0
+      KJV: And; he; appointed
+      gloss[bdb]: take one's stand, stand; take one's stand, stand, be in a standing attitude, stand forth, 
+      gloss[strongs_he]: to stand, in various relations (literal and figurative, intransitive and transitive)
+  [2] כְּמִשְׁפַּ֣ט (כמשפט) strongs=H4941 src=oshb aram=0
+      KJV: according; to; the; order
+      gloss[bdb]: judgment; judgment; justice, right, rectitude; ordinance; decision; right, privilege, due;
+      gloss[strongs_he]: properly, a verdict (favorable or unfavorable) pronounced judicially, especially a sentenc
+  [3] דָּֽוִיד־אָ֠בִיו (דויד-אביו) strongs=None src=None aram=0
+  [4] אֶת־מַחְלְק֨וֹת (את-מחלקות) strongs=None src=None aram=0
+  [5] הַכֹּהֲנִ֜ים (הכהנימ) strongs=None src=None aram=0
+  [6] עַל־עֲבֹדָתָ֗ם (על-עבדתמ) strongs=None src=None aram=0
+  [7] וְהַלְוִיִּ֣ם (והלוימ) strongs=None src=None aram=0
+  [8] עַל־מִ֠שְׁמְרוֹתָם (על-משמרותמ) strongs=None src=None aram=0
+  [9] לְהַלֵּ֨ל (להלל) strongs=H1984 src=oshb aram=0
+      KJV: to; praise
+      gloss[bdb]: shine; when it, his lamp, shone upon my head; flash forth light; be boastful, praise; be b
+      gloss[strongs_he]: to be clear (orig. of sound, but usually of color); to shine; hence, to make a show, to bo
+  [10] וּלְשָׁרֵ֜ת (ולשרת) strongs=H8334 src=oshb aram=0
+      KJV: and; minister
+      gloss[bdb]: minister; serve
+      gloss[strongs_he]: to attend as a menial or worshipper; figuratively, to contribute to
+  [11] נֶ֤גֶד (נגד) strongs=H5048 src=oshb aram=0
+      gloss[bdb]: what is conspicuous; in front; in front of; in sight of; opposite to
+      gloss[strongs_he]: a front, i.e. part opposite; specifically a counterpart, or mate; usually (adverbial, espe
+  [12] הַכֹּֽהֲנִים֙ (הכהנימ) strongs=None src=None aram=0
+  [13] לִדְבַר־י֣וֹם (לדבר-יומ) strongs=None src=None aram=0
+  [14] בְּיוֹמ֔וֹ (ביומו) strongs=H3117 src=oshb aram=0
+      KJV: of; every; day; required
+      gloss[bdb]: day; day; Day; day of Yahweh; days; Days; time
+      gloss[strongs_he]: a day (as the warm hours), whether literal (from sunrise to sunset, or from one sunset to 
+  [15] וְהַשּׁוֹעֲרִ֥ים (והשוערימ) strongs=None src=None aram=0
+  [16] בְּמַחְלְקוֹתָ֖ם (במחלקותמ) strongs=None src=None aram=0
+  [17] לְשַׁ֣עַר (לשער) strongs=H8179 src=oshb aram=0
+      KJV: at; every; gate
+      gloss[bdb]: gate
+      gloss[strongs_he]: an opening, i.e. door or gate
+  [18] וָשָׁ֑עַר (ושער) strongs=H8179 src=oshb aram=0
+      KJV: at; every; gate
+      gloss[bdb]: gate
+      gloss[strongs_he]: an opening, i.e. door or gate
+  [19] כִּ֣י (כי) strongs=H3588 src=oshb aram=0
+      gloss[bdb]: that, for, when; that; when, if, when, if, though; when; if; when, if, though; Because, si
+      gloss[strongs_he]: (by implication) very widely used as a relative conjunction or adverb (as below); often la
+  [20] כֵ֔ן (כנ) strongs=None src=None aram=0
+  [21] מִצְוַ֖ת (מצות) strongs=H4687 src=oshb aram=0
+      KJV: commanded
+      gloss[bdb]: commandment
+      gloss[strongs_he]: a command, whether human or divine (collectively, the Law)
+  [22] דָּוִ֥יד (דויד) strongs=H1732 src=oshb aram=0
+      KJV: of; David; for; so; had; David
+      gloss[bdb]: David
+      gloss[strongs_he]: David, the youngest son of Jesse
+  [23] אִישׁ־הָאֱלֹהִֽים׃ (איש-האלהימ) strongs=None src=None aram=0
+  YLT: And he establisheth, according to the ordinance of David his father, the courses of the priests over their service, and of the Levites over their charges, to praise and to minister over-against the priests, according to the matter of a day in its day, and the gatekeepers in their courses at gate and gate, for so [is] the command of David the man of God.
+
+=== Job 1:21 ===
+  [1] וַיֹּאמֶר֩ (ויאמר) strongs=H559 src=oshb aram=0
+      KJV: And; said
+      gloss[bdb]: utter, say; Say, Say in the heart, Promise, Command; Say; Say in the heart; Promise; Comma
+      gloss[strongs_he]: to say (used with great latitude)
+  [2] עָרֹ֨ם (ערמ) strongs=None src=None aram=0
+  [3] יצתי (יצתי) strongs=H3318 src=oshb aram=0
+      KJV: came; I; out
+      gloss[bdb]: go, come out; go, come out, forth, go forth, depart, going forth, go forth, go forward, pr
+      gloss[strongs_he]: to go (causatively, bring) out, in a great variety of applications, literally and figurati
+  [4] יָצָ֜אתִי (יצאתי) strongs=H3318 src=oshb aram=0
+      KJV: came; I; out
+      gloss[bdb]: go, come out; go, come out, forth, go forth, depart, going forth, go forth, go forward, pr
+      gloss[strongs_he]: to go (causatively, bring) out, in a great variety of applications, literally and figurati
+  [5] מִבֶּ֣טֶן (מבטנ) strongs=None src=None aram=0
+  [6] אִמִּ֗י (אמי) strongs=H517 src=oshb aram=0
+      KJV: of; my; mother’s
+      gloss[bdb]: mother; mother; dam; point of departure, division
+      gloss[strongs_he]: a mother (as the bond of the family); in a wide sense (both literally and figuratively [li
+  [7] וְעָרֹם֙ (וערמ) strongs=None src=None aram=0
+  [8] אָשׁ֣וּב (אשוב) strongs=H7725 src=oshb aram=0
+      KJV: shall; I; return
+      gloss[bdb]: turn back, return; turn back, return, turn back, return, come, go back, return unto, retur
+      gloss[strongs_he]: to turn back (hence, away) transitively or intransitively, literally or figuratively (not 
+  [9] שָׁ֔מָה (שמה) strongs=H8033 src=oshb aram=0
+      gloss[bdb]: there; thither
+      gloss[strongs_he]: there (transferring to time) then; often thither, or thence
+  [10] יְהוָ֣ה (יהוה) strongs=H3068 src=oshb aram=0
+      KJV: thither; the; LORD; and; the; LORD; of; the; LORD
+      gloss[bdb]: Yahweh, the one bringing into being, life-giver
+      gloss[strongs_he]: (the) self-Existent or Eternal; Jeho-vah, Jewish national name of God
+  [11] נָתַ֔ן (נתנ) strongs=None src=None aram=0
+  [12] וַיהוָ֖ה (ויהוה) strongs=H3068 src=oshb aram=0
+      KJV: thither; the; LORD; and; the; LORD; of; the; LORD
+      gloss[bdb]: Yahweh, the one bringing into being, life-giver
+      gloss[strongs_he]: (the) self-Existent or Eternal; Jeho-vah, Jewish national name of God
+  [13] לָקָ֑ח (לקח) strongs=H3947 src=oshb aram=0
+      KJV: hath; taken; away
+      gloss[bdb]: take; take, take in hand, take and carry along, take, take, carry away, take away, take aw
+      gloss[strongs_he]: to take (in the widest variety of applications)
+  [14] יְהִ֛י (יהי) strongs=H1961 src=oshb aram=0
+      gloss[bdb]: fall out, come to pass, become, be; Fall out, happen, occur, take place, come about, come 
+      gloss[strongs_he]: to exist, i.e. be or become, come to pass (always emphatic, and not a mere copula or auxil
+  [15] שֵׁ֥ם (שמ) strongs=None src=None aram=0
+  [16] יְהוָ֖ה (יהוה) strongs=H3068 src=oshb aram=0
+      KJV: thither; the; LORD; and; the; LORD; of; the; LORD
+      gloss[bdb]: Yahweh, the one bringing into being, life-giver
+      gloss[strongs_he]: (the) self-Existent or Eternal; Jeho-vah, Jewish national name of God
+  [17] מְבֹרָֽךְ׃ (מברכ) strongs=None src=None aram=0
+  YLT: and he saith, 'Naked came I forth from the womb of my mother, and naked I turn back thither: Jehovah hath given and Jehovah hath taken: let the name of Jehovah be blessed.'
+
+=== Job 23:10 ===
+  [1] כִּֽי־יָ֭דַע (כי-ידע) strongs=None src=None aram=0
+  [2] דֶּ֣רֶךְ (דרכ) strongs=None src=None aram=0
+  [3] עִמָּדִ֑י (עמדי) strongs=H5978 src=oshb aram=0
+      KJV: that; I; take
+      gloss[bdb]: with; aid, with, with, against, with, with, towards, together with, aid, as long as; aid; 
+      gloss[strongs_he]: along with
+  [4] בְּ֝חָנַ֗נִי (בחנני) strongs=H974 src=oshb aram=0
+      KJV: he; hath; tried
+      gloss[bdb]: examine, try; examine, scrutinize, try, prove, test, try; examine, scrutinize, try; prove,
+      gloss[strongs_he]: to test (especially metals); generally and figuratively, to investigate
+  [5] כַּזָּהָ֥ב (כזהב) strongs=H2091 src=oshb aram=0
+      KJV: as; gold
+      gloss[bdb]: gold; golden oil
+      gloss[strongs_he]: gold, figuratively, something gold-colored (i.e. yellow), as oil, a clear sky
+  [6] אֵצֵֽא׃ (אצא) strongs=H3318 src=oshb aram=0
+      KJV: me; I; shall; come; forth
+      gloss[bdb]: go, come out; go, come out, forth, go forth, depart, going forth, go forth, go forward, pr
+      gloss[strongs_he]: to go (causatively, bring) out, in a great variety of applications, literally and figurati
+  YLT: For He hath known the way with me, He hath tried me — as gold I go forth.
+
+=== Psalms 31:7 ===
+  [1] שָׂנֵ֗אתִי (שנאתי) strongs=H8130 src=oshb aram=0
+      gloss[bdb]: hate; hate; is hated; enemy
+      gloss[strongs_he]: to hate (personally)
+  [2] הַשֹּׁמְרִ֥ים (השמרימ) strongs=None src=None aram=0
+  [3] הַבְלֵי־שָׁ֑וְא (הבלי-שוא) strongs=None src=None aram=0
+  [4] וַ֝אֲנִ֗י (ואני) strongs=H589 src=oshb aram=0
+      gloss[bdb]: I
+      gloss[strongs_he]: I
+  [5] אֶל־יְהוָ֥ה (אל-יהוה) strongs=H3068 src=oshb aram=0
+      gloss[bdb]: Yahweh, the one bringing into being, life-giver
+      gloss[strongs_he]: (the) self-Existent or Eternal; Jeho-vah, Jewish national name of God
+  [6] בָּטָֽחְתִּי׃ (בטחתי) strongs=H982 src=oshb aram=0
+      gloss[bdb]: trust; trust, be confident; trust; be confident; cause to trust, make secure
+      gloss[strongs_he]: properly, to hie for refuge (but not so precipitately as 2620); figuratively, to trust, be
+  YLT: I rejoice, and am glad in Thy kindness, In that Thou hast seen mine affliction, Thou hast known in adversities my soul.
+
+=== Psalms 59:1 ===
+  [1] לַמְנַצֵּ֣חַ (למנצח) strongs=H5329 src=oshb aram=0
+      KJV: To; the; chief; Musician
+      gloss[bdb]: be pre-eminent, enduring; enduring; act as overseer, superintendent, director
+      gloss[strongs_he]: properly, to glitter from afar, i.e. to be eminent (as a superintendent, especially of the
+  [2] אַל־תַּשְׁחֵת֮ (אל-תשחת) strongs=H516 src=oshb aram=0
+      KJV: Al–taschith
+      gloss[bdb]: go to ruin; be marred, spoiled; spoil, ruin, pervert, corrupt; spoil, ruin; pervert, corru
+      gloss[strongs_he]: 'Thou must not destroy'; probably the opening words to a popular song
+  [3] לְדָוִ֪ד (לדוד) strongs=H1732 src=oshb aram=0
+      KJV: of; David
+      gloss[bdb]: David
+      gloss[strongs_he]: David, the youngest son of Jesse
+  [4] מִ֫כְתָּ֥ם (מכתמ) strongs=None src=None aram=0
+  [5] בִּשְׁלֹ֥חַ (בשלח) strongs=H7971 src=oshb aram=0
+      KJV: sent
+      gloss[bdb]: send; send, send, stretch out, send away, let loose; send; send; stretch out; send away; l
+      gloss[strongs_he]: to send away, for, or out (in a great variety of applications)
+  [6] שָׁא֑וּל (שאול) strongs=H7586 src=oshb aram=0
+      KJV: when; Saul
+      gloss[bdb]: asked
+      gloss[strongs_he]: Shaul, the name of an Edomite and two Israelites
+  [7] וַֽיִּשְׁמְר֥וּ (וישמרו) strongs=H8104 src=oshb aram=0
+      KJV: and; they; watched
+      gloss[bdb]: keep, watch, preserve; keep, have charge of, keep, guard, watch for, wait for, watch, obse
+      gloss[strongs_he]: properly, to hedge about (as with thorns), i.e. guard; generally, to protect, attend to, e
+  [8] אֶת־הַ֝בַּ֗יִת (את-הבית) strongs=H1004 src=oshb aram=0
+      KJV: the; house
+      gloss[bdb]: between; house; house; place; receptacle; household, family; household affairs; housewards
+      gloss[strongs_he]: a house (in the greatest variation of applications, especially family, etc.)
+  [9] לַהֲמִיתֽוֹ׃ (להמיתו) strongs=H4191 src=oshb aram=0
+      KJV: to; kill; him
+      gloss[bdb]: die; die, die, be put to death; die; die, be put to death; kill, put to death, despatch; b
+      gloss[strongs_he]: to die (literally or figuratively); causatively, to kill
+  YLT: To the Overseer. — 'Destroy not,' by David. — A secret treasure, in Saul's sending, and they watch the house to put him to death. Deliver me from mine enemies, O my God, From my withstanders set me on high.
+
+=== Psalms 89:25 ===
+  [1] וֶֽאֶֽמוּנָתִ֣י (ואמונתי) strongs=H530 src=oshb aram=0
+      gloss[bdb]: firmness, steadfastness, fidelity; firmness, steadiness; steadfastness; faithfulness, trus
+      gloss[strongs_he]: literally firmness; figuratively security; morally fidelity
+  [2] וְחַסְדִּ֣י (וחסדי) strongs=H2617 src=oshb aram=0
+      gloss[bdb]: shame; reproach; goodness, kindness; kindness, kindness, mercy, affection, love to God, pi
+      gloss[strongs_he]: kindness; by implication (towards God) piety; rarely (by opposition) reproof, or (subject.
+  [3] עִמּ֑וֹ (עמו) strongs=H5973 src=oshb aram=0
+      gloss[bdb]: from with; beside; with; aid, with, with, against, with, with, towards, together with, aid
+      gloss[strongs_he]: adverb or preposition, with (i.e. in conjunction with), in varied applications; specifical
+  [4] וּ֝בִשְׁמִ֗י (ובשמי) strongs=H8034 src=oshb aram=0
+      gloss[bdb]: name; reputation; reputation; name; memorial, monument
+      gloss[strongs_he]: an appellation, as a mark or memorial of individuality; by implication honor, authority, c
+  [5] תָּר֥וּם (תרומ) strongs=None src=None aram=0
+  [6] קַרְנֽוֹ׃ (קרנו) strongs=H7161 src=oshb aram=0
+      gloss[bdb]: horn; hill, peak, isolated hill; rays at his side(s) he had; קַרְנַ֫יִם n.pr.loc. conquere
+      gloss[strongs_he]: a horn (as projecting); by implication, a flask, cornet; by resemblance. an elephant's too
+  YLT: And I have set on the sea his hand, And on the rivers his right hand.
+
+=== Proverbs 10:16 ===
+  [1] פְּעֻלַּ֣ת (פעלת) strongs=H6468 src=oshb aram=0
+      KJV: The; labour
+      gloss[bdb]: work; recompense
+      gloss[strongs_he]: (abstractly) work
+  [2] צַדִּ֣יק (צדיק) strongs=H6662 src=oshb aram=0
+      KJV: of; the; righteous
+      gloss[bdb]: just; righteous
+      gloss[strongs_he]: just
+  [3] לְחַיִּ֑ים (לחיימ) strongs=None src=None aram=0
+  [4] תְּבוּאַ֖ת (תבואת) strongs=H8393 src=oshb aram=0
+      KJV: the; fruit
+      gloss[bdb]: product, revenue; product, yield; income, revenue, gain; income, revenue; gain
+      gloss[strongs_he]: income, i.e. produce (literally or figuratively)
+  [5] רָשָׁ֣ע (רשע) strongs=H7563 src=oshb aram=0
+      KJV: of; the; wicked
+      gloss[bdb]: wicked; criminal
+      gloss[strongs_he]: morally wrong; concretely, an (actively) bad person
+  [6] לְחַטָּֽאת׃ (לחטאת) strongs=H2403 src=oshb aram=0
+      KJV: to; sin
+      gloss[bdb]: sinful thing; sin; sin, sin-offering; sin; condition of sin, guilt of sin; punishment for 
+      gloss[strongs_he]: an offence (sometimes habitual sinfulness), and its penalty, occasion, sacrifice, or expia
+  YLT: The wage of the righteous [is] for life, The increase of the wicked for sin.
+
+=== Jeremiah 7:26 ===
+  [1] וְל֤וֹא (ולוא) strongs=H3808 src=oshb aram=0
+      gloss[bdb]: not
+      gloss[strongs_he]: not (the simple or abs. negation); by implication, no; often used with other particles
+  [2] שָׁמְעוּ֙ (שמעו) strongs=H8085 src=oshb aram=0
+      KJV: Yet; they; hearkened
+      gloss[bdb]: hear; be heard, be heard of, be regarded, obeyed, hearing was granted to their voice; be h
+      gloss[strongs_he]: to hear intelligently (often with implication of attention, obedience, etc.; causatively, 
+  [3] אֵלַ֔י (אלי) strongs=H413 src=oshb aram=0
+      gloss[bdb]: motion to, direction towards; to, unto; into; towards; against; Unto, in addition to; in r
+      gloss[strongs_he]: near, with or among; often in general, to
+  [4] וְלֹ֥א (ולא) strongs=H3808 src=oshb aram=0
+      gloss[bdb]: not
+      gloss[strongs_he]: not (the simple or abs. negation); by implication, no; often used with other particles
+  [5] הִטּ֖וּ (הטו) strongs=H5186 src=oshb aram=0
+      KJV: not; unto; me; nor; inclined
+      gloss[bdb]: stretch out, spread out, extend, incline, bend; stretch out, extend, stretch, offer, Sprea
+      gloss[strongs_he]: to stretch or spread out; by implication, to bend away (including moral deflection); used 
+  [6] אֶת־אָזְנָ֑ם (את-אזנמ) strongs=None src=None aram=0
+  [7] וַיַּקְשׁוּ֙ (ויקשו) strongs=H7185 src=oshb aram=0
+      KJV: but; hardened
+      gloss[bdb]: be hard, severe, fierce; be hard, difficult, be hard, severe; be hard, difficult; be hard,
+      gloss[strongs_he]: properly, to be dense, i.e. tough or severe (in various applications)
+  [8] אֶת־עָרְפָּ֔ם (את-ערפמ) strongs=None src=None aram=0
+  [9] הֵרֵ֖עוּ (הרעו) strongs=H7489 src=oshb aram=0
+      KJV: they; did; worse
+      gloss[bdb]: be evil, bad; be displeasing, be sad, be injurious, evil, be evil, wicked; be displeasing;
+      gloss[strongs_he]: properly, to spoil (literally, by breaking to pieces); figuratively, to make (or be) good 
+  [10] מֵאֲבוֹתָֽם׃ (מאבותמ) strongs=None src=None aram=0
+  YLT: And they have not hearkened unto Me, Nor inclined their ear, and harden their neck, They have done evil above their fathers.
+
+=== Ezekiel 10:20 ===
+  [1] הִ֣יא (היא) strongs=H1931 src=oshb aram=0
+      gloss[bdb]: he, she, it; he, she, it, they, himself, herself, itself, themselves, that, those; that, i
+      gloss[strongs_he]: he (she or it); only expressed when emphatic or without a verb; also (intensively) self, o
+  [2] הַחַיָּ֗ה (החיה) strongs=H2416 src=oshb aram=0
+      KJV: the; living; creature
+      gloss[bdb]: kinsfolk; alive, living; living one, alive, living, green, fresh; living one; alive, livin
+      gloss[strongs_he]: alive; hence, raw (flesh); fresh (plant, water, year), strong; also (as noun, especially i
+  [3] אֲשֶׁ֥ר (אשר) strongs=H834 src=oshb aram=0
+      gloss[bdb]: אֲשֶׁר part. of relation A sign of relation, bringing the clause introduced by it into rel
+      gloss[strongs_he]: who, which, what, that; also (as an adverb and a conjunction) when, where, how, because, i
+  [4] רָאִ֛יתִי (ראיתי) strongs=H7200 src=oshb aram=0
+      KJV: that; I; saw
+      gloss[bdb]: see; see, see, see, see, see, have, vision, see, look at, see, look into, look at, see; se
+      gloss[strongs_he]: to see, literally or figuratively (in numerous applications, direct and implied, transitiv
+  [5] תַּ֥חַת (תחת) strongs=H8478 src=oshb aram=0
+      gloss[bdb]: the under part; underneath; below; instead of
+      gloss[strongs_he]: the bottom (as depressed); only adverbially, below (often with prepositional prefix undern
+  [6] אֱלֹהֵֽי־יִשְׂרָאֵ֖ל (אלהי-ישראל) strongs=H3478 src=oshb aram=0
+      KJV: of; Israel
+      gloss[bdb]: Israel, Ēl persisteth, persevereth
+      gloss[strongs_he]: he will rule as God; Jisraël, a symbolical name of Jacob; also (typically) of his posterit
+  [7] בִּֽנְהַר־כְּבָ֑ר (בנהר-כבר) strongs=H3478 src=oshb aram=0
+      KJV: of; Israel
+      gloss[bdb]: Israel, Ēl persisteth, persevereth
+      gloss[strongs_he]: he will rule as God; Jisraël, a symbolical name of Jacob; also (typically) of his posterit
+  [8] וָאֵדַ֕ע (ואדע) strongs=H3045 src=oshb aram=0
+      KJV: and; I; knew
+      gloss[bdb]: know; know, learn to know, perceive, perceive and see, find out and discern, discriminate,
+      gloss[strongs_he]: to know (properly, to ascertain by seeing); used in a great variety of senses, figurativel
+  [9] כִּ֥י (כי) strongs=H3588 src=oshb aram=0
+      gloss[bdb]: that, for, when; that; when, if, when, if, though; when; if; when, if, though; Because, si
+      gloss[strongs_he]: (by implication) very widely used as a relative conjunction or adverb (as below); often la
+  [10] כְרוּבִ֖ים (כרובימ) strongs=None src=None aram=0
+  [11] הֵֽמָּה׃ (המה) strongs=H1992 src=oshb aram=0
+      gloss[bdb]: they
+      gloss[strongs_he]: they (only used when emphatic)
+  YLT: It [is] the living creature that I saw under the God of Israel by the river Chebar, and I know that they are cherubs.
+

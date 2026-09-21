@@ -1,0 +1,3 @@
+*.db
+worker-out/
+__pycache__/

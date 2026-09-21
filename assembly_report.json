@@ -1,0 +1,35 @@
+{
+  "verification": {
+    "words": 264217,
+    "words_with_strongs": 175449,
+    "words_with_kjv": 134625,
+    "words_with_gloss": 175449,
+    "aramaic": 4405,
+    "kjv_words": 610324,
+    "ylt_verses": 23145,
+    "glosses": 17347,
+    "books": 39
+  },
+  "oshb": {
+    "oshb_rows": 306785,
+    "verses_aligned": 23212,
+    "mapped_1to1": 164358,
+    "mapped_replace": 13109,
+    "canon_tokens_unmapped": 86747,
+    "letters_match": 164358,
+    "strongs_filled": 175322,
+    "strongs_conflicts": 105,
+    "no_lemma_on_mapped": 2022,
+    "aramaic_agree": 3178,
+    "aramaic_oshb_not_kit": 0,
+    "aramaic_kit_not_oshb": 0
+  },
+  "kjv": {
+    "words": 610324,
+    "renderings": 409930,
+    "hebrew_words_rendered": 134625
+  },
+  "ylt_verses": 23145,
+  "glosses": 17347,
+  "gaps": []
+}
