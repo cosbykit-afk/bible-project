@@ -17,7 +17,7 @@ Unresolved items are `U-` numbered at the bottom.
 | Unpointed | `No_Vowel` column: consonantal text only (e.g. בראשית). The dropdown lists scholarly renderings of THIS form. |
 | Slash-join | Prophets.ods convention: morphemes joined with `/` in the unpointed form (e.g. `ו/ה/מלכ` = prefix ו + prefix ה + base מלכ). |
 | Strong's number | H-prefix index (H1–H8674) linking a Hebrew word to lexicon entries. Kit's own prefilled numbers (2026-09-20 and earlier) were discarded as the system of record on 2026-09-21 at his direction; where they conflicted with OSHB (105 rows) the OSHB value now stands. 22 rows keep a Kit value only because OSHB has no number for those words. |
-| Root number (root_code) | The project's own numbering, generated 2026-09-21, replacing Kit's old numbering entirely. Format `root_id.form_seq` (e.g. `19247.42`). Covers all 264,217 words. See §8. |
+| Root number (root_code) | The project's own numbering, generated 2026-09-21, replacing Kit's old numbering entirely. Format `root.fix.vowel` (e.g. `19247.42.1`). Covers all 264,217 words. See §8. |
 | KJV person | Kit's stated preference (2026-09-20): King James Version is his translation; NIV excluded from the project. |
 | Public-domain only | Standing rule (2026-09-20): every ingested text must be public domain or freely licensed. No NIV, no HALOT. |
 
@@ -84,17 +84,26 @@ Unresolved items are `U-` numbered at the bottom.
 
 ## 8. Root numbering system (2026-09-21, replaces Kit's old numbering)
 
-Every distinct **unpointed base word** is a root entry, numbered sequentially in
-Hebrew alphabetical order (`root_entry`: 30,087 roots, `root_id` 1–30087).
-Beneath each root, every distinct **(prefix1, prefix2, prefix3, suffix1, suffix2)**
-combination attested in the text is a numbered form (`root_form`: 57,724 forms),
-ordered alphabetically by the affix tuple. Each word carries
-`root_id`, `root_form_seq`, and the display code `root_code = root_id.form_seq`.
+Three tiers. Syntax: **`root.fix.vowel`**.
 
-- Example: root מלכ is **19247** (2,095 words). Form **19247.1** is bare מלכ (552×);
-  **19247.42** is ה+מלכ "the king" (770×); **19247.66** is ל+מלכ (156×).
-- Coverage is total by construction: all 264,217 words have a root_code,
-  including the 88,768 words the OSHB crosswalk could not reach.
+1. **Root.** Every distinct **unpointed base word** is a root entry, numbered
+   sequentially in Hebrew alphabetical order (`root_entry`: 30,087 roots,
+   `root_id` 1–30087).
+2. **Fix.** Beneath each root, every distinct **(prefix1, prefix2, prefix3,
+   suffix1, suffix2)** combination attested in the text is a numbered form
+   (`root_form`: 57,724 forms), ordered alphabetically by the affix tuple.
+3. **Vowel.** Beneath each (root, form), every distinct **pointed (vocalized)
+   form** attested in the text is a numbered vowel pattern (`root_vowel`:
+   126,869 patterns), ordered by Unicode sort of the pointed string.
+
+Each word carries `root_id`, `root_form_seq`, `root_vowel_seq`, and the display
+code `root_code = root_id.root_form_seq.root_vowel_seq`.
+
+- Example: root מלכ is **19247** (2,095 words). Form **19247.42** is ה+מלכ
+  "the king" (770×); **19247.42.1** is its first vocalization pattern.
+- Coverage is total by construction: all 264,217 words have a three-part
+  root_code, including the 88,768 words the OSHB crosswalk could not reach.
+  One word has an empty pointed form; it is the sole pattern of its group.
 - Root 1 is the empty string: 7 paseq marks (׀, Exod 13 / Ezek 8) whose unpointed
   form is empty. Deterministic; left as-is.
 - Note on the affix columns: they are Kit's own parsing and are uneven —

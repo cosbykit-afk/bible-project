@@ -69,7 +69,7 @@ word = geom(27, 84, 44, [
     ("word_pos", ""), ("strongs_num", ""),
     ("pointed", ""), ("is_aramaic", ""),
     ("root_id", "FK"), ("root_form_seq", ""),
-    ("root_code", "")], cols=2)
+    ("root_vowel_seq", ""), ("root_code", "")], cols=2)
 verse = geom(76, 96, 20, [("book_num", "PK"), ("chapter", "PK"), ("verse", "PK"),
                            ("assembled_text", "")])
 note = geom(2, 58, 18, [("note_id", "PK"), ("word_id", "FK"), ("language", ""), ("note_text", "")])
@@ -86,6 +86,9 @@ rootentry = geom(2, 42, 22, [("root_id", "PK"), ("root", ""), ("word_count", "")
 rootform = geom(28, 42, 30, [("root_id", "PK/FK"), ("form_seq", "PK"),
                               ("prefixes (1-3)", ""), ("suffixes (1-2)", ""),
                               ("word_count", ""), ("example_unpointed", "")], cols=2)
+rootvowel = geom(64, 42, 30, [("root_id", "PK/FK"), ("form_seq", "PK/FK"),
+                              ("vowel_seq", "PK"), ("vowel_pattern", ""),
+                              ("word_count", "")], cols=2)
 
 # edges before boxes
 draw_edge(ax, [(book["right"], 106), (book["cx"], 116.5), (verse["cx"], 116.5),
@@ -100,19 +103,22 @@ draw_edge(ax, [(utrans["right"], 30), (tchoice["left"], 30)], "1", "N")
 draw_edge(ax, [(word["right"], 96), (74, 96), (74, 48), (tchoice["cx"] + 4, tchoice["top"])],
           "1", "N")                                                           # WORD -> TCHOICE
 draw_edge(ax, [(rootentry["right"], 50), (rootform["left"], 50)], "1", "N")   # ROOT_ENTRY -> ROOT_FORM
-draw_edge(ax, [(rootform["right"], 50), (73, 50), (73, 88), (word["right"], 88)],
-          "1", "N")                                                           # ROOT_FORM -> WORD
+draw_edge(ax, [(rootform["right"], 50), (rootvowel["left"], 50)], "1", "N")   # ROOT_FORM -> ROOT_VOWEL
+draw_edge(ax, [(rootvowel["right"], 50), (97, 50), (97, 88), (word["right"], 88)],
+          "1", "N")                                                           # ROOT_VOWEL -> WORD
 
 for g, t in [(book, "BOOK"), (word, "WORD"), (verse, "VERSE"), (note, "NOTE"),
               (kjv, "KJV_RENDERING"), (gloss, "GLOSS"), (ylt, "YLT_VERSE"),
               (user, "APP_USER"), (utrans, "USER_TRANSLATION"), (tchoice, "TRANSLATION_CHOICE"),
-              (rootentry, "ROOT_ENTRY"), (rootform, "ROOT_FORM")]:
+              (rootentry, "ROOT_ENTRY"), (rootform, "ROOT_FORM"),
+              (rootvowel, "ROOT_VOWEL")]:
     draw_box(ax, g, t)
 
 ax.text(50, 8, "PK = primary key    FK = foreign key    1 = one side    N = many side",
         ha="center", fontsize=11, color="#555")
-ax.text(50, 4, "WORD.root_code (root_id.form_seq) is the project's own numbering: every distinct unpointed base word\n"
-        "is a ROOT_ENTRY in Hebrew alphabetical order; each prefix/suffix pattern beneath it is a numbered ROOT_FORM. "
+ax.text(50, 4, "WORD.root_code (root.fix.vowel) is the project's own numbering: every distinct unpointed base word\n"
+        "is a ROOT_ENTRY in Hebrew alphabetical order; each prefix/suffix pattern beneath it is a numbered ROOT_FORM; "
+        "each distinct pointed (vocalized) form beneath that is a numbered ROOT_VOWEL. "
         "WORD.strongs_num \u2192 GLOSS.strongs_num still drives the per-word dropdown.",
         ha="center", fontsize=10, style="italic", color="#555")
 fig.savefig("/home/hatch/workspace/bible-project/er_diagram.png", dpi=110, bbox_inches="tight")
