@@ -1,3 +1,4 @@
 *.db
 worker-out/
 __pycache__/
+*.bak*

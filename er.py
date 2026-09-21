@@ -61,13 +61,15 @@ ax.text(50, 119.3, "One database serves the reader site and the build-your-own-t
 
 # geometry first
 book = geom(2, 96, 18, [("book_num", "PK"), ("name_en", ""), ("name_he", ""), ("section", "")])
-word = geom(27, 88, 44, [
+word = geom(27, 84, 44, [
     ("word_id", "PK"), ("unpointed", ""),
     ("book_num", "FK"), ("prefixes (1-3)", ""),
     ("chapter", ""), ("base_word", ""),
     ("verse", ""), ("suffixes (1-2)", ""),
     ("word_pos", ""), ("strongs_num", ""),
-    ("pointed", ""), ("is_aramaic", "")], cols=2)
+    ("pointed", ""), ("is_aramaic", ""),
+    ("root_id", "FK"), ("root_form_seq", ""),
+    ("root_code", "")], cols=2)
 verse = geom(76, 96, 20, [("book_num", "PK"), ("chapter", "PK"), ("verse", "PK"),
                            ("assembled_text", "")])
 note = geom(2, 58, 18, [("note_id", "PK"), ("word_id", "FK"), ("language", ""), ("note_text", "")])
@@ -75,11 +77,15 @@ kjv = geom(27, 58, 20, [("rendering_id", "PK"), ("word_id", "FK"), ("kjv_word", 
                          ("kjv_word_pos", ""), ("kjv_strongs", "")])
 gloss = geom(52, 58, 18, [("strongs_num", "PK"), ("source", "PK"), ("gloss_text", "")])
 ylt = geom(76, 58, 20, [("book_num", "PK"), ("chapter", "PK"), ("verse", "PK"), ("text", "")])
-user = geom(4, 22, 18, [("user_id", "PK"), ("display_name", ""), ("created_at", "")])
-utrans = geom(28, 18, 22, [("translation_id", "PK"), ("user_id", "FK"), ("book_num", ""),
+user = geom(4, 18, 18, [("user_id", "PK"), ("display_name", ""), ("created_at", "")])
+utrans = geom(28, 14, 22, [("translation_id", "PK"), ("user_id", "FK"), ("book_num", ""),
                             ("chapter", ""), ("verse", ""), ("created_at", "")])
-tchoice = geom(56, 20, 24, [("translation_id", "PK"), ("word_pos", "PK"), ("word_id", "FK"),
+tchoice = geom(56, 16, 24, [("translation_id", "PK"), ("word_pos", "PK"), ("word_id", "FK"),
                              ("chosen_text", ""), ("chosen_source", "")])
+rootentry = geom(2, 42, 22, [("root_id", "PK"), ("root", ""), ("word_count", "")])
+rootform = geom(28, 42, 30, [("root_id", "PK/FK"), ("form_seq", "PK"),
+                              ("prefixes (1-3)", ""), ("suffixes (1-2)", ""),
+                              ("word_count", ""), ("example_unpointed", "")], cols=2)
 
 # edges before boxes
 draw_edge(ax, [(book["right"], 106), (book["cx"], 116.5), (verse["cx"], 116.5),
@@ -93,17 +99,22 @@ draw_edge(ax, [(user["right"], 29), (utrans["left"], 29)], "1", "N")
 draw_edge(ax, [(utrans["right"], 30), (tchoice["left"], 30)], "1", "N")
 draw_edge(ax, [(word["right"], 96), (74, 96), (74, 48), (tchoice["cx"] + 4, tchoice["top"])],
           "1", "N")                                                           # WORD -> TCHOICE
+draw_edge(ax, [(rootentry["right"], 50), (rootform["left"], 50)], "1", "N")   # ROOT_ENTRY -> ROOT_FORM
+draw_edge(ax, [(rootform["right"], 50), (73, 50), (73, 88), (word["right"], 88)],
+          "1", "N")                                                           # ROOT_FORM -> WORD
 
 for g, t in [(book, "BOOK"), (word, "WORD"), (verse, "VERSE"), (note, "NOTE"),
               (kjv, "KJV_RENDERING"), (gloss, "GLOSS"), (ylt, "YLT_VERSE"),
-              (user, "APP_USER"), (utrans, "USER_TRANSLATION"), (tchoice, "TRANSLATION_CHOICE")]:
+              (user, "APP_USER"), (utrans, "USER_TRANSLATION"), (tchoice, "TRANSLATION_CHOICE"),
+              (rootentry, "ROOT_ENTRY"), (rootform, "ROOT_FORM")]:
     draw_box(ax, g, t)
 
 ax.text(50, 8, "PK = primary key    FK = foreign key    1 = one side    N = many side",
         ha="center", fontsize=11, color="#555")
-ax.text(50, 4, "WORD.strongs_num \u2192 GLOSS.strongs_num drives the per-word dropdown; "
-        "TRANSLATION_CHOICE stores what each user picked per word.",
-        ha="center", fontsize=11, style="italic", color="#555")
+ax.text(50, 4, "WORD.root_code (root_id.form_seq) is the project's own numbering: every distinct unpointed base word\n"
+        "is a ROOT_ENTRY in Hebrew alphabetical order; each prefix/suffix pattern beneath it is a numbered ROOT_FORM. "
+        "WORD.strongs_num \u2192 GLOSS.strongs_num still drives the per-word dropdown.",
+        ha="center", fontsize=10, style="italic", color="#555")
 fig.savefig("/home/hatch/workspace/bible-project/er_diagram.png", dpi=110, bbox_inches="tight")
 fig.savefig("/home/hatch/workspace/bible-project/er_diagram.svg", bbox_inches="tight")
 print("done")

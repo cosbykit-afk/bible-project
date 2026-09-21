@@ -33,6 +33,15 @@ readers pick word by word and save their own translation.
 | `ylt_verses` | 23,145 | Young's Literal Translation, verse level |
 | `glosses` | 17,347 | BDB + Strong's dictionary glosses, full H1–H8674 |
 | `books` | 39 | English + Hebrew names |
+| `root_entry` | 30,087 | The project's own numbering: one row per distinct unpointed base word, Hebrew alphabetical order |
+| `root_form` | 57,724 | Numbered prefix/suffix patterns beneath each root; `words.root_code` = `root_id.form_seq` |
+
+**Numbering.** The project's primary word numbering is root-based (built
+2026-09-21, replacing Kit's earlier numbering): every distinct unpointed base
+word is a numbered root entry, and each attested prefix/suffix pattern beneath
+it is a numbered form. Every one of the 264,217 words carries a `root_code`
+like `19247.42` (root מלכ, "the king" form). Strong's numbers are kept as a
+foreign key into the public-domain lexicons.
 
 Coverage: 175,449 of 264,217 words carry a Strong's number (66.4%);
 every one of those has at least one gloss. 134,625 words (50.9%) have a
