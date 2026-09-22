@@ -79,6 +79,10 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   via a Diagrams section; the .mmd files are the text sources and a small
   injector keeps the README copies in sync.
 - PNG/SVG outputs kept as-is.
+- Render validation 2026-09-22 ~03:58 PT: both .mmd files render clean via
+  mermaid-cli (first attempt needed a --no-sandbox puppeteer config since the
+  sandbox runs as root). ER diagram visually inspected; system diagram SVG
+  node/edge/label text inspected. GitHub will render the README embeds live.
 
 ## 2026-09-22 ~04:20 PT — Diagrams as text (Mermaid sources)
 - Kit sent a link to the "text to UML tools" list (diagrams-as-code).
@@ -89,3 +93,7 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   via a Diagrams section; the .mmd files are the text sources and a small
   injector keeps the README copies in sync.
 - PNG/SVG outputs kept as-is.
+- Render validation 2026-09-22 ~03:58 PT: both .mmd files render clean via
+  mermaid-cli (first attempt needed a --no-sandbox puppeteer config since the
+  sandbox runs as root). ER diagram visually inspected; system diagram SVG
+  node/edge/label text inspected. GitHub will render the README embeds live.
