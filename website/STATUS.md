@@ -69,3 +69,13 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
 - Note: website/venv blobs remain inside the earlier public 3925d68 snapshot
   (deleted at tip). Full history purge would need a force-push; parked unless
   Kit wants it.
+
+## 2026-09-22 ~04:20 PT — Diagrams as text (Mermaid sources)
+- Kit sent a link to the "text to UML tools" list (diagrams-as-code).
+- Added `website/website_er.mmd` (erDiagram: app.db + choice files) and
+  `website/website_system.mmd` (flowchart: browser -> Flask -> three stores),
+  faithful to the matplotlib PNG/SVG versions.
+- README.md now embeds both as ```mermaid fences (rendered live on GitHub)
+  via a Diagrams section; the .mmd files are the text sources and a small
+  injector keeps the README copies in sync.
+- PNG/SVG outputs kept as-is.

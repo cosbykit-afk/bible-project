@@ -1,0 +1,17 @@
+%% Website — system diagram. Text source of website/website_system.png/.svg.
+%% Rendered live on GitHub from the ```mermaid fence in README.md.
+%% Three stores: bible.db is the read-only corpus;
+%% app.db + choice files hold the user's work.
+flowchart TB
+    B["Browser (Kit)<br/>verse reader: Hebrew word by word<br/>drop-down per word: KJV · Young's · Other<br/>my translations · reading view · export"]
+    F["Flask app — website/app.py<br/>GET /book /chapter /verse /word<br/>POST /choice — saves the drop-down item-number byte"]
+    DB[("bible.db — read-only corpus<br/>books · words · kjv_words · ylt_verses<br/>kjv_renderings · ylt_renderings (computed)<br/>lexicon · root_entry / root_form / root_vowel")]
+    ADB[("app.db — the user's work<br/>app_user · translation · other_option<br/>created on first run")]
+    CF[["user_data/translation_{id}.choices<br/>264,217 bytes — one byte per Hebrew word<br/>byte offset = word_id − 1<br/>0 = default · byte N = drop-down item N"]]
+    B -->|"HTTP"| F
+    F -->|"reads"| DB
+    F -->|"reads + writes"| ADB
+    F -->|"reads + writes bytes"| CF
+    DB --> DD["Drop-down data, per Hebrew word<br/>KJV renderings (word-aligned)<br/>Young's renderings (computed verse-by-verse alignment)<br/>Other: user-typed (academic pass)"]
+    ADB --> OO["Other options (multi-value)<br/>one row per custom rendering, per translation<br/>each becomes a drop-down item"]
+    CF --> BR["Byte → text resolution<br/>0 → Hebrew shown (no choice)<br/>KJV / Young's items → rendering<br/>Other items → option text"]

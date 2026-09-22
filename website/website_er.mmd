@@ -1,0 +1,34 @@
+%% Website database — entity-relationship diagram (app.db + choice files).
+%% Text source of website/website_er.png/.svg. Rendered live on GitHub
+%% from the ```mermaid fence in README.md.
+%% The website's own storage. bible.db (corpus) stays read-only;
+%% every word_id here points into bible.db words.
+erDiagram
+    APP_USER {
+        int user_id PK
+        string name
+        string created_at
+    }
+    TRANSLATION {
+        int translation_id PK
+        int user_id FK
+        string name
+        string description
+        string created_at
+        string updated_at
+    }
+    OTHER_OPTION {
+        int option_id PK
+        int translation_id FK
+        int idx "1-based creation order within the translation"
+        string text
+        string created_at
+    }
+    CHOICES_FILE {
+        string path PK "translation_{id}.choices"
+        int size_bytes "264217, one byte per Hebrew word"
+        int byte_offset "word_id minus 1"
+    }
+    APP_USER ||--o{ TRANSLATION : "one user, many translations"
+    TRANSLATION ||--o{ OTHER_OPTION : "multi-value Other options"
+    TRANSLATION ||--|| CHOICES_FILE : "one choice file per translation"

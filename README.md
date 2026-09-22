@@ -87,4 +87,71 @@ items in `NOTATION_LEDGER.md`.
   the per-translation byte files in `website/user_data/` (one byte per word;
   git-ignored, personal data stays local).
   Run: `cd website && ./venv/bin/python app.py`
-  (port 5057). Diagrams: `website/website_er.*`, `website/website_system.*`.
+  (port 5057).
+
+## Diagrams
+
+Text-first: `website/website_er.mmd` and `website/website_system.mmd` are the
+diagram sources (Mermaid — renders live on GitHub below). The `.png`/`.svg`
+copies are built from `website/website_diagrams.py` (matplotlib).
+
+<!-- MERMAID-ER-START -->
+```mermaid
+%% Website database — entity-relationship diagram (app.db + choice files).
+%% Text source of website/website_er.png/.svg. Rendered live on GitHub
+%% from the ```mermaid fence in README.md.
+%% The website's own storage. bible.db (corpus) stays read-only;
+%% every word_id here points into bible.db words.
+erDiagram
+    APP_USER {
+        int user_id PK
+        string name
+        string created_at
+    }
+    TRANSLATION {
+        int translation_id PK
+        int user_id FK
+        string name
+        string description
+        string created_at
+        string updated_at
+    }
+    OTHER_OPTION {
+        int option_id PK
+        int translation_id FK
+        int idx "1-based creation order within the translation"
+        string text
+        string created_at
+    }
+    CHOICES_FILE {
+        string path PK "translation_{id}.choices"
+        int size_bytes "264217, one byte per Hebrew word"
+        int byte_offset "word_id minus 1"
+    }
+    APP_USER ||--o{ TRANSLATION : "one user, many translations"
+    TRANSLATION ||--o{ OTHER_OPTION : "multi-value Other options"
+    TRANSLATION ||--|| CHOICES_FILE : "one choice file per translation"
+```
+<!-- MERMAID-ER-END -->
+
+<!-- MERMAID-SYSTEM-START -->
+```mermaid
+%% Website — system diagram. Text source of website/website_system.png/.svg.
+%% Rendered live on GitHub from the ```mermaid fence in README.md.
+%% Three stores: bible.db is the read-only corpus;
+%% app.db + choice files hold the user's work.
+flowchart TB
+    B["Browser (Kit)<br/>verse reader: Hebrew word by word<br/>drop-down per word: KJV · Young's · Other<br/>my translations · reading view · export"]
+    F["Flask app — website/app.py<br/>GET /book /chapter /verse /word<br/>POST /choice — saves the drop-down item-number byte"]
+    DB[("bible.db — read-only corpus<br/>books · words · kjv_words · ylt_verses<br/>kjv_renderings · ylt_renderings (computed)<br/>lexicon · root_entry / root_form / root_vowel")]
+    ADB[("app.db — the user's work<br/>app_user · translation · other_option<br/>created on first run")]
+    CF[["user_data/translation_{id}.choices<br/>264,217 bytes — one byte per Hebrew word<br/>byte offset = word_id − 1<br/>0 = default · byte N = drop-down item N"]]
+    B -->|"HTTP"| F
+    F -->|"reads"| DB
+    F -->|"reads + writes"| ADB
+    F -->|"reads + writes bytes"| CF
+    DB --> DD["Drop-down data, per Hebrew word<br/>KJV renderings (word-aligned)<br/>Young's renderings (computed verse-by-verse alignment)<br/>Other: user-typed (academic pass)"]
+    ADB --> OO["Other options (multi-value)<br/>one row per custom rendering, per translation<br/>each becomes a drop-down item"]
+    CF --> BR["Byte → text resolution<br/>0 → Hebrew shown (no choice)<br/>KJV / Young's items → rendering<br/>Other items → option text"]
+```
+<!-- MERMAID-SYSTEM-END -->
