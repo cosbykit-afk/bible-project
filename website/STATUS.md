@@ -53,3 +53,19 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   renderings). ER + system diagrams redrawn (`website_diagrams.py`) showing the
   byte file. Retested end-to-end: byte file correct on disk, other_option row
   saved, verse/reading/export all resolve bytes correctly. Test data removed.
+
+## 2026-09-22 ~04:10 PT — GitHub push recovered (59854d4)
+- Push had been failing: the cleanup commit accidentally staged bible.db (175MB)
+  and four bible.db.bak-* files (76-162MB) via `git add -A` after an earlier
+  `.gitignore` overwrite dropped the `*.db` rule. GitHub rejects files >100MB.
+- Fixed: removed all five from the commit, restored the merged `.gitignore`
+  (`*.db`, `*.bak*`, `worker-out/`, `website/venv/`, `website/app.db`,
+  `website/user_data/`, `__pycache__/`, `*.pyc`).
+- Also folded in the Unlicense (public domain dedication) commit.
+- Recommitted as ONE commit on top of public 3925d68 (no history rewrite):
+  `59854d4 Byte-per-word choice index + venv removed from repo + Unlicense`.
+- Remote master verified at 59854d4: no website/venv, no bible.db or .bak files,
+  LICENSE + byte-design app/diagrams/docs all present.
+- Note: website/venv blobs remain inside the earlier public 3925d68 snapshot
+  (deleted at tip). Full history purge would need a force-push; parked unless
+  Kit wants it.
