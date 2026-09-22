@@ -74,11 +74,17 @@ items in `NOTATION_LEDGER.md`.
   UI; see U-1 for honest coverage numbers), and **other** — user-defined, for
   the academic pass.
 - Choosing word by word builds and saves the user's own translation (named
-  translations; per-word choices persist in `website/app.db`).
+  translations; per-word choices persist as **one byte per word** in
+  `website/user_data/translation_<id>.choices` — 264,217 bytes, byte at offset
+  `word_id − 1` = the selected drop-down item number, 0 = default).
+  Multi-value "Other" renderings live in `website/app.db` (`other_option` table).
 - Browse: `/` books → `/book/<n>` chapters → `/chapter/<n>/<c>` verses →
   `/verse/<n>/<c>/<v>` words. Reading view `/reading/<tid>/<n>/<c>/<v>`;
   export `/export/<tid>`; word detail `/word/<wid>` (pointed/unpointed, letters,
   root code, Strong's, renderings, contexts, verses).
 - `bible.db` is opened read-only; all user data lives in `website/app.db`
-  (`website/schema.sql`). Run: `cd website && ./venv/bin/python app.py`
+  (`app_user`, `translation`, `other_option` tables — `website/schema.sql`) plus
+  the per-translation byte files in `website/user_data/` (one byte per word;
+  git-ignored, personal data stays local).
+  Run: `cd website && ./venv/bin/python app.py`
   (port 5057). Diagrams: `website/website_er.*`, `website/website_system.*`.

@@ -1,0 +1,33 @@
+=== Loading BibleFull Bible sheet ===
+rows: 264217
+id continuity: min=1 max=264201 unique=264214 sequential=False
+canon_words.csv written: 264217 rows
+books: 39
+per-book counts: {"1": 17676, "2": 14284, "3": 10077, "4": 14137, "5": 12404, "6": 8474, "7": 8453, "8": 1133, "9": 11422, "10": 9401, "11": 11254, "12": 10377, "13": 9295, "14": 11422, "15": 3353, "16": 4642, "17": 2608, "18": 7162, "19": 17252, "20": 6078, "21": 2585, "22": 1142, "23": 15153, "24": 18509, "25": 1399, "26": 16519, "27": 5388, "28": 2112, "29": 854, "30": 1771, "31": 248, "32": 584, "33": 1250, "34": 520, "35": 609, "36": 665, "37": 492, "38": 2734, "39": 779}
+prefilled strongs: 196, translations: 126
+=== Sheet1 notes ===
+notes rows: 264235, Language=A: 4405, join check ok=39 bad=22 samples=[(205069, 23, 45, 5, 'אֲאַזֶּרְךָ֖'), (165875, 18, 33, 33, 'וַאֲאַלֶּפְךָ֥'), (163037, 18, 16, 5, 'אֲאַמִּצְכֶ֥ם'), (257479, 33, 2, 12, 'אֶאֱסֹ֜ף'), (205753, 23, 48, 9, 'אַאֲרִ֣יךְ')]
+aramaic_word_ids.txt: 4405 ids
+=== Diff vs Prophets.xlsx ===
+Prophets sheets: ['Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings ', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah-Jonah', 'Micah-Malachi']
+prophets word rows compared: 195621, exact matches: 195318 (99.845%)
+mismatches recorded: 40; verses affected: 28
+  ('DIFF', 'Joshua', 6, 1, 1, 1, 'וַיְהִ֗י', 'אַחֲרֵ֛י', 'ויהי', 'אחרי')
+  ('DIFF', 'Joshua', 6, 1, 1, 2, 'אַחֲרֵ֛י', 'מ֥וֹת', 'אחרי', 'מות')
+  ('DIFF', 'Joshua', 6, 1, 1, 3, 'מ֥וֹת', 'מֹשֶׁ֖ה', 'מות', 'משה')
+  ('DIFF', 'Joshua', 6, 1, 1, 4, 'מֹשֶׁ֖ה', 'עֶ֣בֶד', 'משה', 'עבד')
+  ('DIFF', 'Joshua', 6, 1, 1, 5, 'עֶ֣בֶד', 'יְהוָ֑ה', 'עבד', 'יהוה')
+  ('DIFF', 'Joshua', 6, 1, 1, 6, 'יְהוָ֑ה', 'וַיֹּ֤אמֶר', 'יהוה', 'ויאמר')
+  ('DIFF', 'Joshua', 6, 1, 1, 7, 'וַיֹּ֤אמֶר', 'יְהוָה֙', 'ויאמר', 'יהוה')
+  ('DIFF', 'Joshua', 6, 1, 1, 8, 'יְהוָה֙', 'אֶל־יְהוֹשֻׁ֣עַ', 'יהוה', 'אליהושע')
+  ('DIFF', 'Joshua', 6, 1, 1, 9, 'אֶל־יְהוֹשֻׁ֣עַ', 'בִּן־נ֔וּן', 'אליהושע', 'בננונ')
+  ('DIFF', 'Joshua', 6, 1, 1, 10, 'בִּן־נ֔וּן', 'מְשָׁרֵ֥ת', 'בננונ', 'משרת')
+  ('DIFF', 'Joshua', 6, 1, 1, 11, 'מְשָׁרֵ֥ת', 'מֹשֶׁ֖ה', 'משרת', 'משה')
+  ('DIFF', 'Joshua', 6, 1, 1, 12, 'מֹשֶׁ֖ה', 'לֵאמֹֽר׃', 'משה', 'לאמר')
+  ('DIFF', 'Judges', 7, 1, 1, 1, 'וַיְהִ֗י', 'אַחֲרֵי֙', 'ויהי', 'אחרי')
+  ('DIFF', 'Judges', 7, 1, 1, 2, 'אַחֲרֵי֙', 'מ֣וֹת', 'אחרי', 'מות')
+  ('DIFF', 'Judges', 7, 1, 1, 3, 'מ֣וֹת', 'יְהוֹשֻׁ֔עַ', 'מות', 'יהושע')
+JUNK: Psalms: 62 columns (expected <=13); extra columns ignored as junk
+JUNK: Hosea: 1024 columns (expected <=13); extra columns ignored as junk
+sheet rows/cols: {"Joshua": [8473, 13], "Judges": [8452, 12], "Ruth": [1131, 12], "1 Samuel": [11422, 13], "2 Samuel": [9402, 13], "1 Kings ": [11253, 13], "2 Kings": [10376, 13], "1 Chronicles": [9295, 13], "2 Chronicles": [11421, 12], "Ezra": [3353, 12], "Nehemiah": [4641, 13], "Esther": [2607, 12], "Job": [7161, 13], "Psalms": [17254, 62], "Proverbs": [6077, 13], "Ecclesiastes": [2584, 13], "Song of Solomon": [1141, 12], "Isaiah": [15152, 13], "Jeremiah": [18508, 13], "Lamentations": [1398, 12], "Ezekiel": [16518, 13], "Daniel": [5387, 13], "Hosea": [2111, 1024], "Joel": [853, 12], "Amos": [1770, 12], "Obadiah-Jonah": [831, 12], "Micah-Malachi": [7050, 13]}
+prophets books present (sampled): {"6": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "17": 1, "18": 1, "19": 1, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 1, "26": 1, "27": 1, "28": 1, "29": 1, "30": 1, "31": 1, "33": 1}

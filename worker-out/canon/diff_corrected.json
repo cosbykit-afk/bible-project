@@ -1,0 +1,135 @@
+{
+  "compared": 195638,
+  "exact": 195637,
+  "pct": 99.99948885185904,
+  "mismatches": 1,
+  "verses_affected": 1,
+  "junk": [
+    "Psalms: 62 columns; only first 13 used, rest ignored as junk",
+    "Hosea: 1024 columns; only first 13 used, rest ignored as junk"
+  ],
+  "sheet_info": {
+    "Joshua": [
+      8474,
+      13
+    ],
+    "Judges": [
+      8453,
+      12
+    ],
+    "Ruth": [
+      1132,
+      12
+    ],
+    "1 Samuel": [
+      11423,
+      13
+    ],
+    "2 Samuel": [
+      9403,
+      13
+    ],
+    "1 Kings ": [
+      11254,
+      13
+    ],
+    "2 Kings": [
+      10377,
+      13
+    ],
+    "1 Chronicles": [
+      9296,
+      13
+    ],
+    "2 Chronicles": [
+      11422,
+      12
+    ],
+    "Ezra": [
+      3354,
+      12
+    ],
+    "Nehemiah": [
+      4642,
+      13
+    ],
+    "Esther": [
+      2608,
+      12
+    ],
+    "Job": [
+      7162,
+      13
+    ],
+    "Psalms": [
+      17255,
+      62
+    ],
+    "Proverbs": [
+      6078,
+      13
+    ],
+    "Ecclesiastes": [
+      2585,
+      13
+    ],
+    "Song of Solomon": [
+      1142,
+      12
+    ],
+    "Isaiah": [
+      15153,
+      13
+    ],
+    "Jeremiah": [
+      18509,
+      13
+    ],
+    "Lamentations": [
+      1399,
+      12
+    ],
+    "Ezekiel": [
+      16519,
+      13
+    ],
+    "Daniel": [
+      5388,
+      13
+    ],
+    "Hosea": [
+      2112,
+      1024
+    ],
+    "Joel": [
+      854,
+      12
+    ],
+    "Amos": [
+      1771,
+      12
+    ],
+    "Obadiah-Jonah": [
+      832,
+      12
+    ],
+    "Micah-Malachi": [
+      7051,
+      13
+    ]
+  },
+  "mismatch_samples": [
+    [
+      "DIFF",
+      "2 Kings",
+      12,
+      17,
+      15,
+      12,
+      "וַיֵּ֨לְכ֜וּ",
+      "וַיֵּ֨לְכ֜וּ",
+      "וילכו",
+      "וילכוצ"
+    ]
+  ]
+}

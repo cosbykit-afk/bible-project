@@ -1,4 +1,8 @@
 *.db
-worker-out/
-__pycache__/
 *.bak*
+worker-out/
+website/venv/
+website/app.db
+website/user_data/
+__pycache__/
+*.pyc

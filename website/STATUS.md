@@ -5,8 +5,12 @@ Spec (Kit, 2026-09-22): drop-down over each Hebrew word — KJV rendering, Young
 Other (user-defined, the academic pass). Browse book → chapter → verse → words.
 Choosing word by word builds and saves his translation.
 
-Corpus `bible.db` stays READ-ONLY. Website's own database `app.db` holds
-`app_user`, `translation`, `translation_choice` (UNIQUE(translation_id, word_id)).
+Corpus `bible.db` stays READ-ONLY. Website storage:
+- `app.db`: `app_user`, `translation`, `other_option` (multi-value "Other" renderings).
+- `user_data/translation_<id>.choices`: ONE BYTE PER WORD (264,217 bytes),
+  byte at offset (word_id − 1). Byte = drop-down item number selected:
+  0 = default (no choice); rest index into the word's drop-down list rebuilt
+  identically as [KJV renderings | Young's-computed renderings | Other options].
 
 ## Log
 
@@ -41,3 +45,11 @@ Corpus `bible.db` stays READ-ONLY. Website's own database `app.db` holds
   translation, saved KJV + Other choices, verified persistence (2 checks),
   reading view composes, export downloads, word detail renders. Test data
   removed (app.db deleted; recreated on first run).
+- 2026-09-22 ~03:45 PT (Kit's directive: "a byte per word"): choice storage
+  redesigned from SQL rows to a flat index file — `user_data/translation_<id>.choices`,
+  264,217 bytes, byte at offset (word_id − 1) = selected drop-down item number
+  (0 = default; rest index into [KJV | Young's-computed | Other options]).
+  `translation_choice` table replaced by `other_option` (multi-value Other
+  renderings). ER + system diagrams redrawn (`website_diagrams.py`) showing the
+  byte file. Retested end-to-end: byte file correct on disk, other_option row
+  saved, verse/reading/export all resolve bytes correctly. Test data removed.

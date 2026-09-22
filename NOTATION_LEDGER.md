@@ -131,19 +131,28 @@ code `root_code = root_id.root_form_seq.root_vowel_seq`.
   book → chapter → verse → words; choosing word by word builds and saves his
   translation.
 - `website/schema.sql`: `app.db` holds `app_user`, `translation`,
-  `translation_choice(choice_id, translation_id, word_id, chosen_source,
-  chosen_text, updated_at)` with `chosen_source IN ('kjv','ylt','other')` and
-  `UNIQUE(translation_id, word_id)`. `bible.db` opened read-only; `word_id` is a
-  logical cross-db reference enforced by application code.
+  `other_option(option_id, translation_id, idx, text, created_at)` — the
+  multi-value "Other" renderings. Per-word choices are NOT rows: each
+  translation gets `website/user_data/translation_<id>.choices`, ONE BYTE PER
+  WORD (264,217 bytes), byte at offset (word_id − 1). Byte = drop-down item
+  number selected: 0 = default (no choice); rest index into the word's
+  drop-down rebuilt identically as [KJV renderings | Young's-computed
+  renderings | this translation's Other options] (Kit's spec, 2026-09-22).
+  `bible.db` opened read-only; `word_id` is a logical cross-db reference
+  enforced by application code. Note: byte meaning is per-word (item lists
+  differ per word); if corpus renderings are ever recomputed, stored bytes
+  may point at different items (stale bytes fall back to default).
 - `website/app.py` (Flask, port 5057): `/` books; `/book/<n>` chapters;
   `/chapter/<n>/<c>` verses; `/verse/<n>/<c>/<v>` words with per-word
   KJV/Young's-computed/Other dropdown + save; `POST /choice`; `/translations`
   create/select; `/reading/<tid>/<n>/<c>/<v>`; `/export/<tid>` (text download);
   `/word/<wid>` detail (pointed/unpointed, letters, root code, Strong's, KJV/YLT
   renderings, lexicon contexts, found verses).
-- Tested locally end-to-end 2026-09-22: all routes 200; translation created;
-  KJV + Other choices saved and persisted; reading view composes; export
-  downloads; word detail renders. Test data removed.
+- Tested locally end-to-end 2026-09-22 (byte-file design): all routes 200;
+  translation created; KJV item byte + new multi-value Other option saved;
+  verified on disk (264,217-byte file, correct bytes at word offsets,
+  `other_option` row); verse page re-renders selected items; reading view
+  composes; export downloads. Test data removed (`app.db`, `user_data/`).
 - Diagrams: `website/website_er.png`/`.svg`, `website/website_system.png`/`.svg`
   (builder `website_diagrams.py`); status log `website/STATUS.md` (read by the
   morning report).

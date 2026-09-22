@@ -1,0 +1,40 @@
+1	GEN	Genesis	1533
+2	EXO	Exodus	1213
+3	LEV	Leviticus	859
+4	NUM	Numbers	1288
+5	DEU	Deuteronomy	959
+6	JOS	Joshua	658
+7	JDG	Judges	618
+8	RUT	Ruth	85
+9	1SA	1 Samuel	810
+10	2SA	2 Samuel	695
+11	1KI	1 Kings	816
+12	2KI	2 Kings	719
+13	1CH	1 Chronicles	942
+14	2CH	2 Chronicles	822
+15	EZR	Ezra	280
+16	NEH	Nehemiah	406
+17	EST	Esther	167
+18	JOB	Job	1070
+19	PSA	Psalms	2461
+20	PRO	Proverbs	915
+21	ECC	Ecclesiastes	222
+22	SNG	Song of Solomon	117
+23	ISA	Isaiah	1292
+24	JER	Jeremiah	1364
+25	LAM	Lamentations	154
+26	EZK	Ezekiel	1273
+27	DAN	Daniel	357
+28	HOS	Hosea	197
+29	JOL	Joel	73
+30	AMO	Amos	146
+31	OBA	Obadiah	21
+32	JON	Jonah	48
+33	MIC	Micah	105
+34	NAM	Nahum	47
+35	HAB	Habakkuk	56
+36	ZEP	Zephaniah	53
+37	HAG	Haggai	38
+38	ZEC	Zechariah	211
+39	MAL	Malachi	55
+TOTAL			23145

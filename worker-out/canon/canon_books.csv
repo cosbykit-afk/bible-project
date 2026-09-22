@@ -1,0 +1,40 @@
+book_num,name_en,name_he
+1,Genesis,בראשית
+2,Exodus,שמות
+3,Leviticus,ויקרא
+4,Numbers,במדבר
+5,Deuteronomy,דברים
+6,Joshua,יהושע
+7,Judges,שופטים
+8,Ruth,רות
+9,1 Samuel,שמואל א
+10,2 Samuel,שמואל ב
+11,1 Kings,מלכים א
+12,2 Kings,מלכים ב
+13,1 Chronicles,דברי הימים א
+14,2 Chronicles,דברי הימים ב
+15,Ezra,עזרא
+16,Nehemiah,נחמיה
+17,Esther,אסתר
+18,Job,איוב
+19,Psalms,תהלים
+20,Proverbs,משלי
+21,Ecclesiastes,קהלת
+22,The Song of Solomon,שיר השירים
+23,Isaiah,ישעיה
+24,Jeremiah,ירמיה
+25,Lamentations,איכה
+26,Ezekiel,יחזקאל
+27,Daniel,דניאל
+28,Hosea,הושע
+29,Joel,יואל
+30,Amos,עמוס
+31,Obadiah,עבדיה
+32,Jonah,יונה
+33,Micah,מיכה
+34,Nahum,נחום
+35,Habakkuk,חבקוק
+36,Zephaniah,צפניה
+37,Haggai,חגי
+38,Zechariah,זכריה
+39,Malachi,מלאכי

@@ -2,11 +2,18 @@
 """Bible translation-builder website.
 
 - bible.db is opened READ-ONLY (corpus: Hebrew words, KJV/YLT data, lexicon).
-- website/app.db holds users, named translations, and per-word choices.
-- Per Hebrew word, the verse page offers a drop-down: KJV rendering,
-  Young's rendering (COMPUTED via KJV-bridge alignment -- labeled as such),
-  or Other (user-defined). Choices are saved per named translation.
+- website/app.db holds users, named translations, and multi-value "Other"
+  rendering options.
+- Per-word choices live in a flat index file per translation:
+  website/user_data/translation_<id>.choices -- 264,217 bytes, ONE BYTE PER
+  WORD, byte at offset (word_id - 1). The byte is the item number of the
+  word's drop-down that was selected: 0 = default (no choice); the rest
+  index into the word's drop-down list, rebuilt identically on every call
+  as [KJV renderings | Young's-computed renderings | this translation's
+  Other options]. "Other" is multi-value: every custom rendering the user
+  adds becomes a new drop-down item.
 """
+import html
 import os
 import sqlite3
 from flask import Flask, request, redirect, url_for, render_template_string, jsonify, Response, g
@@ -60,11 +67,72 @@ def current_translation():
             return r
     return None
 
-def translation_choices(tid):
-    rows = appdb().execute(
-        'SELECT word_id, chosen_source, chosen_text FROM translation_choice WHERE translation_id=?',
-        (tid,)).fetchall()
-    return {r['word_id']: (r['chosen_source'], r['chosen_text']) for r in rows}
+# ---------------------------------------------------------------- choice index: 1 byte per word
+# Each translation gets a flat file website/user_data/translation_<id>.choices:
+# 264,217 bytes, byte at offset (word_id - 1). The byte is the item number of
+# the word's drop-down that was selected: 0 = default (no choice); the rest
+# index into dropdown_items(word), rebuilt identically on every call as
+# [KJV renderings | Young's-computed renderings | this translation's Other
+# options]. "Other" is multi-value: each custom rendering the user adds
+# becomes a row in other_option and a new drop-down item.
+N_WORDS = 264217
+USER_DATA = os.path.join(BASE, 'user_data')
+MAX_ITEMS = 255    # must fit in one byte
+MAX_OTHERS = 230   # headroom so KJV + Young's items always fit in the byte
+
+def choices_path(tid):
+    return os.path.join(USER_DATA, f'translation_{tid}.choices')
+
+def read_choices(tid):
+    """Whole choice file as a mutable bytearray (zeros = all default)."""
+    p = choices_path(tid)
+    if not os.path.exists(p):
+        return bytearray(N_WORDS)
+    with open(p, 'rb') as f:
+        data = f.read()
+    if len(data) < N_WORDS:
+        data += b'\x00' * (N_WORDS - len(data))
+    return bytearray(data[:N_WORDS])
+
+def write_choice(tid, word_id, val):
+    os.makedirs(USER_DATA, exist_ok=True)
+    p = choices_path(tid)
+    if not os.path.exists(p):
+        with open(p, 'wb') as f:
+            f.write(b'\x00' * N_WORDS)
+    with open(p, 'r+b') as f:
+        f.seek(word_id - 1)
+        f.write(bytes([val & 0xFF]))
+
+def other_options(tid):
+    return appdb().execute(
+        'SELECT * FROM other_option WHERE translation_id=? ORDER BY idx', (tid,)).fetchall()
+
+def dropdown_items(w, others):
+    """The word's drop-down list, built identically on every call. The list
+    index IS the byte value stored in the choices file (0 = default)."""
+    items = [('— default —', None)]
+    for t in split_renderings(w['kjv_renderings'])[:12]:
+        items.append((f'KJV: {t}', t))
+    for t in split_renderings(w['ylt_renderings_computed'])[:12]:
+        items.append((f"Young's (computed): {t}", t))
+    for o in others:
+        items.append((f"Other: {o['text']}", o['text']))
+    return items[:MAX_ITEMS]
+
+def word_with_lex(wid):
+    return bible().execute('''SELECT w.*, l.kjv_renderings, l.ylt_renderings_computed
+                              FROM words w LEFT JOIN lexicon l
+                                ON l.root_id=w.root_id AND l.root_form_seq=w.root_form_seq
+                                   AND l.vowel_seq=w.root_vowel_seq
+                              WHERE w.word_id=?''', (wid,)).fetchone()
+
+def resolve_choice(w, others, byte):
+    """Byte -> chosen rendering text, or None for default/stale."""
+    items = dropdown_items(w, others)
+    if 0 < byte < len(items):
+        return items[byte][1]
+    return None
 
 NAV = '''
 <div style="margin:10px 0;padding:8px;background:#f4f1e8;border:1px solid #ccc">
@@ -131,39 +199,32 @@ def verse(n, c, v):
                               AND l.vowel_seq=w.root_vowel_seq
                          WHERE w.book=? AND w.chapter=? AND w.verse=?
                          ORDER BY w.word_pos''', (n, c, v)).fetchall()
-    choices = translation_choices(trans['translation_id']) if trans else {}
+    tid = trans['translation_id'] if trans else None
+    choice_bytes = read_choices(tid) if tid else None
+    others = other_options(tid) if tid else []
     parts = []
     if not trans:
         parts.append('<p><b><a href="/translations">Pick or create a translation</a></b> '
                      'to start choosing word renderings.</p>')
     for w in words:
         wid = w['word_id']
-        kjv_opts = split_renderings(w['kjv_renderings'])
-        ylt_opts = split_renderings(w['ylt_renderings_computed'])
-        cur_src, cur_txt = choices.get(wid, ('', ''))
+        items = dropdown_items(w, others)
+        cur = choice_bytes[wid - 1] if choice_bytes is not None else 0
+        if cur >= len(items):
+            cur = 0  # stale byte (corpus data changed since) -> default
         opts = []
-        for t in kjv_opts[:12]:
-            sel = ' selected' if cur_src == 'kjv' and cur_txt == t else ''
-            opts.append(f'<option value="kjv|{t}"{sel}>KJV: {t}</option>')
-        for t in ylt_opts[:12]:
-            sel = ' selected' if cur_src == 'ylt' and cur_txt == t else ''
-            opts.append(f'<option value="ylt|{t}"{sel}>Young\u2019s (computed): {t}</option>')
-        sel_other = ' selected' if cur_src == 'other' else ''
-        opts.append(f'<option value="other|"{sel_other}>Other\u2026</option>')
-        if not cur_src:
-            opts.insert(0, '<option value="" selected>\u2014 choose \u2014</option>')
-        other_val = cur_txt if cur_src == 'other' else ''
+        for i, (label, _text) in enumerate(items):
+            sel = ' selected' if i == cur else ''
+            opts.append(f'<option value="{i}"{sel}>{html.escape(label)}</option>')
         ctl = ''
         if trans:
             ctl = f'''<form method="post" action="/choice{tqs(trans)}" style="display:inline">
 <input type="hidden" name="word_id" value="{wid}">
 <input type="hidden" name="next" value="/verse/{n}/{c}/{v}{tqs(trans)}">
-<select name="choice" onchange="this.form.other_txt.style.display =
-  this.value.startsWith('other|')?'inline':'none'">{''.join(opts)}</select>
-<input type="text" name="other_txt" placeholder="your rendering" value="{other_val}"
-  style="display:{'inline' if cur_src=='other' else 'none'}">
+<select name="item">{''.join(opts)}</select>
+<input type="text" name="other_txt" placeholder="new Other rendering (optional)">
 <button type="submit">save</button>
-{'<span class="saved">\u2713</span>' if cur_src else ''}
+{'<span class="saved">\u2713</span>' if cur else ''}
 </form>'''
         parts.append(f'''<div class="wordbox"><span class="heb">{w['word_pointed'] or w['word_unpointed']}</span>
  <a href="/word/{wid}{tqs(trans)}" style="font-size:.85em">detail</a><br>{ctl}</div>''')
@@ -175,31 +236,42 @@ def verse(n, c, v):
 
 @app.route('/choice', methods=['POST'])
 def choice():
+    """Save one byte: the selected drop-down item number for the word.
+    A non-empty other_txt adds a new multi-value Other option first."""
     trans = current_translation()
     if not trans:
         return 'No translation selected', 400
+    tid = trans['translation_id']
     wid = int(request.form['word_id'])
-    raw = request.form.get('choice', '')
-    if raw.startswith('other|'):
-        src, txt = 'other', request.form.get('other_txt', '').strip()
-    elif '|' in raw:
-        src, txt = raw.split('|', 1)
-    else:
-        src, txt = '', ''
     db = appdb()
-    if not txt:
-        db.execute('DELETE FROM translation_choice WHERE translation_id=? AND word_id=?',
-                   (trans['translation_id'], wid))
+    new_other = request.form.get('other_txt', '').strip()
+    others = other_options(tid)
+    if new_other:
+        match = next((o for o in others if o['text'] == new_other), None)
+        if match is None:
+            if len(others) >= MAX_OTHERS:
+                return f'Other-option limit reached ({MAX_OTHERS})', 400
+            idx = max([o['idx'] for o in others] + [0]) + 1
+            db.execute('INSERT INTO other_option(translation_id, idx, text) VALUES (?,?,?)',
+                       (tid, idx, new_other))
+            db.commit()
+            others = other_options(tid)
+    w = word_with_lex(wid)
+    if not w:
+        return 'Unknown word', 404
+    items = dropdown_items(w, others)
+    if new_other:
+        item = next(i for i, (lab, txt) in enumerate(items)
+                    if txt == new_other and lab.startswith('Other:'))
     else:
-        db.execute('''INSERT INTO translation_choice(translation_id, word_id, chosen_source, chosen_text)
-                      VALUES(?,?,?,?)
-                      ON CONFLICT(translation_id, word_id)
-                      DO UPDATE SET chosen_source=excluded.chosen_source,
-                                    chosen_text=excluded.chosen_text,
-                                    updated_at=datetime('now')''',
-                   (trans['translation_id'], wid, src, txt))
-        db.execute("UPDATE translation SET updated_at=datetime('now') WHERE translation_id=?",
-                   (trans['translation_id'],))
+        try:
+            item = int(request.form.get('item', '0'))
+        except ValueError:
+            item = 0
+        if not 0 <= item < len(items):
+            item = 0
+    write_choice(tid, wid, item)
+    db.execute("UPDATE translation SET updated_at=datetime('now') WHERE translation_id=?", (tid,))
     db.commit()
     return redirect(request.form.get('next', '/'))
 
@@ -221,11 +293,17 @@ def translations():
         return redirect(f'/translations?t={cur.lastrowid}')
     trans = current_translation()
     rows = db.execute('SELECT * FROM translation ORDER BY updated_at DESC').fetchall()
-    items = ''.join(
-        f'<li><a href="/verse/1/1/1?t={r["translation_id"]}">{r["name"]}</a>'
-        f' <span style="color:#666">{r["description"]} (updated {r["updated_at"]})</span>'
-        f' | <a href="/export/{r["translation_id"]}">export</a></li>' for r in rows)
-    body = f'''<ul>{items}</ul>
+    items = []
+    for r in rows:
+        tid = r['translation_id']
+        n_chosen = sum(1 for x in read_choices(tid) if x) if os.path.exists(choices_path(tid)) else 0
+        n_other = db.execute('SELECT COUNT(*) c FROM other_option WHERE translation_id=?', (tid,)).fetchone()['c']
+        items.append(
+            f'<li><a href="/verse/1/1/1?t={tid}">{html.escape(r["name"])}</a>'
+            f' <span style="color:#666">{html.escape(r["description"])}'
+            f' (updated {r["updated_at"]}; {n_chosen} words chosen, {n_other} Other options)</span>'
+            f' | <a href="/export/{tid}">export</a></li>')
+    body = f'''<ul>{''.join(items)}</ul>
 <h2>New translation</h2>
 <form method="post"><input type="text" name="name" placeholder="name">
 <input type="text" name="description" placeholder="description">
@@ -237,18 +315,24 @@ def reading(tid, n, c, v):
     trans = appdb().execute('SELECT * FROM translation WHERE translation_id=?', (tid,)).fetchone()
     if not trans:
         return 'Unknown translation', 404
-    choices = translation_choices(tid)
+    choices = read_choices(tid)
+    others = other_options(tid)
     words = bible().execute(
-        'SELECT word_id, word_pointed, word_unpointed FROM words WHERE book=? AND chapter=? AND verse=? ORDER BY word_pos',
+        '''SELECT w.word_id, w.word_pointed, w.word_unpointed,
+                  l.kjv_renderings, l.ylt_renderings_computed
+           FROM words w LEFT JOIN lexicon l
+             ON l.root_id=w.root_id AND l.root_form_seq=w.root_form_seq
+                AND l.vowel_seq=w.root_vowel_seq
+           WHERE w.book=? AND w.chapter=? AND w.verse=? ORDER BY w.word_pos''',
         (n, c, v)).fetchall()
     out = []
     for w in words:
-        ch = choices.get(w['word_id'])
-        if ch:
-            src, txt = ch
-            out.append(f'<span title="{src}: {w["word_pointed"] or w["word_unpointed"]}">{txt}</span>')
+        txt = resolve_choice(w, others, choices[w['word_id'] - 1])
+        heb = w['word_pointed'] or w['word_unpointed']
+        if txt:
+            out.append(f'<span title="{html.escape(heb)}">{html.escape(txt)}</span>')
         else:
-            out.append(f'<span class="heb" title="no choice yet">{w["word_pointed"] or w["word_unpointed"]}</span>')
+            out.append(f'<span class="heb" title="no choice yet">{heb}</span>')
     body = f'<p style="font-size:1.3em">{" ".join(out)}</p>'
     body += f'<p><a href="/verse/{n}/{c}/{v}?t={tid}">back to verse</a></p>'
     return render(f'{trans["name"]} — {book_name(n)} {c}:{v}', body, trans)
@@ -258,18 +342,24 @@ def export(tid):
     trans = appdb().execute('SELECT * FROM translation WHERE translation_id=?', (tid,)).fetchone()
     if not trans:
         return 'Unknown translation', 404
-    choices = translation_choices(tid)
+    choices = read_choices(tid)
+    others = other_options(tid)
     b = bible()
     lines = [f'# {trans["name"]}', f'# {trans["description"]}', '']
     verses = b.execute('''SELECT DISTINCT book, chapter, verse FROM words ORDER BY book, chapter, verse''').fetchall()
     for vr in verses:
         words = b.execute(
-            'SELECT word_id, word_pointed, word_unpointed FROM words WHERE book=? AND chapter=? AND verse=? ORDER BY word_pos',
+            '''SELECT w.word_id, w.word_pointed, w.word_unpointed,
+                      l.kjv_renderings, l.ylt_renderings_computed
+               FROM words w LEFT JOIN lexicon l
+                 ON l.root_id=w.root_id AND l.root_form_seq=w.root_form_seq
+                    AND l.vowel_seq=w.root_vowel_seq
+               WHERE w.book=? AND w.chapter=? AND w.verse=? ORDER BY w.word_pos''',
             (vr['book'], vr['chapter'], vr['verse'])).fetchall()
         parts = []
         for w in words:
-            ch = choices.get(w['word_id'])
-            parts.append(ch[1] if ch else f'[{w["word_pointed"] or w["word_unpointed"]}]')
+            txt = resolve_choice(w, others, choices[w['word_id'] - 1])
+            parts.append(txt if txt else f'[{w["word_pointed"] or w["word_unpointed"]}]')
         lines.append(f'{book_name(vr["book"])} {vr["chapter"]}:{vr["verse"]}\n{" ".join(parts)}\n')
     return Response('\n'.join(lines), mimetype='text/plain',
                     headers={'Content-Disposition': f'attachment; filename=translation_{tid}.txt'})

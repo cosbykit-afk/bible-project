@@ -19,14 +19,20 @@ CREATE TABLE translation(
 );
 CREATE INDEX idx_translation_user ON translation(user_id);
 
-CREATE TABLE translation_choice(
-  choice_id     INTEGER PRIMARY KEY,
+-- Per-word choices are NOT rows here. Each translation gets a flat file
+-- website/user_data/translation_<id>.choices: 264,217 bytes, one byte per word,
+-- byte at offset (word_id - 1). The byte is the item number of the word's
+-- drop-down that was selected: 0 = default (no choice); the rest index into
+-- the word's drop-down list built as [KJV renderings | Young's renderings |
+-- this translation's Other options]. "Other" is multi-value: each custom
+-- rendering the user adds becomes a row below and a new drop-down item.
+CREATE TABLE other_option(
+  option_id     INTEGER PRIMARY KEY,
   translation_id INTEGER NOT NULL REFERENCES translation(translation_id)
     ON DELETE CASCADE,
-  word_id       INTEGER NOT NULL,  -- -> bible.db.words(word_id), app-enforced
-  chosen_source TEXT NOT NULL CHECK(chosen_source IN ('kjv','ylt','other')),
-  chosen_text   TEXT NOT NULL,
-  updated_at    TEXT NOT NULL DEFAULT (datetime('now')),
-  UNIQUE(translation_id, word_id)
+  idx           INTEGER NOT NULL,  -- 1-based creation order within the translation
+  text          TEXT NOT NULL,
+  created_at    TEXT NOT NULL DEFAULT (datetime('now')),
+  UNIQUE(translation_id, idx)
 );
-CREATE INDEX idx_choice_translation ON translation_choice(translation_id);
+CREATE INDEX idx_other_translation ON other_option(translation_id);
