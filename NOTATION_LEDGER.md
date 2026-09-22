@@ -124,9 +124,33 @@ code `root_code = root_id.root_form_seq.root_vowel_seq`.
   `found_verses` (the verse references, `;`-separated, canonical order).
   Builder: `build_lexicon.py`.
 
-## 9. Unresolved items
+## 9. Website implementation (2026-09-22)
 
-- **U-1** (2026-09-20): YLT word-level alignment — verse-level is certain; word-level is best-effort. Update 2026-09-21: verse-level confirmed in DB (`ylt_verses`, 23,145 rows). Word-level remains best-effort; still open.
+- Spec (Kit): drop-down over each Hebrew word — KJV rendering, Young's rendering
+  (COMPUTED, labeled as such), Other (user-defined, the academic pass). Browse
+  book → chapter → verse → words; choosing word by word builds and saves his
+  translation.
+- `website/schema.sql`: `app.db` holds `app_user`, `translation`,
+  `translation_choice(choice_id, translation_id, word_id, chosen_source,
+  chosen_text, updated_at)` with `chosen_source IN ('kjv','ylt','other')` and
+  `UNIQUE(translation_id, word_id)`. `bible.db` opened read-only; `word_id` is a
+  logical cross-db reference enforced by application code.
+- `website/app.py` (Flask, port 5057): `/` books; `/book/<n>` chapters;
+  `/chapter/<n>/<c>` verses; `/verse/<n>/<c>/<v>` words with per-word
+  KJV/Young's-computed/Other dropdown + save; `POST /choice`; `/translations`
+  create/select; `/reading/<tid>/<n>/<c>/<v>`; `/export/<tid>` (text download);
+  `/word/<wid>` detail (pointed/unpointed, letters, root code, Strong's, KJV/YLT
+  renderings, lexicon contexts, found verses).
+- Tested locally end-to-end 2026-09-22: all routes 200; translation created;
+  KJV + Other choices saved and persisted; reading view composes; export
+  downloads; word detail renders. Test data removed.
+- Diagrams: `website/website_er.png`/`.svg`, `website/website_system.png`/`.svg`
+  (builder `website_diagrams.py`); status log `website/STATUS.md` (read by the
+  morning report).
+
+## 10. Unresolved items
+
+- **U-1** (2026-09-20): YLT word-level alignment — verse-level is certain; word-level is best-effort. Update 2026-09-21: verse-level confirmed in DB (`ylt_verses`, 23,145 rows). Update 2026-09-22: computed word-level alignment COMPLETE (`build_ylt_align.py`, exit 0): `ylt_renderings(word_id, ylt_word, ylt_word_pos)`, 259,171 rows; 23,006 verses; 36.0% of YLT tokens mapped; 43.6% of Hebrew words hit. Honest coverage measured (`measure_ylt_coverage.py`): per-book hit 26.8%–52.9%; 56.8% of Hebrew words have no YLT (59.2% of misses unbridgeable — blank Strong's); 65.1% of hit words map to >1 distinct YLT word; spot-checks show real errors (H3068→"from"). Status: COMPUTED best-effort, NOT authoritative. Lexicon carries it as `ylt_renderings_computed` (62,323/126,869 rows, 49.1%), labeled computed in the website UI.
 - **U-2** (2026-09-20): Prophets.ods Psalms sheet (62 cols, stray `]צ`, trailing numbers) and Hosea sheet (1024 cols, stray values) contain junk columns. Closed 2026-09-21: extra columns ignored as junk in the ingest (canon_report.json); Prophets sheets matched the canonical list at 99.85%.
 - **U-3** (2026-09-20): Canonical word source undecided — BibleFull's Bible sheet vs Prophets.ods per-book sheets. Closed 2026-09-21: BibleFull's Bible sheet is canonical (264,217 rows); Prophets.ods used as a check.
 - **U-4** (2026-09-20): `Var` and `Notes` columns in the notes sheet have no documented meaning yet. Kit to define, or drop.

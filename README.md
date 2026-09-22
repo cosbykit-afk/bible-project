@@ -63,5 +63,22 @@ files don't) — see `oshb_crosswalk_report.json`.
 
 ## Status
 
-Database built; website not yet started. Open items are tracked as `U-`
+Database built; website built and tested locally (2026-09-22). Open items are tracked as `U-`
 items in `NOTATION_LEDGER.md`.
+
+## Website (built 2026-09-22, Flask + SQLite)
+
+- Over each Hebrew word: a drop-down box for choosing that word's rendering.
+- Drop-down options: the **KJV** rendering, the **Young's** rendering
+  (COMPUTED via KJV-bridge word alignment — labeled "Young's (computed)" in the
+  UI; see U-1 for honest coverage numbers), and **other** — user-defined, for
+  the academic pass.
+- Choosing word by word builds and saves the user's own translation (named
+  translations; per-word choices persist in `website/app.db`).
+- Browse: `/` books → `/book/<n>` chapters → `/chapter/<n>/<c>` verses →
+  `/verse/<n>/<c>/<v>` words. Reading view `/reading/<tid>/<n>/<c>/<v>`;
+  export `/export/<tid>`; word detail `/word/<wid>` (pointed/unpointed, letters,
+  root code, Strong's, renderings, contexts, verses).
+- `bible.db` is opened read-only; all user data lives in `website/app.db`
+  (`website/schema.sql`). Run: `cd website && ./venv/bin/python app.py`
+  (port 5057). Diagrams: `website/website_er.*`, `website/website_system.*`.
