@@ -97,3 +97,23 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   mermaid-cli (first attempt needed a --no-sandbox puppeteer config since the
   sandbox runs as root). ER diagram visually inspected; system diagram SVG
   node/edge/label text inspected. GitHub will render the README embeds live.
+
+## 2026-09-24 — U-1 alignment improvement (re-measured)
+- Gold set `eval/ylt_gold.tsv`: 30 hand-aligned verses (Gen 1:1–12, Ps 23:1–6,
+  Isa 53:1–12), 335 Hebrew words, 770 expected pairs; validated 0 errors.
+- `build_ylt_align.py --eval`: baseline precision 0.6911 / recall 0.4766;
+  anchored bridge precision 0.7941 / recall 0.4506; propagated variant tied
+  (0.7941 / 0.4506) with zero propagated predictions on the gold set.
+- Winner re-run over all 23,006 verses (exit 0): 337,601 `ylt_renderings` rows;
+  propagation fired 0 times corpus-wide, so every row is labeled `bridged`
+  (the shipped table is the anchored bridge).
+- H3068 divine-name check on the gold set: 0 drift pairs under the anchored
+  bridge (baseline: 1). Misses remain (recall gaps, not mis-maps).
+- Honest re-measurement (`measure_ylt_coverage.py`): 325,284/575,877 YLT tokens
+  mapped (56.4850%); 171,065/252,495 Hebrew words hit (67.7499%); per-book hit
+  41.25% (Psalms) – 77.81% (Ezra); 81,430 misses, 5,718 = 7.0220% unbridgeable
+  by Strong's; 60.6875% of hit words map to >1 distinct YLT word.
+- `lexicon.ylt_renderings_computed` rebuilt via build_roots3.py →
+  build_lexicon.py → build_lexicon_ylt.py: 95,967/126,869 rows (75.6426%).
+- Website label "Young's (computed)" unchanged (drop-down + word detail page).
+  Corpus stays READ-ONLY. Status: COMPUTED best-effort, NOT authoritative.

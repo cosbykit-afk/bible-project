@@ -28,9 +28,10 @@ readers pick word by word and save their own translation.
 | Table | Rows | Notes |
 |---|---|---|
 | `words` | 264,217 | One row per Hebrew/Aramaic token; morphology parsed; Strong's via OSHB crosswalk |
-| `kjv_renderings` | 409,930 | KJV word renderings aligned to Hebrew words |
+| `kjv_renderings` | 624,748 | KJV word renderings aligned to Hebrew words |
 | `kjv_words` | 610,324 | Raw KJV+Strong's word list |
 | `ylt_verses` | 23,145 | Young's Literal Translation, verse level |
+| `ylt_renderings` | 337,601 | YLT word ↔ Hebrew alignment (COMPUTED best-effort, U-1) |
 | `glosses` | 17,347 | BDB + Strong's dictionary glosses, full H1–H8674 |
 | `books` | 39 | English + Hebrew names |
 | `root_entry` | 30,087 | The project's own numbering: one row per distinct unpointed base word, Hebrew alphabetical order |
@@ -47,11 +48,11 @@ carries a `root_code` like `19247.42.1` (root מלכ, "the king" form, first
 vocalization). Strong's numbers are kept as a foreign key into the
 public-domain lexicons.
 
-Coverage: 175,449 of 264,217 words carry a Strong's number (66.4%);
-every one of those has at least one gloss. 134,625 words (50.9%) have a
-KJV rendering. 4,405 Aramaic words flagged. The remaining gap is a
-crosswalk alignment limitation (OSHB splits maqqef-joined words; Kit's
-files don't) — see `oshb_crosswalk_report.json`.
+Coverage: 258,209 of 264,217 words carry a Strong's number (97.7261%),
+every one of those has at least one gloss. 204,701 words (77.4746%) have a
+KJV rendering. 4,405 Aramaic words flagged. Strong's coverage rose via the OSHB
+crosswalk (2026-09-24); the remaining gap is a crosswalk alignment limitation
+(OSHB splits maqqef-joined words; Kit's files don't) — see `oshb_crosswalk_report.json`.
 
 ## Sources (all public domain / freely licensed)
 
@@ -65,6 +66,13 @@ files don't) — see `oshb_crosswalk_report.json`.
 
 Database built; website built and tested locally (2026-09-22). Open items are tracked as `U-`
 items in `NOTATION_LEDGER.md`.
+
+YLT word alignment (U-1, re-measured 2026-09-24): anchored-bridge method scores
+precision 0.7941 / recall 0.4506 on a 30-verse hand-aligned gold set
+(`eval/ylt_gold.tsv`, 770 pairs); corpus coverage 325,284/575,877 YLT tokens
+mapped (56.4850%), 171,065/252,495 Hebrew words hit (67.7499%), per-book
+41.25%–77.81%; `lexicon.ylt_renderings_computed` populated on 95,967/126,869
+rows (75.6426%). Computed best-effort, NOT authoritative.
 
 ## Website (built 2026-09-22, Flask + SQLite)
 
