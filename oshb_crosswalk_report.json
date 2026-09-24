@@ -2,14 +2,18 @@
   "stats": {
     "oshb_rows": 306785,
     "verses_aligned": 23212,
-    "mapped_1to1": 164358,
-    "mapped_replace": 13109,
-    "canon_tokens_unmapped": 86747,
-    "letters_match": 164358,
-    "strongs_filled": 175322,
-    "strongs_conflicts": 105,
-    "no_lemma_on_mapped": 2022,
-    "aramaic_agree": 3178,
+    "mapped_1to1": 306723,
+    "mapped_replace": 12,
+    "mapped_fallback": 81,
+    "canon_tokens_unmapped": 76,
+    "letters_match": 164375,
+    "strongs_filled": 218584,
+    "stage2_fills": 39498,
+    "split_words": 41173,
+    "split_words_mapped": 41148,
+    "strongs_conflicts": 109,
+    "no_lemma_on_mapped": 5983,
+    "aramaic_agree": 4404,
     "aramaic_oshb_not_kit": 0,
     "aramaic_kit_not_oshb": 0
   },
@@ -515,6 +519,1589 @@
       "H1"
     ]
   ],
+  "stage2_fill_samples": [
+    {
+      "word_id": 13,
+      "book": 1,
+      "chapter": 1,
+      "verse": 2,
+      "word_pos": 6,
+      "word_pointed": "עַל־פְּנֵ֣י",
+      "strongs": "H6440",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "פני",
+          "oshb_unpointed": "פני",
+          "oshb_strongs": "H6440",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 18,
+      "book": 1,
+      "chapter": 1,
+      "verse": 2,
+      "word_pos": 11,
+      "word_pointed": "עַל־פְּנֵ֥י",
+      "strongs": "H6440",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "פני",
+          "oshb_unpointed": "פני",
+          "oshb_strongs": "H6440",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 24,
+      "book": 1,
+      "chapter": 1,
+      "verse": 3,
+      "word_pos": 5,
+      "word_pointed": "וַֽיְהִי־אֽוֹר׃",
+      "strongs": "H216",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "אור",
+          "oshb_unpointed": "אור",
+          "oshb_strongs": "H216",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 27,
+      "book": 1,
+      "chapter": 1,
+      "verse": 4,
+      "word_pos": 3,
+      "word_pointed": "אֶת־הָא֖וֹר",
+      "strongs": "H216",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "האור",
+          "oshb_unpointed": "האור",
+          "oshb_strongs": "H216",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 28,
+      "book": 1,
+      "chapter": 1,
+      "verse": 4,
+      "word_pos": 4,
+      "word_pointed": "כִּי־ט֑וֹב",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 42,
+      "book": 1,
+      "chapter": 1,
+      "verse": 5,
+      "word_pos": 8,
+      "word_pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "strongs": "H6153",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ערב",
+          "oshb_unpointed": "ערב",
+          "oshb_strongs": "H6153",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 43,
+      "book": 1,
+      "chapter": 1,
+      "verse": 5,
+      "word_pos": 9,
+      "word_pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "strongs": "H1242",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "בקר",
+          "oshb_unpointed": "בקר",
+          "oshb_strongs": "H1242",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 59,
+      "book": 1,
+      "chapter": 1,
+      "verse": 7,
+      "word_pos": 3,
+      "word_pointed": "אֶת־הָרָקִיעַ֒",
+      "strongs": "H7549",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הרקיע",
+          "oshb_unpointed": "הרקיע",
+          "oshb_strongs": "H7549",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 71,
+      "book": 1,
+      "chapter": 1,
+      "verse": 7,
+      "word_pos": 15,
+      "word_pointed": "וַֽיְהִי־כֵֽן׃",
+      "strongs": "H3651",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כנ",
+          "oshb_unpointed": "כן",
+          "oshb_strongs": "H3651",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 76,
+      "book": 1,
+      "chapter": 1,
+      "verse": 8,
+      "word_pos": 5,
+      "word_pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "strongs": "H6153",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ערב",
+          "oshb_unpointed": "ערב",
+          "oshb_strongs": "H6153",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 77,
+      "book": 1,
+      "chapter": 1,
+      "verse": 8,
+      "word_pos": 6,
+      "word_pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "strongs": "H1242",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "בקר",
+          "oshb_unpointed": "בקר",
+          "oshb_strongs": "H1242",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 86,
+      "book": 1,
+      "chapter": 1,
+      "verse": 9,
+      "word_pos": 7,
+      "word_pointed": "אֶל־מָק֣וֹם",
+      "strongs": "H4725",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "אל",
+          "oshb_unpointed": "אל",
+          "oshb_strongs": "H413",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "מקומ",
+          "oshb_unpointed": "מקום",
+          "oshb_strongs": "H4725",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 90,
+      "book": 1,
+      "chapter": 1,
+      "verse": 9,
+      "word_pos": 11,
+      "word_pointed": "וַֽיְהִי־כֵֽן׃",
+      "strongs": "H3651",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כנ",
+          "oshb_unpointed": "כן",
+          "oshb_strongs": "H3651",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 101,
+      "book": 1,
+      "chapter": 1,
+      "verse": 10,
+      "word_pos": 11,
+      "word_pointed": "כִּי־טֽוֹב׃",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 117,
+      "book": 1,
+      "chapter": 1,
+      "verse": 11,
+      "word_pos": 16,
+      "word_pointed": "עַל־הָאָ֑רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 118,
+      "book": 1,
+      "chapter": 1,
+      "verse": 11,
+      "word_pos": 17,
+      "word_pointed": "וַֽיְהִי־כֵֽן׃",
+      "strongs": "H3651",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כנ",
+          "oshb_unpointed": "כן",
+          "oshb_strongs": "H3651",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 127,
+      "book": 1,
+      "chapter": 1,
+      "verse": 12,
+      "word_pos": 9,
+      "word_pointed": "עֹֽשֶׂה־פְּרִ֛י",
+      "strongs": "H6529",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "עשה",
+          "oshb_unpointed": "עשה",
+          "oshb_strongs": "H6213",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "פרי",
+          "oshb_unpointed": "פרי",
+          "oshb_strongs": "H6529",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 133,
+      "book": 1,
+      "chapter": 1,
+      "verse": 12,
+      "word_pos": 15,
+      "word_pointed": "כִּי־טֽוֹב׃",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 134,
+      "book": 1,
+      "chapter": 1,
+      "verse": 13,
+      "word_pos": 1,
+      "word_pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "strongs": "H6153",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ערב",
+          "oshb_unpointed": "ערב",
+          "oshb_strongs": "H6153",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 135,
+      "book": 1,
+      "chapter": 1,
+      "verse": 13,
+      "word_pos": 2,
+      "word_pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "strongs": "H1242",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "בקר",
+          "oshb_unpointed": "בקר",
+          "oshb_strongs": "H1242",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 159,
+      "book": 1,
+      "chapter": 1,
+      "verse": 15,
+      "word_pos": 6,
+      "word_pointed": "עַל־הָאָ֑רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 160,
+      "book": 1,
+      "chapter": 1,
+      "verse": 15,
+      "word_pos": 7,
+      "word_pointed": "וַֽיְהִי־כֵֽן׃",
+      "strongs": "H3651",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כנ",
+          "oshb_unpointed": "כן",
+          "oshb_strongs": "H3651",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 163,
+      "book": 1,
+      "chapter": 1,
+      "verse": 16,
+      "word_pos": 3,
+      "word_pointed": "אֶת־שְׁנֵ֥י",
+      "strongs": "H8147",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "שני",
+          "oshb_unpointed": "שני",
+          "oshb_strongs": "H8147",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 166,
+      "book": 1,
+      "chapter": 1,
+      "verse": 16,
+      "word_pos": 6,
+      "word_pointed": "אֶת־הַמָּא֤וֹר",
+      "strongs": "H3974",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "המאור",
+          "oshb_unpointed": "המאור",
+          "oshb_strongs": "H3974",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 170,
+      "book": 1,
+      "chapter": 1,
+      "verse": 16,
+      "word_pos": 10,
+      "word_pointed": "וְאֶת־הַמָּא֤וֹר",
+      "strongs": "H3974",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ואת",
+          "oshb_unpointed": "ואת",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "המאור",
+          "oshb_unpointed": "המאור",
+          "oshb_strongs": "H3974",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 182,
+      "book": 1,
+      "chapter": 1,
+      "verse": 17,
+      "word_pos": 7,
+      "word_pointed": "עַל־הָאָֽרֶץ׃",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 193,
+      "book": 1,
+      "chapter": 1,
+      "verse": 18,
+      "word_pos": 11,
+      "word_pointed": "כִּי־טֽוֹב׃",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 194,
+      "book": 1,
+      "chapter": 1,
+      "verse": 19,
+      "word_pos": 1,
+      "word_pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "strongs": "H6153",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ערב",
+          "oshb_unpointed": "ערב",
+          "oshb_strongs": "H6153",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 195,
+      "book": 1,
+      "chapter": 1,
+      "verse": 19,
+      "word_pos": 2,
+      "word_pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "strongs": "H1242",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "בקר",
+          "oshb_unpointed": "בקר",
+          "oshb_strongs": "H1242",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 207,
+      "book": 1,
+      "chapter": 1,
+      "verse": 20,
+      "word_pos": 10,
+      "word_pointed": "עַל־הָאָ֔רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 208,
+      "book": 1,
+      "chapter": 1,
+      "verse": 20,
+      "word_pos": 11,
+      "word_pointed": "עַל־פְּנֵ֖י",
+      "strongs": "H6440",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "פני",
+          "oshb_unpointed": "פני",
+          "oshb_strongs": "H6440",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 213,
+      "book": 1,
+      "chapter": 1,
+      "verse": 21,
+      "word_pos": 3,
+      "word_pointed": "אֶת־הַתַּנִּינִ֖ם",
+      "strongs": "H8577",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "התנינמ",
+          "oshb_unpointed": "התנינם",
+          "oshb_strongs": "H8577",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 216,
+      "book": 1,
+      "chapter": 1,
+      "verse": 21,
+      "word_pos": 6,
+      "word_pointed": "כָּל־נֶ֣פֶשׁ",
+      "strongs": "H5315",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "נפש",
+          "oshb_unpointed": "נפש",
+          "oshb_strongs": "H5315",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 224,
+      "book": 1,
+      "chapter": 1,
+      "verse": 21,
+      "word_pos": 14,
+      "word_pointed": "כָּל־ע֤וֹף",
+      "strongs": "H5775",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "עופ",
+          "oshb_unpointed": "עוף",
+          "oshb_strongs": "H5775",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 229,
+      "book": 1,
+      "chapter": 1,
+      "verse": 21,
+      "word_pos": 19,
+      "word_pointed": "כִּי־טֽוֹב׃",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 237,
+      "book": 1,
+      "chapter": 1,
+      "verse": 22,
+      "word_pos": 8,
+      "word_pointed": "אֶת־הַמַּ֙יִם֙",
+      "strongs": "H4325",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "המימ",
+          "oshb_unpointed": "המים",
+          "oshb_strongs": "H4325",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 242,
+      "book": 1,
+      "chapter": 1,
+      "verse": 23,
+      "word_pos": 1,
+      "word_pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "strongs": "H6153",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ערב",
+          "oshb_unpointed": "ערב",
+          "oshb_strongs": "H6153",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 243,
+      "book": 1,
+      "chapter": 1,
+      "verse": 23,
+      "word_pos": 2,
+      "word_pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "strongs": "H1242",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "בקר",
+          "oshb_unpointed": "בקר",
+          "oshb_strongs": "H1242",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 255,
+      "book": 1,
+      "chapter": 1,
+      "verse": 24,
+      "word_pos": 10,
+      "word_pointed": "וְחַֽיְתוֹ־אֶ֖רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "וחיתו",
+          "oshb_unpointed": "וחיתו",
+          "oshb_strongs": "H2416",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "ארצ",
+          "oshb_unpointed": "ארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 257,
+      "book": 1,
+      "chapter": 1,
+      "verse": 24,
+      "word_pos": 12,
+      "word_pointed": "וַֽיְהִי־כֵֽן׃",
+      "strongs": "H3651",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ויהי",
+          "oshb_unpointed": "ויהי",
+          "oshb_strongs": "H1961",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כנ",
+          "oshb_unpointed": "כן",
+          "oshb_strongs": "H3651",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 260,
+      "book": 1,
+      "chapter": 1,
+      "verse": 25,
+      "word_pos": 3,
+      "word_pointed": "אֶת־חַיַּ֨ת",
+      "strongs": "H2416",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "חית",
+          "oshb_unpointed": "חית",
+          "oshb_strongs": "H2416",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 263,
+      "book": 1,
+      "chapter": 1,
+      "verse": 25,
+      "word_pos": 6,
+      "word_pointed": "וְאֶת־הַבְּהֵמָה֙",
+      "strongs": "H929",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ואת",
+          "oshb_unpointed": "ואת",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הבהמה",
+          "oshb_unpointed": "הבהמה",
+          "oshb_strongs": "H929",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 266,
+      "book": 1,
+      "chapter": 1,
+      "verse": 25,
+      "word_pos": 9,
+      "word_pointed": "כָּל־רֶ֥מֶשׂ",
+      "strongs": "H7431",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "רמש",
+          "oshb_unpointed": "רמש",
+          "oshb_strongs": "H7431",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 271,
+      "book": 1,
+      "chapter": 1,
+      "verse": 25,
+      "word_pos": 14,
+      "word_pointed": "כִּי־טֽוֹב׃",
+      "strongs": "H2896",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כי",
+          "oshb_unpointed": "כי",
+          "oshb_strongs": "H3588",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "טוב",
+          "oshb_unpointed": "טוב",
+          "oshb_strongs": "H2896",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 284,
+      "book": 1,
+      "chapter": 1,
+      "verse": 26,
+      "word_pos": 13,
+      "word_pointed": "וּבְכָל־הָאָ֔רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ובכל",
+          "oshb_unpointed": "ובכל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 285,
+      "book": 1,
+      "chapter": 1,
+      "verse": 26,
+      "word_pos": 14,
+      "word_pointed": "וּבְכָל־הָרֶ֖מֶשׂ",
+      "strongs": "H7431",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ובכל",
+          "oshb_unpointed": "ובכל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הרמש",
+          "oshb_unpointed": "הרמש",
+          "oshb_strongs": "H7431",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 287,
+      "book": 1,
+      "chapter": 1,
+      "verse": 26,
+      "word_pos": 16,
+      "word_pointed": "עַל־הָאָֽרֶץ׃",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 290,
+      "book": 1,
+      "chapter": 1,
+      "verse": 27,
+      "word_pos": 3,
+      "word_pointed": "אֶת־הָֽאָדָם֙",
+      "strongs": "H120",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "האדמ",
+          "oshb_unpointed": "האדם",
+          "oshb_strongs": "H120",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 309,
+      "book": 1,
+      "chapter": 1,
+      "verse": 28,
+      "word_pos": 10,
+      "word_pointed": "אֶת־הָאָ֖רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 316,
+      "book": 1,
+      "chapter": 1,
+      "verse": 28,
+      "word_pos": 17,
+      "word_pointed": "וּבְכָל־חַיָּ֖ה",
+      "strongs": "H2416",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ובכל",
+          "oshb_unpointed": "ובכל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "חיה",
+          "oshb_unpointed": "חיה",
+          "oshb_strongs": "H2416",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 318,
+      "book": 1,
+      "chapter": 1,
+      "verse": 28,
+      "word_pos": 19,
+      "word_pointed": "עַל־הָאָֽרֶץ׃",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 324,
+      "book": 1,
+      "chapter": 1,
+      "verse": 29,
+      "word_pos": 6,
+      "word_pointed": "אֶת־כָּל־עֵ֣שֶׂב ׀",
+      "strongs": "H6212",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 2,
+          "comp_consonants": "עשב",
+          "oshb_unpointed": "עשב",
+          "oshb_strongs": "H6212",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 328,
+      "book": 1,
+      "chapter": 1,
+      "verse": 29,
+      "word_pos": 10,
+      "word_pointed": "עַל־פְּנֵ֣י",
+      "strongs": "H6440",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "פני",
+          "oshb_unpointed": "פני",
+          "oshb_strongs": "H6440",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 329,
+      "book": 1,
+      "chapter": 1,
+      "verse": 29,
+      "word_pos": 11,
+      "word_pointed": "כָל־הָאָ֔רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 330,
+      "book": 1,
+      "chapter": 1,
+      "verse": 29,
+      "word_pos": 12,
+      "word_pointed": "וְאֶת־כָּל־הָעֵ֛ץ",
+      "strongs": "H6086",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ואת",
+          "oshb_unpointed": "ואת",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 2,
+          "comp_consonants": "העצ",
+          "oshb_unpointed": "העץ",
+          "oshb_strongs": "H6086",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 332,
+      "book": 1,
+      "chapter": 1,
+      "verse": 29,
+      "word_pos": 14,
+      "word_pointed": "פְרִי־עֵ֖ץ",
+      "strongs": "H6086",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "פרי",
+          "oshb_unpointed": "פרי",
+          "oshb_strongs": "H6529",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "עצ",
+          "oshb_unpointed": "עץ",
+          "oshb_strongs": "H6086",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 338,
+      "book": 1,
+      "chapter": 1,
+      "verse": 30,
+      "word_pos": 1,
+      "word_pointed": "וּֽלְכָל־חַיַּ֣ת",
+      "strongs": "H2416",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ולכל",
+          "oshb_unpointed": "ולכל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "חית",
+          "oshb_unpointed": "חית",
+          "oshb_strongs": "H2416",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 340,
+      "book": 1,
+      "chapter": 1,
+      "verse": 30,
+      "word_pos": 3,
+      "word_pointed": "וּלְכָל־ע֨וֹף",
+      "strongs": "H5775",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "ולכל",
+          "oshb_unpointed": "ולכל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "עופ",
+          "oshb_unpointed": "עוף",
+          "oshb_strongs": "H5775",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 344,
+      "book": 1,
+      "chapter": 1,
+      "verse": 30,
+      "word_pos": 7,
+      "word_pointed": "עַל־הָאָ֗רֶץ",
+      "strongs": "H776",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "על",
+          "oshb_unpointed": "על",
+          "oshb_strongs": "H5921",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "הארצ",
+          "oshb_unpointed": "הארץ",
+          "oshb_strongs": "H776",
+          "how": "1to1"
+        }
+      ]
+    },
+    {
+      "word_id": 348,
+      "book": 1,
+      "chapter": 1,
+      "verse": 30,
+      "word_pos": 11,
+      "word_pointed": "אֶת־כָּל־יֶ֥רֶק",
+      "strongs": "H3418",
+      "strongs_source": "oshb-split",
+      "components": [
+        {
+          "comp_idx": 0,
+          "comp_consonants": "את",
+          "oshb_unpointed": "את",
+          "oshb_strongs": "H853",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 1,
+          "comp_consonants": "כל",
+          "oshb_unpointed": "כל",
+          "oshb_strongs": "H3605",
+          "how": "1to1"
+        },
+        {
+          "comp_idx": 2,
+          "comp_consonants": "ירק",
+          "oshb_unpointed": "ירק",
+          "oshb_strongs": "H3418",
+          "how": "1to1"
+        }
+      ]
+    }
+  ],
   "unmapped_verses": [
     [
       8,
@@ -531,5 +2118,6 @@
       36,
       32
     ]
-  ]
+  ],
+  "notes": "pair-level counters (mapped_1to1/mapped_replace/mapped_fallback) count maqqef components, not canonical words; canon_tokens_unmapped counts canonical words with no OSHB pairing; strongs_source oshb-split = word kept last paired maqqef component's Strong's; oshb-fallback = word paired via exact-consonant fallback"
 }

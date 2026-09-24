@@ -93,17 +93,40 @@ by_ref = {(w['book'], w['chapter'], w['verse'], w['word_pos']): w for w in words
 # ---- OSHB crosswalk ----
 # Kit's versification is WLC-like (verse sets differ from OSHB by only 12 verses).
 # Four chapters place verse 1 at the end under a bogus number; remap those.
-# Token alignment per verse uses difflib on consonantal letter strings to survive
-# ketiv/qere doubles and maqqef splits (OSHB splits maqqef-joined words).
+# Token alignment per verse, in two stages:
+#   Stage 1 (difflib): canonical tokens containing maqqef (U+05BE) are expanded
+#     into their components BEFORE difflib, because OSHB splits maqqef-joined
+#     words into separate tokens. Each component then pairs 1:1 with its own
+#     OSHB token and that component's own Strong's. The word keeps the LAST
+#     paired component's Strong's (the content word; also the old
+#     longest-token choice in the common case), tagged strongs_source=
+#     'oshb-split' for honesty. Comparison is on normalized consonantal keys:
+#     Hebrew letters only, final forms (sofit) folded to regular, so the
+#     canonical letters' final-folding vs OSHB's final forms no longer
+#     mismatches. Canonical tokens with internal space/paseq (ketiv/qere
+#     doubles, paseq rows) reduce to their consonantal component and match
+#     OSHB's first component token via the same keys.
+#   Stage 2 (fallback): residual 'delete'/'replace-mismatch' blocks get a
+#     fallback pass matching each canonical token against still-unmatched
+#     OSHB tokens in the same verse by EXACT normalized-consonant equality
+#     only (no fuzzy guessing), tagged strongs_source='oshb-fallback'.
+# strongs_conflicts logic is unchanged from the previous build.
 import difflib
 VERSE_REMAP = {(19, 17, 17): (19, 17, 1), (23, 27, 22): (23, 27, 1),
                (24, 28, 23): (24, 28, 1), (25, 2, 23): (25, 2, 1)}
+MAQQEF = '־'
+SOFIT_FOLD = {'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ'}
+def cons_key(s):
+    """Normalized consonantal key: Hebrew letters only, finals folded."""
+    return ''.join(SOFIT_FOLD.get(ch, ch) for ch in (s or '') if 'א' <= ch <= 'ת')
 oshb_path = f'{WO}/oshb/oshb_words.tsv'
 stats = {'oshb_rows': 0, 'verses_aligned': 0, 'mapped_1to1': 0, 'mapped_replace': 0,
-         'canon_tokens_unmapped': 0, 'letters_match': 0, 'strongs_filled': 0,
-         'strongs_conflicts': 0, 'no_lemma_on_mapped': 0, 'aramaic_agree': 0,
-         'aramaic_oshb_not_kit': 0, 'aramaic_kit_not_oshb': 0}
+         'mapped_fallback': 0, 'canon_tokens_unmapped': 0, 'letters_match': 0,
+         'strongs_filled': 0, 'stage2_fills': 0, 'split_words': 0,
+         'split_words_mapped': 0, 'strongs_conflicts': 0, 'no_lemma_on_mapped': 0,
+         'aramaic_agree': 0, 'aramaic_oshb_not_kit': 0, 'aramaic_kit_not_oshb': 0}
 conflicts = []
+stage2_fill_samples = []
 canon_unmapped_verses = []
 try:
     oshb_by_verse = {}
@@ -120,28 +143,68 @@ try:
     for v in canon_by_verse.values():
         v.sort(key=lambda x: x['word_pos'])
 
+    def find_unconsumed(key, owords, consumed, bkeys):
+        if not key:
+            return None
+        for j, (used, bk) in enumerate(zip(consumed, bkeys)):
+            if not used and bk == key:
+                return j
+        return None
+
     def align_verse(cwords, owords):
-        a = [w['letters'] for w in cwords]
-        b = [r['unpointed'] for r in owords]
+        # Stage 1: expand maqqef tokens into components before difflib.
+        # Returns list of ((word, comp_key, comp_idx, n_comps), orow|None, how).
+        pseudo = []
+        for w in cwords:
+            pt = w['word_pointed'] or ''
+            if MAQQEF in pt:
+                comps = [cons_key(p) for p in pt.split(MAQQEF)]
+                if len(comps) > 1 and all(comps):
+                    for ci, ck in enumerate(comps):
+                        pseudo.append((w, ck, ci, len(comps)))
+                    continue
+            pseudo.append((w, cons_key(w['letters']), 0, 1))
+        a = [p[1] for p in pseudo]
+        b = [cons_key(r['unpointed']) for r in owords]
         sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
         out = []
+        consumed = [False] * len(owords)
         for tag, i1, i2, j1, j2 in sm.get_opcodes():
             if tag == 'equal':
                 for i, j in zip(range(i1, i2), range(j1, j2)):
-                    out.append((cwords[i], owords[j], '1to1'))
+                    consumed[j] = True
+                    out.append((pseudo[i], owords[j], '1to1'))
             elif tag == 'replace':
                 ca = ''.join(a[i1:i2]); cb = ''.join(b[j1:j2])
                 if ca == cb and ca:
-                    for i in range(i1, i2):
-                        best = max(range(j1, j2), key=lambda j: len(b[j]))
-                        out.append((cwords[i], owords[best], 'replace'))
+                    if (i2 - i1) == (j2 - j1):
+                        for i, j in zip(range(i1, i2), range(j1, j2)):
+                            consumed[j] = True
+                            out.append((pseudo[i], owords[j], 'replace'))
+                    else:
+                        for i in range(i1, i2):
+                            best = max(range(j1, j2), key=lambda j: len(b[j]))
+                            consumed[best] = True
+                            out.append((pseudo[i], owords[best], 'replace'))
                 else:
+                    # Stage 2 fallback: exact normalized-consonant match only
                     for i in range(i1, i2):
-                        out.append((cwords[i], None, 'unmapped'))
+                        j = find_unconsumed(a[i], owords, consumed, b)
+                        if j is not None:
+                            consumed[j] = True
+                            out.append((pseudo[i], owords[j], 'fallback'))
+                        else:
+                            out.append((pseudo[i], None, 'unmapped'))
             elif tag == 'delete':
                 for i in range(i1, i2):
-                    out.append((cwords[i], None, 'unmapped'))
-            # 'insert': OSHB-only tokens (qere alternates etc.) ignored
+                    j = find_unconsumed(a[i], owords, consumed, b)
+                    if j is not None:
+                        consumed[j] = True
+                        out.append((pseudo[i], owords[j], 'fallback'))
+                    else:
+                        out.append((pseudo[i], None, 'unmapped'))
+            # 'insert': OSHB-only tokens (qere alternates etc.) stay
+            # unconsumed so the Stage 2 fallback can still claim them
         return out
 
     for ckey, cwords in canon_by_verse.items():
@@ -151,28 +214,64 @@ try:
             canon_unmapped_verses.append(ckey)
             continue
         stats['verses_aligned'] += 1
-        for w, orow, how in align_verse(cwords, owords):
-            if orow is None:
+        agg = {}
+        for (w, key, ci, nc), orow, how in align_verse(cwords, owords):
+            agg.setdefault(w['word_id'], {'w': w, 'pairs': []})['pairs'].append(
+                (key, orow, how, ci, nc))
+        for w in cwords:
+            entry = agg.get(w['word_id'])
+            plist = entry['pairs'] if entry else []
+            n_comps = plist[0][4] if plist else 1
+            is_split = n_comps > 1
+            if is_split:
+                stats['split_words'] += 1
+            mapped = [(key, orow, how, ci) for (key, orow, how, ci, nc) in plist
+                      if orow is not None]
+            for (key, orow, how, ci) in mapped:
+                stats['mapped_1to1' if how == '1to1'
+                      else ('mapped_replace' if how == 'replace' else 'mapped_fallback')] += 1
+                if w['letters'] == orow['unpointed']:
+                    stats['letters_match'] += 1
+                ostr = multi_strongs(orow['strongs'])
+                if not (ostr and ostr[0]):
+                    stats['no_lemma_on_mapped'] += 1
+            if not mapped:
                 stats['canon_tokens_unmapped'] += 1
                 continue
-            stats['mapped_1to1' if how == '1to1' else 'mapped_replace'] += 1
-            if w['letters'] == orow['unpointed']:
-                stats['letters_match'] += 1
-            ostr = multi_strongs(orow['strongs'])
+            if is_split:
+                stats['split_words_mapped'] += 1
+            # Representative OSHB row: LAST paired component (content word)
+            rep = max(mapped, key=lambda t: t[3])[1]
+            ostr = multi_strongs(rep['strongs'])
             ostrongs = ostr[0] if ostr else None
-            if not ostrongs:
-                stats['no_lemma_on_mapped'] += 1
             if w['strongs'] and ostrongs and w['strongs'] != ostrongs:
                 stats['strongs_conflicts'] += 1
                 if len(conflicts) < 50:
                     conflicts.append((w['word_id'], w['book'], w['chapter'], w['verse'],
                                       w['word_pos'], w['word_pointed'], w['strongs'], ostrongs))
             elif not w['strongs'] and ostrongs:
-                w['strongs'] = ostrongs; w['strongs_source'] = 'oshb'
-                stats['strongs_filled'] += 1
-            if orow.get('morph'):
-                w['morph'] = orow['morph']
-                o_ar = orow['morph'].startswith('A')
+                w['strongs'] = ostrongs
+                if is_split or any(h == 'fallback' for (_, _, h, _) in mapped):
+                    w['strongs_source'] = 'oshb-split' if is_split else 'oshb-fallback'
+                    stats['stage2_fills'] += 1
+                    if len(stage2_fill_samples) < 60:
+                        stage2_fill_samples.append({
+                            'word_id': w['word_id'], 'book': w['book'],
+                            'chapter': w['chapter'], 'verse': w['verse'],
+                            'word_pos': w['word_pos'], 'word_pointed': w['word_pointed'],
+                            'strongs': ostrongs, 'strongs_source': w['strongs_source'],
+                            'components': [
+                                {'comp_idx': ci, 'comp_consonants': key,
+                                 'oshb_unpointed': orow['unpointed'],
+                                 'oshb_strongs': (multi_strongs(orow['strongs']) or [None])[0],
+                                 'how': how}
+                                for (key, orow, how, ci) in mapped]})
+                else:
+                    w['strongs_source'] = 'oshb'
+                    stats['strongs_filled'] += 1
+            if rep.get('morph'):
+                w['morph'] = rep['morph']
+                o_ar = rep['morph'].startswith('A')
                 if o_ar and w['is_aramaic']: stats['aramaic_agree'] += 1
                 elif o_ar and not w['is_aramaic']: stats['aramaic_oshb_not_kit'] += 1
                 elif not o_ar and w['is_aramaic']: stats['aramaic_kit_not_oshb'] += 1
@@ -184,7 +283,14 @@ print('oshb crosswalk:', json.dumps(stats))
 print('canon verses with no OSHB counterpart:', canon_unmapped_verses)
 with open(f'{ROOT}/oshb_crosswalk_report.json', 'w') as f:
     json.dump({'stats': stats, 'conflict_samples': conflicts,
-               'unmapped_verses': canon_unmapped_verses}, f, indent=2, ensure_ascii=False)
+               'stage2_fill_samples': stage2_fill_samples,
+               'unmapped_verses': canon_unmapped_verses,
+               'notes': ('pair-level counters (mapped_1to1/mapped_replace/mapped_fallback) '
+                         'count maqqef components, not canonical words; '
+                         'canon_tokens_unmapped counts canonical words with no OSHB pairing; '
+                         'strongs_source oshb-split = word kept last paired maqqef component\'s '
+                         'Strong\'s; oshb-fallback = word paired via exact-consonant fallback')}, f,
+              indent=2, ensure_ascii=False)
 
 # ---- KJV ----
 kjv_path = f'{WO}/kjv/kjv_words.tsv'
