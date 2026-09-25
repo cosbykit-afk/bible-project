@@ -117,3 +117,26 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   build_lexicon.py → build_lexicon_ylt.py: 95,967/126,869 rows (75.6426%).
 - Website label "Young's (computed)" unchanged (drop-down + word detail page).
   Corpus stays READ-ONLY. Status: COMPUTED best-effort, NOT authoritative.
+
+## 2026-09-25 — U-7 affix display normalization (closed)
+- `normalize_affixes.py` (new, in project root): maps English affix glosses to
+  Hebrew letters into NEW display columns `prefix1_disp`/`prefix2_disp`/
+  `prefix3_disp`/`suffix1_disp`/`suffix2_disp` on `words` (ALTER TABLE + UPDATE;
+  raw columns never overwritten). Backup `bible.db.bak-20260925-u7` (264,217 rows).
+- 113,423 gloss occurrences normalized across 107,922/264,217 word rows:
+  and,but→ו 51,210; to,for→ל 19,404; The,?→ה 16,454; in,with,by→ב 15,299;
+  from→מ 6,346; as,like→כ 2,945; the,?→ה 1,633; that,which,who,whom→ש 132.
+  'The, ?'/'the, ?'→ה resolved per-row (18,087/18,087 have ה at the expected
+  position). Already-Hebrew values (maqqef-joined את-ה, כל-ה, …) pass through;
+  suffix1/suffix2 held no English values.
+- Verification (`verify_u7.py`, run log + mapping table kept in the workflow
+  work dir): disp prefix chain is a literal prefix of word_unpointed
+  113,671/113,673; disp suffix chain a literal suffix 44,274/44,276; zero
+  Latin-looking values in disp columns; DISTINCT root_code 126,869 before and
+  after; raw affix columns byte-identical to the backup. The 4 positional misses
+  are pre-existing raw-parse quirks faithfully mirrored in disp (2× עד-למרחוק
+  raw prefix1='from'; תיראומ raw suffix1='נ' vs ם ending; בתוכ-העמ raw
+  suffix1='י' vs עמ ending) — display layer does not rewrite the parse.
+- `bible.db` stays read-only for the website (contract unchanged).
+- Follow-up (not done): word-detail template should read the `*_disp` columns
+  — one-line template change.

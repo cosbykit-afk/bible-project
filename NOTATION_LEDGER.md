@@ -110,8 +110,9 @@ code `root_code = root_id.root_form_seq.root_vowel_seq`.
   `prefix1`/`prefix2` often hold an English gloss of the prefix ("and, but",
   "the, ?") rather than Hebrew letters, and `prefix3` sometimes holds a whole
   preceding maqqef-joined word ("אל-ה"). Grouping is still exact (identical
-  tuples group together), but a future cleanup pass could normalize these to
-  Hebrew letters. Tracked as U-7.
+  tuples group together). U-7 display normalization landed 2026-09-25: new
+  `*_disp` columns hold the Hebrew-letter forms (English glosses mapped,
+  e.g. "and, but"→ו; raw columns untouched, so grouping is unaffected).
 - Strong's numbers are retained as a foreign key into the public-domain
   lexicons (KJV/gloss dropdowns), but the root code is the project's primary
   word numbering.
@@ -165,4 +166,4 @@ code `root_code = root_id.root_form_seq.root_vowel_seq`.
 - **U-4** (2026-09-20): `Var` and `Notes` columns in the notes sheet have no documented meaning yet. Kit to define, or drop.
 - **U-5** (2026-09-20): "Green literal translation" read as Young's Literal Translation; Kit confirmed the plan containing YLT on 2026-09-20. Closed unless corrected.
 - **U-6** (2026-09-20): Website stack and hosting undecided. Flask + SQLite is the working assumption; Kit hasn't chosen.
-- **U-7** (2026-09-21): Affix columns are Kit's own uneven parsing — `prefix1`/`prefix2` often hold English glosses ("and, but") instead of Hebrew letters, and `prefix3` sometimes holds a whole preceding maqqef-joined word ("אל-ה"). The root numbering groups on these tuples exactly, so numbering is unaffected, but a future pass should normalize them to Hebrew letters for display.
+- **U-7** (2026-09-21): Affix columns are Kit's own uneven parsing — `prefix1`/`prefix2` often hold English glosses ("and, but") instead of Hebrew letters, and `prefix3` sometimes holds a whole preceding maqqef-joined word ("אל-ה"). The root numbering groups on these tuples exactly, so numbering is unaffected, but a future pass should normalize them to Hebrew letters for display. **Closed 2026-09-25:** display pass complete via `normalize_affixes.py` — new columns `prefix1_disp`/`prefix2_disp`/`prefix3_disp`/`suffix1_disp`/`suffix2_disp` on `words` (raw columns untouched; backup `bible.db.bak-20260925-u7`). 113,423 gloss occurrences normalized across 107,922/264,217 word rows: and,but→ו (51,210), to,for→ל (19,404), The,?→ה (16,454), in,with,by→ב (15,299), from→מ (6,346), as,like→כ (2,945), the,?→ה (1,633), that,which,who,whom→ש (132); the ה mappings verified per-row positionally 18,087/18,087. Already-Hebrew values (incl. maqqef-joined את-ה etc.) pass through unchanged; suffix1/suffix2 held no English values. Verification (`verify_u7.py`, exact numerators/denominators): disp prefix chain is a literal prefix of word_unpointed 113,671/113,673; disp suffix chain a literal suffix 44,274/44,276; zero Latin-looking values in disp columns; DISTINCT root_code 126,869 before and after; raw affix columns byte-identical to backup. The 4 positional misses are pre-existing raw-parse quirks faithfully mirrored in disp (2× עד-למרחוק raw prefix1='from'; תיראומ raw suffix1='נ' vs ם ending; בתוכ-העמ raw suffix1='י' vs עמ ending) — the display layer does not rewrite Kit's parse. Follow-up (not done): website word-detail template should read the `*_disp` columns — one-line template change.
