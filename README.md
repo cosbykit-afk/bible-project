@@ -49,10 +49,18 @@ vocalization). Strong's numbers are kept as a foreign key into the
 public-domain lexicons.
 
 Coverage: 258,209 of 264,217 words carry a Strong's number (97.7261%),
-every one of those has at least one gloss. 204,701 words (77.4746%) have a
-KJV rendering. 4,405 Aramaic words flagged. Strong's coverage rose via the OSHB
-crosswalk (2026-09-24); the remaining gap is a crosswalk alignment limitation
-(OSHB splits maqqef-joined words; Kit's files don't) — see `oshb_crosswalk_report.json`.
+every one of those has at least one gloss. 205,511 words (77.7811%) have a
+KJV rendering — raised from 204,701 (77.4746%) by the U-8 maqqef-component
+repair (2026-09-26): 810 maqqef-split words gained renderings via their
+OSHB-split sub-token Strong's; the 2,281 new `kjv_renderings` rows are
+labeled `method='maqqef-component'` (original rows are `method='direct'`).
+4,405 Aramaic words flagged. Strong's coverage rose via the OSHB
+crosswalk (2026-09-24); the remaining KJV gap is a source limitation, not a
+crosswalk bug — the KJV+Strong's dataset tags many English words with a
+different Strong's than the Hebrew word's, or leaves them untagged
+(phrase-level tagging); 2,106 further words sit in verses missing from the
+KJV dataset under versification offsets (e.g. Gen 32:33 = KJV 32:32) —
+see `oshb_crosswalk_report.json` and NOTATION_LEDGER.md U-8.
 
 ## Sources (all public domain / freely licensed)
 

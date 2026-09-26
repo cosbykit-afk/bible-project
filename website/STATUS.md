@@ -140,3 +140,15 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
 - `bible.db` stays read-only for the website (contract unchanged).
 - Follow-up (not done): word-detail template should read the `*_disp` columns
   — one-line template change.
+
+## 2026-09-26 — U-8: KJV maqqef-component repair
+- `kjv_renderings` gained a `method` column: `'direct'` for the 624,748
+  original rows, `'maqqef-component'` for 2,281 new rows covering 810
+  maqqef-split Hebrew words (KJV tokens matched via the OSHB-split
+  sub-token Strong's). Words with ≥1 KJV rendering: 204,701 → 205,511
+  (77.4746% → 77.7811%).
+- Website impact: none needed — verse/word pages read `kjv_word` only;
+  `lexicon.kjv_renderings` updated for the 712 affected root_vowel
+  entries (687 went from empty to filled). `bible.db` stays read-only
+  for the website (contract unchanged). Backup
+  `bible.db.bak-20260926-u8-pre` kept.
