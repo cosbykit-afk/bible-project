@@ -152,3 +152,23 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   entries (687 went from empty to filled). `bible.db` stays read-only
   for the website (contract unchanged). Backup
   `bible.db.bak-20260926-u8-pre` kept.
+
+## 2026-09-27 — U-9: KJV versification-offset repair
+- 209 Hebrew references had zero same-reference `kjv_words` rows (MT-vs-KJV
+  versification offsets, e.g. Gen 32:33 = KJV 32:32, Ex 7:26-29 = KJV 8:1-4,
+  Joel 4 = KJV 3) — the U-8 diagnosis bucket (c). A verified 206-row
+  verse-remap (`u9_verse_remap.tsv`, sequence-aware per-book alignment with
+  Strong's-overlap gates and full-text adjudication of all 19 low-overlap
+  picks) paired the 2,106 affected Strong's-carrying words against the remap
+  target verse using the assembler's exact Strong's-sharing logic.
+- 4,921 new `kjv_renderings` rows carry `method='verse-remap'` (existing rows
+  never modified/deleted; all 569,740 pre-existing triples preserved). 1,801
+  words repaired; 207,312/264,217 (78.4628%) now have a KJV rendering
+  (was 205,511, 77.7811%). `lexicon.kjv_renderings` refreshed for 1,283
+  affected cells. All 4,921 rows mechanically re-checked for Strong's
+  sharing (bad=0). Limits: 305 words got no rendering (Strong's on no KJV
+  word in target — same tagger-mismatch class as U-8's 45,582); three
+  no-Strong's anomalous verses (Josh 4:32, Ruth 8:18, 2 Chr 36:32) left
+  unrepaired by design.
+- `bible.db` stays read-only for the website (contract unchanged); backup
+  `bible.db.bak-20260927-u9-pre` kept.

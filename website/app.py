@@ -224,7 +224,7 @@ def verse(n, c, v):
 <select name="item">{''.join(opts)}</select>
 <input type="text" name="other_txt" placeholder="new Other rendering (optional)">
 <button type="submit">save</button>
-{'<span class="saved">\u2713</span>' if cur else ''}
+{'<span class="saved">✓</span>' if cur else ''}
 </form>'''
         parts.append(f'''<div class="wordbox"><span class="heb">{w['word_pointed'] or w['word_unpointed']}</span>
  <a href="/word/{wid}{tqs(trans)}" style="font-size:.85em">detail</a><br>{ctl}</div>''')

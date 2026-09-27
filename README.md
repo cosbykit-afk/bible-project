@@ -28,7 +28,7 @@ readers pick word by word and save their own translation.
 | Table | Rows | Notes |
 |---|---|---|
 | `words` | 264,217 | One row per Hebrew/Aramaic token; morphology parsed; Strong's via OSHB crosswalk |
-| `kjv_renderings` | 624,748 | KJV word renderings aligned to Hebrew words |
+| `kjv_renderings` | 631,950 | KJV word renderings aligned to Hebrew words |
 | `kjv_words` | 610,324 | Raw KJV+Strong's word list |
 | `ylt_verses` | 23,145 | Young's Literal Translation, verse level |
 | `ylt_renderings` | 337,601 | YLT word ↔ Hebrew alignment (COMPUTED best-effort, U-1) |
@@ -49,11 +49,15 @@ vocalization). Strong's numbers are kept as a foreign key into the
 public-domain lexicons.
 
 Coverage: 258,209 of 264,217 words carry a Strong's number (97.7261%),
-every one of those has at least one gloss. 205,511 words (77.7811%) have a
-KJV rendering — raised from 204,701 (77.4746%) by the U-8 maqqef-component
-repair (2026-09-26): 810 maqqef-split words gained renderings via their
-OSHB-split sub-token Strong's; the 2,281 new `kjv_renderings` rows are
-labeled `method='maqqef-component'` (original rows are `method='direct'`).
+every one of those has at least one gloss. 207,312 words (78.4628%) have a
+KJV rendering — raised from 205,511 (77.7811%) by the U-9 verse-remap repair
+(2026-09-27): 1,801 words in 206 verses with MT-vs-KJV versification offsets
+(e.g. Gen 32:33 = KJV 32:32, Ex 7:26–29 = KJV 8:1–4, Joel 4 = KJV 3) gained
+renderings by pairing against the verified remap target verse with the same
+normalized Strong's-sharing logic as the original alignment; the 4,921 new
+`kjv_renderings` rows are labeled `method='verse-remap'` (earlier rows are
+`method='direct'` / `method='maqqef-component'`). The U-8 maqqef-component
+repair (2026-09-26) had raised coverage from 204,701 (77.4746%).
 4,405 Aramaic words flagged. Strong's coverage rose via the OSHB
 crosswalk (2026-09-24); the remaining KJV gap is a source limitation, not a
 crosswalk bug — the KJV+Strong's dataset tags many English words with a
