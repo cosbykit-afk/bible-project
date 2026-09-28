@@ -1,0 +1,117 @@
+{
+ "src": "/home/hatch/workspace/bible-project/bible.db",
+ "dst": "/home/hatch/workspace/bible-project/bible_v2.db",
+ "steps": {
+  "verses": {
+   "n": 23354
+  },
+  "strongs": {
+   "n": 19058,
+   "composite": 1865,
+   "components": 3783
+  },
+  "morph": {
+   "patterns": 3437,
+   "unparsed": 1,
+   "segments": 7552
+  },
+  "words": {
+   "n": 264217,
+   "unpointed_letters_anomalies": 129
+  },
+  "lexicon": {
+   "headers": 126869,
+   "kjv": 393956,
+   "ylt": 220395,
+   "contexts": 260683,
+   "found_verses": 262829,
+   "unresolvable_refs": 0
+  },
+  "kjv_words": {
+   "n": 610324
+  },
+  "kjv_renderings": {
+   "n": 631950
+  },
+  "ylt_verses": {
+   "n": 23145
+  },
+  "ylt_renderings": {
+   "n": 337601
+  }
+ },
+ "warnings": [
+  "morph pattern unparsed (kept verbatim): 'AT': T segment missing type: 'T'"
+ ],
+ "verification": {
+  "count_words": {
+   "v1": 264217,
+   "v2": 264217,
+   "match": true
+  },
+  "count_kjv_words": {
+   "v1": 610324,
+   "v2": 610324,
+   "match": true
+  },
+  "count_kjv_renderings": {
+   "v1": 631950,
+   "v2": 631950,
+   "match": true
+  },
+  "count_ylt_renderings": {
+   "v1": 337601,
+   "v2": 337601,
+   "match": true
+  },
+  "count_ylt_verses": {
+   "v1": 23145,
+   "v2": 23145,
+   "match": true
+  },
+  "count_glosses": {
+   "v1": 17347,
+   "v2": 17347,
+   "match": true
+  },
+  "count_root_entry": {
+   "v1": 30087,
+   "v2": 30087,
+   "match": true
+  },
+  "count_root_form": {
+   "v1": 57724,
+   "v2": 57724,
+   "match": true
+  },
+  "count_root_vowel": {
+   "v1": 126869,
+   "v2": 126869,
+   "match": true
+  },
+  "count_lexicon": {
+   "v1": 126869,
+   "v2": 126869,
+   "match": true
+  },
+  "count_books": {
+   "v1": 39,
+   "v2": 39,
+   "match": true
+  },
+  "foreign_key_check": {
+   "violations": 0
+  },
+  "blob_roundtrip": {
+   "child_mismatches": 0,
+   "view_mismatches": 0
+  },
+  "v_words_equivalence": {
+   "rows": 264217,
+   "diff_rows": 0,
+   "diff_columns": [],
+   "diff_sample": []
+  },
+  "null_morph": 79
+ }
+}

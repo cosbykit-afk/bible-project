@@ -189,3 +189,10 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   `(none)`; /word/6, /word/2, /verse/1/1/1, / all return 200.
   `bible.db` byte-identical afterward (md5
   9570752fc6f83b44dc5865923207fa73).
+
+## 2026-09-28 — v2 normalization + laptop staging (proving ground)
+
+- Kit: "the Bible project database is nowhere near normalized — it is glorified spreadsheet at this point." He authorized building a normalized replacement from the existing diagrams, with the laptop deploy as the proving ground. He has not reviewed/approved the specific schema (`schema_v2.md` says so explicitly).
+- `schema_v2.sql` + `migrate_v2.py` → `bible_v2.db` (264,217 words, 66.9 s): lexicon blobs → 4 ordered child tables; morphology → `morph_patterns`/`morph_segments`; Strong's composites → `strongs` + `strongs_components` (reconstruction assertion 1,865/1,865); Strong's source → entity; `*_disp` → `root_form`; `verses(verse_id)` entity. `v_words` compat view 0 differing rows; 0 FK violations; lexicon round-trips 0 mismatches.
+- `website/app_v2.py` (env: APP_DB, BIBLE_DB, USER_DIR, PORT, SCRIPT_NAME): 13/13 routes byte-identical to v1 locally; Python 3.10 f-string fixes for the laptop.
+- Laptop staging (`/opt/bible`): `bible_v2.db` bit-identical (SHA-256 `4cacd562…e579e282`); supervisord `bible-v2` on 127.0.0.1:5058; Apache `/bible-v2` before `/bible`; separate app DB + choice dir. Verified: 13/13 internal 200s, 7/7 in-distro proxy 200s, live `/bible` regression 200s, full write path + cleanup. Distro rebooted ~1 h later; both programs self-recovered, health re-verified. Direct external access from this VM not reachable — no external claim. Live `app.py` + v1 `bible.db` untouched; no cutover.

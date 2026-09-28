@@ -1,0 +1,1039 @@
+{
+ "rule": "unpointed_of/letters_of in migrate_v2.py (CANDIDATE, not applied); v1 values preserved verbatim in bible_v2.db",
+ "n_anomalies": 129,
+ "note": "An earlier audit pass reported 208 mismatches, but its code was not retained, so that figure is not reproducible and is superseded by this count from the documented rule.",
+ "anomalies": [
+  {
+   "word_id": 51400,
+   "pointed": "לך־לְכָה־נָּ֨א",
+   "v1_unpointed": "לכ-",
+   "candidate_unpointed": "לכ-לכה-נא",
+   "v1_letters": "לכ",
+   "candidate_letters": "לכלכהנא"
+  },
+  {
+   "word_id": 71447,
+   "pointed": "אכרות־אֶֽכְרָת־לְךָ֥",
+   "v1_unpointed": "אכרות-",
+   "candidate_unpointed": "אכרות-אכרת-לכ",
+   "v1_letters": "אכרות",
+   "candidate_letters": "אכרותאכרתלכ"
+  },
+  {
+   "word_id": 71448,
+   "pointed": "",
+   "v1_unpointed": "אכרת-לכ",
+   "candidate_unpointed": "",
+   "v1_letters": "אכרתלכ",
+   "candidate_letters": ""
+  },
+  {
+   "word_id": 84266,
+   "pointed": "לְךָ֥",
+   "v1_unpointed": "לכק",
+   "candidate_unpointed": "לכ",
+   "v1_letters": "לכק",
+   "candidate_letters": "לכ"
+  },
+  {
+   "word_id": 84702,
+   "pointed": "בְּנֵ֣י",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "בני",
+   "v1_letters": "ככ",
+   "candidate_letters": "בני"
+  },
+  {
+   "word_id": 86191,
+   "pointed": "אֵלַ֖י",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "אלי",
+   "v1_letters": "ככ",
+   "candidate_letters": "אלי"
+  },
+  {
+   "word_id": 86269,
+   "pointed": "אם",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "אמ",
+   "v1_letters": "קק",
+   "candidate_letters": "אמ"
+  },
+  {
+   "word_id": 86337,
+   "pointed": "אֵלַ֔י",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "אלי",
+   "v1_letters": "ככ",
+   "candidate_letters": "אלי"
+  },
+  {
+   "word_id": 86442,
+   "pointed": "לגאול־לִגְאָל־לִ֔י",
+   "v1_unpointed": "לגאול-",
+   "candidate_unpointed": "לגאול-לגאל-לי",
+   "v1_letters": "לגאול",
+   "candidate_letters": "לגאוללגאללי"
+  },
+  {
+   "word_id": 86443,
+   "pointed": "לגאול־לִגְאָל־לִ֔י",
+   "v1_unpointed": "לגאל-לי",
+   "candidate_unpointed": "לגאול-לגאל-לי",
+   "v1_letters": "לגאללי",
+   "candidate_letters": "לגאוללגאללי"
+  },
+  {
+   "word_id": 94116,
+   "pointed": "על־אֶל־הַלֶּ֖חֶם",
+   "v1_unpointed": "על-",
+   "candidate_unpointed": "על-אל-הלחמ",
+   "v1_letters": "על",
+   "candidate_letters": "עלאלהלחמ"
+  },
+  {
+   "word_id": 94117,
+   "pointed": "על־אֶל־הַלֶּ֖חֶם",
+   "v1_unpointed": "אל-הלחמ",
+   "candidate_unpointed": "על-אל-הלחמ",
+   "v1_letters": "אלהלחמ",
+   "candidate_letters": "עלאלהלחמ"
+  },
+  {
+   "word_id": 94834,
+   "pointed": "לשאול־לִשְׁאָל־ל֥וֹ",
+   "v1_unpointed": "לשאול-",
+   "candidate_unpointed": "לשאול-לשאל-לו",
+   "v1_letters": "לשאול",
+   "candidate_letters": "לשאוללשאללו"
+  },
+  {
+   "word_id": 94835,
+   "pointed": "לשאול־לִשְׁאָל־ל֥וֹ",
+   "v1_unpointed": "לשאל-לו",
+   "candidate_unpointed": "לשאול-לשאל-לו",
+   "v1_letters": "לשאללו",
+   "candidate_letters": "לשאוללשאללו"
+  },
+  {
+   "word_id": 97045,
+   "pointed": "קסומי־קָֽסֳמִי־נָ֥א",
+   "v1_unpointed": "קסומי-",
+   "candidate_unpointed": "קסומי-קסמי-נא",
+   "v1_letters": "קסומי",
+   "candidate_letters": "קסומיקסמינא"
+  },
+  {
+   "word_id": 97046,
+   "pointed": "קסומי־קָֽסֳמִי־נָ֥א",
+   "v1_unpointed": "קסמי-נאי",
+   "candidate_unpointed": "קסומי-קסמי-נא",
+   "v1_letters": "קסמינאי",
+   "candidate_letters": "קסומיקסמינא"
+  },
+  {
+   "word_id": 100626,
+   "pointed": "בִּֽנְהַר־פְּרָֽת׃",
+   "v1_unpointed": "פרת",
+   "candidate_unpointed": "בנהר-פרת",
+   "v1_letters": "פרת",
+   "candidate_letters": "בנהרפרת"
+  },
+  {
+   "word_id": 102748,
+   "pointed": "שום־שִׂים־לְאִישִׁ֛י",
+   "v1_unpointed": "שומ-",
+   "candidate_unpointed": "שומ-שימ-לאישי",
+   "v1_letters": "שומ",
+   "candidate_letters": "שומשימלאישי"
+  },
+  {
+   "word_id": 102749,
+   "pointed": "שום־שִׂים־לְאִישִׁ֛י",
+   "v1_unpointed": "שימ-לאישי",
+   "candidate_unpointed": "שומ-שימ-לאישי",
+   "v1_letters": "שימלאישי",
+   "candidate_letters": "שומשימלאישי"
+  },
+  {
+   "word_id": 103986,
+   "pointed": "יִשְׁאַל־אִ֖ישׁ",
+   "v1_unpointed": "איש",
+   "candidate_unpointed": "ישאל-איש",
+   "v1_letters": "איש",
+   "candidate_letters": "ישאלאיש"
+  },
+  {
+   "word_id": 104753,
+   "pointed": "ככ־על",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "ככ-על",
+   "v1_letters": "ככ",
+   "candidate_letters": "ככעל"
+  },
+  {
+   "word_id": 106069,
+   "pointed": "ינתן־יֻתַּן־לָ֜נוּ",
+   "v1_unpointed": "ינתנ-",
+   "candidate_unpointed": "ינתנ-יתנ-לנו",
+   "v1_letters": "ינתנ",
+   "candidate_letters": "ינתניתנלנו"
+  },
+  {
+   "word_id": 106070,
+   "pointed": "ינתן־יֻתַּן־לָ֜נוּ",
+   "v1_unpointed": "יתנ-לנו",
+   "candidate_unpointed": "ינתנ-יתנ-לנו",
+   "v1_letters": "יתנלנו",
+   "candidate_letters": "ינתניתנלנו"
+  },
+  {
+   "word_id": 115902,
+   "pointed": "תתן־תֵּת־יְהוָ֛ה",
+   "v1_unpointed": "תתנ-",
+   "candidate_unpointed": "תתנ-תת-יהוה",
+   "v1_letters": "תתנ",
+   "candidate_letters": "תתנתתיהוה"
+  },
+  {
+   "word_id": 115903,
+   "pointed": "תתן־תֵּת־יְהוָ֛ה",
+   "v1_unpointed": "תת-יהוה",
+   "candidate_unpointed": "תתנ-תת-יהוה",
+   "v1_letters": "תתיהוה",
+   "candidate_letters": "תתנתתיהוה"
+  },
+  {
+   "word_id": 119683,
+   "pointed": "ויבו־וַיַּכּוּ־בָ֔הּ",
+   "v1_unpointed": "ויבו-",
+   "candidate_unpointed": "ויבו-ויכו-בה",
+   "v1_letters": "ויבו",
+   "candidate_letters": "ויבוויכובה"
+  },
+  {
+   "word_id": 119684,
+   "pointed": "ויבו־וַיַּכּוּ־בָ֔הּ",
+   "v1_unpointed": "ויכו-בה",
+   "candidate_unpointed": "ויבו-ויכו-בה",
+   "v1_letters": "ויכובה",
+   "candidate_letters": "ויבוויכובה"
+  },
+  {
+   "word_id": 120608,
+   "pointed": "יִסְלַח־נא",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "יסלח-נא",
+   "v1_letters": "קק",
+   "candidate_letters": "יסלחנא"
+  },
+  {
+   "word_id": 121620,
+   "pointed": "זֹ֚את",
+   "v1_unpointed": "זאת]צ",
+   "candidate_unpointed": "זאת",
+   "v1_letters": "זאתצ",
+   "candidate_letters": "זאת"
+  },
+  {
+   "word_id": 125124,
+   "pointed": "ואת־אֶת־הַכִּיֹּ֔ר",
+   "v1_unpointed": "ואת-",
+   "candidate_unpointed": "ואת-את-הכיר",
+   "v1_letters": "ואת",
+   "candidate_letters": "ואתאתהכיר"
+  },
+  {
+   "word_id": 125125,
+   "pointed": "ואת־אֶת־הַכִּיֹּ֔ר",
+   "v1_unpointed": "את-הכיר",
+   "candidate_unpointed": "ואת-את-הכיר",
+   "v1_letters": "אתהכיר",
+   "candidate_letters": "ואתאתהכיר"
+  },
+  {
+   "word_id": 126741,
+   "pointed": "צְבָא֖וֹת",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "צבאות",
+   "v1_letters": "ככ",
+   "candidate_letters": "צבאות"
+  },
+  {
+   "word_id": 126812,
+   "pointed": "בָּנָיו֙",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "בניו",
+   "v1_letters": "ככ",
+   "candidate_letters": "בניו"
+  },
+  {
+   "word_id": 127959,
+   "pointed": "בני־בֶן־הִנֹּ֑ם",
+   "v1_unpointed": "בני-",
+   "candidate_unpointed": "בני-בנ-הנמ",
+   "v1_letters": "בני",
+   "candidate_letters": "בניבנהנמ"
+  },
+  {
+   "word_id": 127960,
+   "pointed": "בני־בֶן־הִנֹּ֑ם",
+   "v1_unpointed": "בנ-הנמ",
+   "candidate_unpointed": "בני-בנ-הנמ",
+   "v1_letters": "בנהנמ",
+   "candidate_letters": "בניבנהנמ"
+  },
+  {
+   "word_id": 132076,
+   "pointed": "בֶן־בנימן־בָּנִ֔י",
+   "v1_unpointed": "בנ-בנימנ-",
+   "candidate_unpointed": "בנ-בנימנ-בני",
+   "v1_letters": "בנבנימנ",
+   "candidate_letters": "בנבנימנבני"
+  },
+  {
+   "word_id": 132077,
+   "pointed": "בֶן־בנימן־בָּנִ֔י",
+   "v1_unpointed": "בני",
+   "candidate_unpointed": "בנ-בנימנ-בני",
+   "v1_letters": "בני",
+   "candidate_letters": "בנבנימנבני"
+  },
+  {
+   "word_id": 132847,
+   "pointed": "ה֤וּא",
+   "v1_unpointed": "הוא]צ",
+   "candidate_unpointed": "הוא",
+   "v1_letters": "הואצ",
+   "candidate_letters": "הוא"
+  },
+  {
+   "word_id": 132857,
+   "pointed": "ולא־וְלוֹ־שֵׁ֖ם",
+   "v1_unpointed": "ולא-",
+   "candidate_unpointed": "ולא-ולו-שמ",
+   "v1_letters": "ולא",
+   "candidate_letters": "ולאולושמ"
+  },
+  {
+   "word_id": 132858,
+   "pointed": "ולא־וְלוֹ־שֵׁ֖ם",
+   "v1_unpointed": "ולו-שמ",
+   "candidate_unpointed": "ולא-ולו-שמ",
+   "v1_letters": "ולושמ",
+   "candidate_letters": "ולאולושמ"
+  },
+  {
+   "word_id": 134965,
+   "pointed": "לשאול־לִשְׁאָל־ל֨וֹ",
+   "v1_unpointed": "לשאול-",
+   "candidate_unpointed": "לשאול-לשאל-לו",
+   "v1_letters": "לשאול",
+   "candidate_letters": "לשאוללשאללו"
+  },
+  {
+   "word_id": 134966,
+   "pointed": "לשאול־לִשְׁאָל־ל֨וֹ",
+   "v1_unpointed": "לשאל-לו",
+   "candidate_unpointed": "לשאול-לשאל-לו",
+   "v1_letters": "לשאללו",
+   "candidate_letters": "לשאוללשאללו"
+  },
+  {
+   "word_id": 141695,
+   "pointed": "בן־בַּת־יְרִימ֖וֹת",
+   "v1_unpointed": "בנ-",
+   "candidate_unpointed": "בנ-בת-ירימות",
+   "v1_letters": "בנ",
+   "candidate_letters": "בנבתירימות"
+  },
+  {
+   "word_id": 141696,
+   "pointed": "בן־בַּת־יְרִימ֖וֹת",
+   "v1_unpointed": "בת-ירימות",
+   "candidate_unpointed": "בנ-בת-ירימות",
+   "v1_letters": "בתירימות",
+   "candidate_letters": "בנבתירימות"
+  },
+  {
+   "word_id": 151198,
+   "pointed": "לְּהֹ֖ם",
+   "v1_unpointed": "להמ]פ]פ",
+   "candidate_unpointed": "להמ",
+   "v1_letters": "להמפפ",
+   "candidate_letters": "להמ"
+  },
+  {
+   "word_id": 153463,
+   "pointed": "אֶֽל־פַּֽחֲווֹת֙",
+   "v1_unpointed": "אל-פחוות]צ",
+   "candidate_unpointed": "אל-פחוות",
+   "v1_letters": "אלפחוותצ",
+   "candidate_letters": "אלפחוות"
+  },
+  {
+   "word_id": 154239,
+   "pointed": "כִּי־נ֣וֹדַֽע",
+   "v1_unpointed": "כי-נודע]צ",
+   "candidate_unpointed": "כי-נודע",
+   "v1_letters": "כינודעצ",
+   "candidate_letters": "כינודע"
+  },
+  {
+   "word_id": 161577,
+   "pointed": "על־עֲלֵי־אָ֑רֶץ",
+   "v1_unpointed": "על-",
+   "candidate_unpointed": "על-עלי-ארצ",
+   "v1_letters": "על",
+   "candidate_letters": "עלעליארצ"
+  },
+  {
+   "word_id": 161578,
+   "pointed": "על־עֲלֵי־אָ֑רֶץ",
+   "v1_unpointed": "עלי-ארצ",
+   "candidate_unpointed": "על-עלי-ארצ",
+   "v1_letters": "עליארצ",
+   "candidate_letters": "עלעליארצ"
+  },
+  {
+   "word_id": 162028,
+   "pointed": "במו־בְמֵי־שָׁ֑לֶג",
+   "v1_unpointed": "במו-",
+   "candidate_unpointed": "במו-במי-שלג",
+   "v1_letters": "במו",
+   "candidate_letters": "במובמישלג"
+  },
+  {
+   "word_id": 162029,
+   "pointed": "במו־בְמֵי־שָׁ֑לֶג",
+   "v1_unpointed": "במי-שלג",
+   "candidate_unpointed": "במו-במי-שלג",
+   "v1_letters": "במישלג",
+   "candidate_letters": "במובמישלג"
+  },
+  {
+   "word_id": 167229,
+   "pointed": "לא־לֽוֹ־אַחֲרִ֥ישׁ",
+   "v1_unpointed": "לא-",
+   "candidate_unpointed": "לא-לו-אחריש",
+   "v1_letters": "לא",
+   "candidate_letters": "לאלואחריש"
+  },
+  {
+   "word_id": 167230,
+   "pointed": "לא־לֽוֹ־אַחֲרִ֥ישׁ",
+   "v1_unpointed": "לו-אחריש",
+   "candidate_unpointed": "לא-לו-אחריש",
+   "v1_letters": "לואחריש",
+   "candidate_letters": "לאלואחריש"
+  },
+  {
+   "word_id": 170479,
+   "pointed": "מיורדי־מִיָּֽרְדִי־בֽוֹר׃",
+   "v1_unpointed": "מיורדי-",
+   "candidate_unpointed": "מיורדי-מירדי-בור",
+   "v1_letters": "מיורדי",
+   "candidate_letters": "מיורדימירדיבור"
+  },
+  {
+   "word_id": 170480,
+   "pointed": "מיורדי־מִיָּֽרְדִי־בֽוֹר׃",
+   "v1_unpointed": "מירדי-בור",
+   "candidate_unpointed": "מיורדי-מירדי-בור",
+   "v1_letters": "מירדיבור",
+   "candidate_letters": "מיורדימירדיבור"
+  },
+  {
+   "word_id": 171798,
+   "pointed": "רדופי־רָֽדְפִי־טֽוֹב׃",
+   "v1_unpointed": "רדופי-",
+   "candidate_unpointed": "רדופי-רדפי-טוב",
+   "v1_letters": "רדופי",
+   "candidate_letters": "רדופירדפיטוב"
+  },
+  {
+   "word_id": 171799,
+   "pointed": "רדופי־רָֽדְפִי־טֽוֹב׃",
+   "v1_unpointed": "רדפי-טוב",
+   "candidate_unpointed": "רדופי-רדפי-טוב",
+   "v1_letters": "רדפיטוב",
+   "candidate_letters": "רדופירדפיטוב"
+  },
+  {
+   "word_id": 178075,
+   "pointed": "אשמור־אֶשְׁמָר־ל֣וֹ",
+   "v1_unpointed": "אשמור-",
+   "candidate_unpointed": "אשמור-אשמר-לו",
+   "v1_letters": "אשמור",
+   "candidate_letters": "אשמוראשמרלו"
+  },
+  {
+   "word_id": 178076,
+   "pointed": "אשמור־אֶשְׁמָר־ל֣וֹ",
+   "v1_unpointed": "אשמר-לו",
+   "candidate_unpointed": "אשמור-אשמר-לו",
+   "v1_letters": "אשמרלו",
+   "candidate_letters": "אשמוראשמרלו"
+  },
+  {
+   "word_id": 181035,
+   "pointed": "א֭וֹר",
+   "v1_unpointed": "אור]צ",
+   "candidate_unpointed": "אור",
+   "v1_letters": "אורצ",
+   "candidate_letters": "אור"
+  },
+  {
+   "word_id": 188056,
+   "pointed": "וקר־יְקַר־ר֝֗וּחַ",
+   "v1_unpointed": "וקר-",
+   "candidate_unpointed": "וקר-יקר-רוח",
+   "v1_letters": "וקר",
+   "candidate_letters": "וקריקררוח"
+  },
+  {
+   "word_id": 188057,
+   "pointed": "וקר־יְקַר־ר֝֗וּחַ",
+   "v1_unpointed": "יקר-רוח",
+   "candidate_unpointed": "וקר-יקר-רוח",
+   "v1_letters": "יקררוח",
+   "candidate_letters": "וקריקררוח"
+  },
+  {
+   "word_id": 188172,
+   "pointed": "יבא־וּבָֽא־רֵ֝עֵ֗הוּ",
+   "v1_unpointed": "יבא-",
+   "candidate_unpointed": "יבא-ובא-רעהו",
+   "v1_letters": "יבא",
+   "candidate_letters": "יבאובארעהו"
+  },
+  {
+   "word_id": 188173,
+   "pointed": "יבא־וּבָֽא־רֵ֝עֵ֗הוּ",
+   "v1_unpointed": "ובא-רעהו",
+   "candidate_unpointed": "יבא-ובא-רעהו",
+   "v1_letters": "ובארעהו",
+   "candidate_letters": "יבאובארעהו"
+  },
+  {
+   "word_id": 188272,
+   "pointed": "לא־לוֹ־הֵֽמָּה׃",
+   "v1_unpointed": "לא-",
+   "candidate_unpointed": "לא-לו-המה",
+   "v1_letters": "לא",
+   "candidate_letters": "לאלוהמה"
+  },
+  {
+   "word_id": 188273,
+   "pointed": "לא־לוֹ־הֵֽמָּה׃",
+   "v1_unpointed": "לו-המה",
+   "candidate_unpointed": "לא-לו-המה",
+   "v1_letters": "לוהמה",
+   "candidate_letters": "לאלוהמה"
+  },
+  {
+   "word_id": 188350,
+   "pointed": "גרל־גְּֽדָל־חֵ֭מָה",
+   "v1_unpointed": "גרל-",
+   "candidate_unpointed": "גרל-גדל-חמה",
+   "v1_letters": "גרל",
+   "candidate_letters": "גרלגדלחמה"
+  },
+  {
+   "word_id": 188351,
+   "pointed": "גרל־גְּֽדָל־חֵ֭מָה",
+   "v1_unpointed": "גדל-חמה",
+   "candidate_unpointed": "גרל-גדל-חמה",
+   "v1_letters": "גדלחמה",
+   "candidate_letters": "גרלגדלחמה"
+  },
+  {
+   "word_id": 188883,
+   "pointed": "יקצור־יִקְצָר־אָ֑וֶן",
+   "v1_unpointed": "יקצור-",
+   "candidate_unpointed": "יקצור-יקצר-אונ",
+   "v1_letters": "יקצור",
+   "candidate_letters": "יקצוריקצראונ"
+  },
+  {
+   "word_id": 188884,
+   "pointed": "יקצור־יִקְצָר־אָ֑וֶן",
+   "v1_unpointed": "יקצר-אונ",
+   "candidate_unpointed": "יקצור-יקצר-אונ",
+   "v1_letters": "יקצראונ",
+   "candidate_letters": "יקצוריקצראונ"
+  },
+  {
+   "word_id": 188902,
+   "pointed": "טהור־טְהָר־לֵ֑ב",
+   "v1_unpointed": "טהור-",
+   "candidate_unpointed": "טהור-טהר-לב",
+   "v1_letters": "טהור",
+   "candidate_letters": "טהורטהרלב"
+  },
+  {
+   "word_id": 188903,
+   "pointed": "טהור־טְהָר־לֵ֑ב",
+   "v1_unpointed": "טהר-לב",
+   "candidate_unpointed": "טהור-טהר-לב",
+   "v1_letters": "טהרלב",
+   "candidate_letters": "טהורטהרלב"
+  },
+  {
+   "word_id": 188928,
+   "pointed": "יפול־יִפָּל־שָֽׁם׃",
+   "v1_unpointed": "יפול-",
+   "candidate_unpointed": "יפול-יפל-שמ",
+   "v1_letters": "יפול",
+   "candidate_letters": "יפוליפלשמ"
+  },
+  {
+   "word_id": 188929,
+   "pointed": "יפול־יִפָּל־שָֽׁם׃",
+   "v1_unpointed": "יפל-שמ",
+   "candidate_unpointed": "יפול-יפל-שמ",
+   "v1_letters": "יפלשמ",
+   "candidate_letters": "יפוליפלשמ"
+  },
+  {
+   "word_id": 189183,
+   "pointed": "וישמח־יִשְׂמַח־בּֽוֹ׃",
+   "v1_unpointed": "וישמח-",
+   "candidate_unpointed": "וישמח-ישמח-בו",
+   "v1_letters": "וישמח",
+   "candidate_letters": "וישמחישמחבו"
+  },
+  {
+   "word_id": 189184,
+   "pointed": "וישמח־יִשְׂמַח־בּֽוֹ׃",
+   "v1_unpointed": "ישמח-בו",
+   "candidate_unpointed": "וישמח-ישמח-בו",
+   "v1_letters": "ישמחבו",
+   "candidate_letters": "וישמחישמחבו"
+  },
+  {
+   "word_id": 197169,
+   "pointed": "בית־בַּת־צִיּ֔וֹן",
+   "v1_unpointed": "בית-",
+   "candidate_unpointed": "בית-בת-ציונ",
+   "v1_letters": "בית",
+   "candidate_letters": "ביתבתציונ"
+  },
+  {
+   "word_id": 197170,
+   "pointed": "בית־בַּת־צִיּ֔וֹן",
+   "v1_unpointed": "בת-ציונ",
+   "candidate_unpointed": "בית-בת-ציונ",
+   "v1_letters": "בתציונ",
+   "candidate_letters": "ביתבתציונ"
+  },
+  {
+   "word_id": 199245,
+   "pointed": "הֶעָוֺ֨ן",
+   "v1_unpointed": "העונ]צ",
+   "candidate_unpointed": "העונ",
+   "v1_letters": "העונצ",
+   "candidate_letters": "העונ"
+  },
+  {
+   "word_id": 200138,
+   "pointed": "עַד־יעבור־יַעֲבָר־זָֽעַם׃",
+   "v1_unpointed": "עד-יעבור-",
+   "candidate_unpointed": "עד-יעבור-יעבר-זעמ",
+   "v1_letters": "עדיעבור",
+   "candidate_letters": "עדיעבוריעברזעמ"
+  },
+  {
+   "word_id": 200139,
+   "pointed": "עַד־יעבור־יַעֲבָר־זָֽעַם׃",
+   "v1_unpointed": "יעבר-זעמ",
+   "candidate_unpointed": "עד-יעבור-יעבר-זעמ",
+   "v1_letters": "יעברזעמ",
+   "candidate_letters": "עדיעבוריעברזעמ"
+  },
+  {
+   "word_id": 204852,
+   "pointed": "יסגוד־יִסְגָּד־ל֤וֹ",
+   "v1_unpointed": "יסגוד-",
+   "candidate_unpointed": "יסגוד-יסגד-לו",
+   "v1_letters": "יסגוד",
+   "candidate_letters": "יסגודיסגדלו"
+  },
+  {
+   "word_id": 204853,
+   "pointed": "יסגוד־יִסְגָּד־ל֤וֹ",
+   "v1_unpointed": "יסגד-לו",
+   "candidate_unpointed": "יסגוד-יסגד-לו",
+   "v1_letters": "יסגדלו",
+   "candidate_letters": "יסגודיסגדלו"
+  },
+  {
+   "word_id": 206724,
+   "pointed": "מי־לי־מַה־לִּי־פֹה֙",
+   "v1_unpointed": "מי-לי-",
+   "candidate_unpointed": "מי-לי-מה-לי-פה",
+   "v1_letters": "מילי",
+   "candidate_letters": "מילימהליפה"
+  },
+  {
+   "word_id": 206725,
+   "pointed": "מי־לי־מַה־לִּי־פֹה֙",
+   "v1_unpointed": "מה-לי-פה",
+   "candidate_unpointed": "מי-לי-מה-לי-פה",
+   "v1_letters": "מהליפה",
+   "candidate_letters": "מילימהליפה"
+  },
+  {
+   "word_id": 209209,
+   "pointed": "על־אֶל־חֵיקָֽם׃",
+   "v1_unpointed": "על-",
+   "candidate_unpointed": "על-אל-חיקמ",
+   "v1_letters": "על",
+   "candidate_letters": "עלאלחיקמ"
+  },
+  {
+   "word_id": 209210,
+   "pointed": "על־אֶל־חֵיקָֽם׃",
+   "v1_unpointed": "אל-חיקמ",
+   "candidate_unpointed": "על-אל-חיקמ",
+   "v1_letters": "אלחיקמ",
+   "candidate_letters": "עלאלחיקמ"
+  },
+  {
+   "word_id": 210753,
+   "pointed": "תקראו־תִּקְרְאִי־לִ֔י",
+   "v1_unpointed": "תקראו-",
+   "candidate_unpointed": "תקראו-תקראי-לי",
+   "v1_letters": "תקראו",
+   "candidate_letters": "תקראותקראילי"
+  },
+  {
+   "word_id": 210754,
+   "pointed": "תקראו־תִּקְרְאִי־לִ֔י",
+   "v1_unpointed": "תקראי-לי",
+   "candidate_unpointed": "תקראו-תקראי-לי",
+   "v1_letters": "תקראילי",
+   "candidate_letters": "תקראותקראילי"
+  },
+  {
+   "word_id": 212052,
+   "pointed": "וְֽנָאֹ֔ף",
+   "v1_unpointed": "ונאפ]צ",
+   "candidate_unpointed": "ונאפ",
+   "v1_letters": "ונאפצ",
+   "candidate_letters": "ונאפ"
+  },
+  {
+   "word_id": 214021,
+   "pointed": "וְאָמַרְתָּ֨",
+   "v1_unpointed": "ואמרת]צ",
+   "candidate_unpointed": "ואמרת",
+   "v1_letters": "ואמרתצ",
+   "candidate_letters": "ואמרת"
+  },
+  {
+   "word_id": 220165,
+   "pointed": "בָּאִ֖ים",
+   "v1_unpointed": "ככ",
+   "candidate_unpointed": "באימ",
+   "v1_letters": "ככ",
+   "candidate_letters": "באימ"
+  },
+  {
+   "word_id": 220925,
+   "pointed": "לכול־לְכָל־עֲוֺנֽוֹתֵיהֶם֙",
+   "v1_unpointed": "לכול-",
+   "candidate_unpointed": "לכול-לכל-עונותיהמ",
+   "v1_letters": "לכול",
+   "candidate_letters": "לכוללכלעונותיהמ"
+  },
+  {
+   "word_id": 220926,
+   "pointed": "לכול־לְכָל־עֲוֺנֽוֹתֵיהֶם֙",
+   "v1_unpointed": "לכל-עונותיהמ",
+   "candidate_unpointed": "לכול-לכל-עונותיהמ",
+   "v1_letters": "לכלעונותיהמ",
+   "candidate_letters": "לכוללכלעונותיהמ"
+  },
+  {
+   "word_id": 222877,
+   "pointed": "את",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "את",
+   "v1_letters": "קק",
+   "candidate_letters": "את"
+  },
+  {
+   "word_id": 223231,
+   "pointed": "אם",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "אמ",
+   "v1_letters": "קק",
+   "candidate_letters": "אמ"
+  },
+  {
+   "word_id": 226846,
+   "pointed": "אַל־יְהִי־לָהּ֙",
+   "v1_unpointed": "אל-יהי-ככ",
+   "candidate_unpointed": "אל-יהי-לה",
+   "v1_letters": "אליהיככ",
+   "candidate_letters": "אליהילה"
+  },
+  {
+   "word_id": 226847,
+   "pointed": "אַל־יְהִי־לָהּ֙",
+   "v1_unpointed": "לה",
+   "candidate_unpointed": "אל-יהי-לה",
+   "v1_letters": "לה",
+   "candidate_letters": "אליהילה"
+  },
+  {
+   "word_id": 227091,
+   "pointed": "ידרך",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "ידרכ",
+   "v1_letters": "קק",
+   "candidate_letters": "ידרכ"
+  },
+  {
+   "word_id": 227964,
+   "pointed": "בבית־בֵֽית־הַפְּקֻדֹּ֖ת",
+   "v1_unpointed": "בבית-",
+   "candidate_unpointed": "בבית-בית-הפקדת",
+   "v1_letters": "בבית",
+   "candidate_letters": "בביתביתהפקדת"
+  },
+  {
+   "word_id": 227965,
+   "pointed": "בבית־בֵֽית־הַפְּקֻדֹּ֖ת",
+   "v1_unpointed": "בית-הפקדת",
+   "candidate_unpointed": "בבית-בית-הפקדת",
+   "v1_letters": "ביתהפקדת",
+   "candidate_letters": "בביתביתהפקדת"
+  },
+  {
+   "word_id": 228366,
+   "pointed": "מן־בת־מִבַּת־צִיּ֖וֹן",
+   "v1_unpointed": "מנ-בת-",
+   "candidate_unpointed": "מנ-בת-מבת-ציונ",
+   "v1_letters": "מנבת",
+   "candidate_letters": "מנבתמבתציונ"
+  },
+  {
+   "word_id": 228367,
+   "pointed": "מן־בת־מִבַּת־צִיּ֖וֹן",
+   "v1_unpointed": "מבת-ציונ",
+   "candidate_unpointed": "מנ-בת-מבת-ציונ",
+   "v1_letters": "מבתציונ",
+   "candidate_letters": "מנבתמבתציונ"
+  },
+  {
+   "word_id": 231856,
+   "pointed": "על־אַל־תָּחֹ֥ס",
+   "v1_unpointed": "על-",
+   "candidate_unpointed": "על-אל-תחס",
+   "v1_letters": "על",
+   "candidate_letters": "עלאלתחס"
+  },
+  {
+   "word_id": 231857,
+   "pointed": "עיניכם",
+   "v1_unpointed": "אל-תחס",
+   "candidate_unpointed": "עיניכמ",
+   "v1_letters": "אלתחס",
+   "candidate_letters": "עיניכמ"
+  },
+  {
+   "word_id": 231858,
+   "pointed": "עֵינְכֶ֖ם",
+   "v1_unpointed": "עיניכמ",
+   "candidate_unpointed": "עינכמ",
+   "v1_letters": "עיניכמ",
+   "candidate_letters": "עינכמ"
+  },
+  {
+   "word_id": 236215,
+   "pointed": "כקסום־כִּקְסָם־שָׁוְא֙",
+   "v1_unpointed": "כקסומ-",
+   "candidate_unpointed": "כקסומ-כקסמ-שוא",
+   "v1_letters": "כקסומ",
+   "candidate_letters": "כקסומכקסמשוא"
+  },
+  {
+   "word_id": 236216,
+   "pointed": "כקסום־כִּקְסָם־שָׁוְא֙",
+   "v1_unpointed": "כקסמ-שוא",
+   "candidate_unpointed": "כקסומ-כקסמ-שוא",
+   "v1_letters": "כקסמשוא",
+   "candidate_letters": "כקסומכקסמשוא"
+  },
+  {
+   "word_id": 237271,
+   "pointed": "כתוב־כְּתָב־לְךָ֙",
+   "v1_unpointed": "כתוב-",
+   "candidate_unpointed": "כתוב-כתב-לכ",
+   "v1_letters": "כתוב",
+   "candidate_letters": "כתובכתבלכ"
+  },
+  {
+   "word_id": 237272,
+   "pointed": "כתוב־כְּתָב־לְךָ֙",
+   "v1_unpointed": "כתב-לכ",
+   "candidate_unpointed": "כתוב-כתב-לכ",
+   "v1_letters": "כתבלכ",
+   "candidate_letters": "כתובכתבלכ"
+  },
+  {
+   "word_id": 241255,
+   "pointed": "תכשלי־תְשַׁכְּלִי־ע֑וֹד",
+   "v1_unpointed": "תכשלי-",
+   "candidate_unpointed": "תכשלי-תשכלי-עוד",
+   "v1_letters": "תכשלי",
+   "candidate_letters": "תכשליתשכליעוד"
+  },
+  {
+   "word_id": 241256,
+   "pointed": "תכשלי־תְשַׁכְּלִי־ע֑וֹד",
+   "v1_unpointed": "תשכלי-עוד",
+   "candidate_unpointed": "תכשלי-תשכלי-עוד",
+   "v1_letters": "תשכליעוד",
+   "candidate_letters": "תכשליתשכליעוד"
+  },
+  {
+   "word_id": 241854,
+   "pointed": "יהיה־יִֽהְיוּ־עוֹד֙",
+   "v1_unpointed": "יהיה-",
+   "candidate_unpointed": "יהיה-יהיו-עוד",
+   "v1_letters": "יהיה",
+   "candidate_letters": "יהיהיהיועוד"
+  },
+  {
+   "word_id": 241855,
+   "pointed": "יהיה־יִֽהְיוּ־עוֹד֙",
+   "v1_unpointed": "יהיו-עוד",
+   "candidate_unpointed": "יהיה-יהיו-עוד",
+   "v1_letters": "יהיועוד",
+   "candidate_letters": "יהיהיהיועוד"
+  },
+  {
+   "word_id": 245945,
+   "pointed": "חמש",
+   "v1_unpointed": "קק",
+   "candidate_unpointed": "חמש",
+   "v1_letters": "קק",
+   "candidate_letters": "חמש"
+  },
+  {
+   "word_id": 248108,
+   "pointed": "אנתה־אַנְתְּ־ה֣וּא",
+   "v1_unpointed": "אנתה-",
+   "candidate_unpointed": "אנתה-אנת-הוא",
+   "v1_letters": "אנתה",
+   "candidate_letters": "אנתהאנתהוא"
+  },
+  {
+   "word_id": 248109,
+   "pointed": "אנתה־אַנְתְּ־ה֣וּא",
+   "v1_unpointed": "אנת-הוא",
+   "candidate_unpointed": "אנתה-אנת-הוא",
+   "v1_letters": "אנתהוא",
+   "candidate_letters": "אנתהאנתהוא"
+  },
+  {
+   "word_id": 248616,
+   "pointed": "אנתה־אַנְתְּ־ה֤וּא",
+   "v1_unpointed": "אנתה-",
+   "candidate_unpointed": "אנתה-אנת-הוא",
+   "v1_letters": "אנתה",
+   "candidate_letters": "אנתהאנתהוא"
+  },
+  {
+   "word_id": 248617,
+   "pointed": "אנתה־אַנְתְּ־ה֤וּא",
+   "v1_unpointed": "אנת-הוא",
+   "candidate_unpointed": "אנתה-אנת-הוא",
+   "v1_letters": "אנתהוא",
+   "candidate_letters": "אנתהאנתהוא"
+  },
+  {
+   "word_id": 252796,
+   "pointed": "אכתוב־אֶ֨כְתָּב־ל֔וֹ",
+   "v1_unpointed": "אכתב-לו",
+   "candidate_unpointed": "אכתוב-אכתב-לו",
+   "v1_letters": "אכתבלו",
+   "candidate_letters": "אכתובאכתבלו"
+  },
+  {
+   "word_id": 252797,
+   "pointed": "אכתוב־אֶ֨כְתָּב־ל֔וֹ",
+   "v1_unpointed": "אכתוב-",
+   "candidate_unpointed": "אכתוב-אכתב-לו",
+   "v1_letters": "אכתוב",
+   "candidate_letters": "אכתובאכתבלו"
+  },
+  {
+   "word_id": 253001,
+   "pointed": "בלי־בַֽל־יַעֲשׂ֑וּן",
+   "v1_unpointed": "בלי-",
+   "candidate_unpointed": "בלי-בל-יעשונ",
+   "v1_letters": "בלי",
+   "candidate_letters": "בליבליעשונ"
+  },
+  {
+   "word_id": 253002,
+   "pointed": "בלי־בַֽל־יַעֲשׂ֑וּן",
+   "v1_unpointed": "בל-יעשונ",
+   "candidate_unpointed": "בלי-בל-יעשונ",
+   "v1_letters": "בליעשונ",
+   "candidate_letters": "בליבליעשונ"
+  },
+  {
+   "word_id": 255996,
+   "pointed": "ענוי־עֲנִיֵּי־אָֽרֶץ׃",
+   "v1_unpointed": "ענוי-",
+   "candidate_unpointed": "ענוי-עניי-ארצ",
+   "v1_letters": "ענוי",
+   "candidate_letters": "ענויענייארצ"
+  },
+  {
+   "word_id": 255997,
+   "pointed": "ענוי־עֲנִיֵּי־אָֽרֶץ׃",
+   "v1_unpointed": "עניי-ארצ",
+   "candidate_unpointed": "ענוי-עניי-ארצ",
+   "v1_letters": "ענייארצ",
+   "candidate_letters": "ענויענייארצ"
+  },
+  {
+   "word_id": 258442,
+   "pointed": "וגדול־וּגְדָל־כֹּ֔חַ",
+   "v1_unpointed": "וגדול-",
+   "candidate_unpointed": "וגדול-וגדל-כח",
+   "v1_letters": "וגדול",
+   "candidate_letters": "וגדולוגדלכח"
+  },
+  {
+   "word_id": 258443,
+   "pointed": "וגדול־וּגְדָל־כֹּ֔חַ",
+   "v1_unpointed": "וגדל-כח",
+   "candidate_unpointed": "וגדול-וגדל-כח",
+   "v1_letters": "וגדלכח",
+   "candidate_letters": "וגדולוגדלכח"
+  },
+  {
+   "word_id": 258578,
+   "pointed": "לעבור־לַֽעֲבָר־בָּ֥ךְ",
+   "v1_unpointed": "לעבור-",
+   "candidate_unpointed": "לעבור-לעבר-בכ",
+   "v1_letters": "לעבור",
+   "candidate_letters": "לעבורלעברבכ"
+  },
+  {
+   "word_id": 258579,
+   "pointed": "לעבור־לַֽעֲבָר־בָּ֥ךְ",
+   "v1_unpointed": "לעבר-בכ",
+   "candidate_unpointed": "לעבור-לעבר-בכ",
+   "v1_letters": "לעברבכ",
+   "candidate_letters": "לעבורלעברבכ"
+  }
+ ]
+}

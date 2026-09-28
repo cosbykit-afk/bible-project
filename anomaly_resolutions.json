@@ -1,0 +1,4200 @@
+{
+ "51400": {
+  "v1_unpointed": "לכ-",
+  "v1_letters": "לכ",
+  "resolved_unpointed": "לך־לכה־נא",
+  "resolved_letters": "לךלכהנא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Numbers",
+   "oshb_chapter": 23,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "לך",
+    "לְכָ/ה",
+    "נָּ֨א"
+   ],
+   "oshb_unpointed": [
+    "לך",
+    "לכה",
+    "נא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "לך־לְכָה־נָּ֨א",
+  "resolved_unpointed_v1conv": "לכ-לכה-נא",
+  "resolved_letters_v1conv": "לכלכהנא"
+ },
+ "71447": {
+  "v1_unpointed": "אכרות-",
+  "v1_letters": "אכרות",
+  "resolved_unpointed": "אכרות־אכרת־לך",
+  "resolved_letters": "אכרותאכרתלך",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Joshua",
+   "oshb_chapter": 9,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "אכרות",
+    "אֶֽכְרָת",
+    "לְ/ךָ֥"
+   ],
+   "oshb_unpointed": [
+    "אכרות",
+    "אכרת",
+    "לך"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "אכרות־אֶֽכְרָת־לְךָ֥",
+  "resolved_unpointed_v1conv": "אכרות-אכרת-לכ",
+  "resolved_letters_v1conv": "אכרותאכרתלכ"
+ },
+ "71448": {
+  "v1_unpointed": "אכרת-לכ",
+  "v1_letters": "אכרתלכ",
+  "resolved_unpointed": "אכרת־לך",
+  "resolved_letters": "אכרתלכ",
+  "anomaly_class": "token-split-misalignment",
+  "evidence": {
+   "oshb_book": "Joshua",
+   "oshb_chapter": 9,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "אֶֽכְרָת",
+    "לְ/ךָ֥"
+   ],
+   "oshb_unpointed": [
+    "אכרת",
+    "לך"
+   ],
+   "match_method": "neighbor-span-split",
+   "note": "Row is a v1 split artifact (orig_word_id 71446.1): v1 divided OSHB tokens 12-14 (אכרות/אכרת/לך) into two rows; word 71447 holds the full pointed text, this row holds the remaining unpointed with empty pointed. Stored value אכרת-לכ correctly reflects OSHB tokens 13-14; the anomaly is the row split itself, not the value."
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "",
+  "resolved_unpointed_v1conv": "אכרת-לכ",
+  "resolved_letters_v1conv": "אכרתלכ"
+ },
+ "84266": {
+  "v1_unpointed": "לכק",
+  "v1_letters": "לכק",
+  "resolved_unpointed": "לך",
+  "resolved_letters": "לך",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Judges",
+   "oshb_chapter": 19,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    3
+   ],
+   "oshb_pointed": [
+    "לְךָ֥"
+   ],
+   "oshb_unpointed": [
+    "לך"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "לְךָ֥",
+  "resolved_unpointed_v1conv": "לכ",
+  "resolved_letters_v1conv": "לכ"
+ },
+ "84702": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "בני",
+  "resolved_letters": "בני",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Judges",
+   "oshb_chapter": 20,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    15
+   ],
+   "oshb_pointed": [
+    "בְּנֵ֣י"
+   ],
+   "oshb_unpointed": [
+    "בני"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 13,
+  "v1_pointed": "בְּנֵ֣י",
+  "resolved_unpointed_v1conv": "בני",
+  "resolved_letters_v1conv": "בני"
+ },
+ "86191": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "אלי",
+  "resolved_letters": "אלי",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ruth",
+   "oshb_chapter": 3,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    6
+   ],
+   "oshb_pointed": [
+    "אֵלַ֖/י"
+   ],
+   "oshb_unpointed": [
+    "אלי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "אֵלַ֖י",
+  "resolved_unpointed_v1conv": "אלי",
+  "resolved_letters_v1conv": "אלי"
+ },
+ "86269": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "אם",
+  "resolved_letters": "אם",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ruth",
+   "oshb_chapter": 3,
+   "oshb_verse": 12,
+   "oshb_word_pos": [
+    5
+   ],
+   "oshb_pointed": [
+    "אם"
+   ],
+   "oshb_unpointed": [
+    "אם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "אם",
+  "resolved_unpointed_v1conv": "אמ",
+  "resolved_letters_v1conv": "אמ"
+ },
+ "86337": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "אלי",
+  "resolved_letters": "אלי",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ruth",
+   "oshb_chapter": 3,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    9
+   ],
+   "oshb_pointed": [
+    "אֵלַ֔/י"
+   ],
+   "oshb_unpointed": [
+    "אלי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "אֵלַ֔י",
+  "resolved_unpointed_v1conv": "אלי",
+  "resolved_letters_v1conv": "אלי"
+ },
+ "86442": {
+  "v1_unpointed": "לגאול-",
+  "v1_letters": "לגאול",
+  "resolved_unpointed": "לגאול־לגאל־לי",
+  "resolved_letters": "לגאוללגאללי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ruth",
+   "oshb_chapter": 4,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "ל/גאול",
+    "לִ/גְאָל",
+    "לִ֔/י"
+   ],
+   "oshb_unpointed": [
+    "לגאול",
+    "לגאל",
+    "לי"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "לגאול־לִגְאָל־לִ֔י",
+  "resolved_unpointed_v1conv": "לגאול-לגאל-לי",
+  "resolved_letters_v1conv": "לגאוללגאללי"
+ },
+ "86443": {
+  "v1_unpointed": "לגאל-לי",
+  "v1_letters": "לגאללי",
+  "resolved_unpointed": "לגאול־לגאל־לי",
+  "resolved_letters": "לגאוללגאללי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ruth",
+   "oshb_chapter": 4,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "ל/גאול",
+    "לִ/גְאָל",
+    "לִ֔/י"
+   ],
+   "oshb_unpointed": [
+    "לגאול",
+    "לגאל",
+    "לי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "לגאול־לִגְאָל־לִ֔י",
+  "resolved_unpointed_v1conv": "לגאול-לגאל-לי",
+  "resolved_letters_v1conv": "לגאוללגאללי"
+ },
+ "94116": {
+  "v1_unpointed": "על-",
+  "v1_letters": "על",
+  "resolved_unpointed": "על־אל־הלחם",
+  "resolved_letters": "עלאלהלחם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 20,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "על",
+    "אֶל",
+    "הַ/לֶּ֖חֶם"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "אל",
+    "הלחם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "על־אֶל־הַלֶּ֖חֶם",
+  "resolved_unpointed_v1conv": "על-אל-הלחמ",
+  "resolved_letters_v1conv": "עלאלהלחמ"
+ },
+ "94117": {
+  "v1_unpointed": "אל-הלחמ",
+  "v1_letters": "אלהלחמ",
+  "resolved_unpointed": "על־אל־הלחם",
+  "resolved_letters": "עלאלהלחם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 20,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "על",
+    "אֶל",
+    "הַ/לֶּ֖חֶם"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "אל",
+    "הלחם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "על־אֶל־הַלֶּ֖חֶם",
+  "resolved_unpointed_v1conv": "על-אל-הלחמ",
+  "resolved_letters_v1conv": "עלאלהלחמ"
+ },
+ "94834": {
+  "v1_unpointed": "לשאול-",
+  "v1_letters": "לשאול",
+  "resolved_unpointed": "לשאול־לשאל־לו",
+  "resolved_letters": "לשאוללשאללו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 22,
+   "oshb_verse": 15,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "ל/שאול",
+    "לִ/שְׁאָל",
+    "ל֥/וֹ"
+   ],
+   "oshb_unpointed": [
+    "לשאול",
+    "לשאל",
+    "לו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "לשאול־לִשְׁאָל־ל֥וֹ",
+  "resolved_unpointed_v1conv": "לשאול-לשאל-לו",
+  "resolved_letters_v1conv": "לשאוללשאללו"
+ },
+ "94835": {
+  "v1_unpointed": "לשאל-לו",
+  "v1_letters": "לשאללו",
+  "resolved_unpointed": "לשאול־לשאל־לו",
+  "resolved_letters": "לשאוללשאללו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 22,
+   "oshb_verse": 15,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "ל/שאול",
+    "לִ/שְׁאָל",
+    "ל֥/וֹ"
+   ],
+   "oshb_unpointed": [
+    "לשאול",
+    "לשאל",
+    "לו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "לשאול־לִשְׁאָל־ל֥וֹ",
+  "resolved_unpointed_v1conv": "לשאול-לשאל-לו",
+  "resolved_letters_v1conv": "לשאוללשאללו"
+ },
+ "97045": {
+  "v1_unpointed": "קסומי-",
+  "v1_letters": "קסומי",
+  "resolved_unpointed": "קסומי־קסמי־נא",
+  "resolved_letters": "קסומיקסמינא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 28,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "קסומי",
+    "קָֽסֳמִי",
+    "נָ֥א"
+   ],
+   "oshb_unpointed": [
+    "קסומי",
+    "קסמי",
+    "נא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 15,
+  "v1_pointed": "קסומי־קָֽסֳמִי־נָ֥א",
+  "resolved_unpointed_v1conv": "קסומי-קסמי-נא",
+  "resolved_letters_v1conv": "קסומיקסמינא"
+ },
+ "97046": {
+  "v1_unpointed": "קסמי-נאי",
+  "v1_letters": "קסמינאי",
+  "resolved_unpointed": "קסומי־קסמי־נא",
+  "resolved_letters": "קסומיקסמינא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Samuel",
+   "oshb_chapter": 28,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "קסומי",
+    "קָֽסֳמִי",
+    "נָ֥א"
+   ],
+   "oshb_unpointed": [
+    "קסומי",
+    "קסמי",
+    "נא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption Stored נאי corrupts OSHB נא (extra י); otherwise stored = last two segments."
+  },
+  "confidence": "high",
+  "v1_word_pos": 16,
+  "v1_pointed": "קסומי־קָֽסֳמִי־נָ֥א",
+  "resolved_unpointed_v1conv": "קסומי-קסמי-נא",
+  "resolved_letters_v1conv": "קסומיקסמינא"
+ },
+ "100626": {
+  "v1_unpointed": "פרת",
+  "v1_letters": "פרת",
+  "resolved_unpointed": "בנהר־פרת",
+  "resolved_letters": "בנהרפרת",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 8,
+   "oshb_verse": 3,
+   "oshb_word_pos": [
+    12,
+    13
+   ],
+   "oshb_pointed": [
+    "בִּֽ/נְהַר",
+    "פְּרָֽת"
+   ],
+   "oshb_unpointed": [
+    "בנהר",
+    "פרת"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "בִּֽנְהַר־פְּרָֽת׃",
+  "resolved_unpointed_v1conv": "בנהר-פרת",
+  "resolved_letters_v1conv": "בנהרפרת"
+ },
+ "102748": {
+  "v1_unpointed": "שומ-",
+  "v1_letters": "שומ",
+  "resolved_unpointed": "שום־שים־לאישי",
+  "resolved_letters": "שוםשיםלאישי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 14,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    27,
+    28,
+    29
+   ],
+   "oshb_pointed": [
+    "שום",
+    "שִׂים",
+    "לְ/אִישִׁ֛/י"
+   ],
+   "oshb_unpointed": [
+    "שום",
+    "שים",
+    "לאישי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 22,
+  "v1_pointed": "שום־שִׂים־לְאִישִׁ֛י",
+  "resolved_unpointed_v1conv": "שומ-שימ-לאישי",
+  "resolved_letters_v1conv": "שומשימלאישי"
+ },
+ "102749": {
+  "v1_unpointed": "שימ-לאישי",
+  "v1_letters": "שימלאישי",
+  "resolved_unpointed": "שום־שים־לאישי",
+  "resolved_letters": "שוםשיםלאישי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 14,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    27,
+    28,
+    29
+   ],
+   "oshb_pointed": [
+    "שום",
+    "שִׂים",
+    "לְ/אִישִׁ֛/י"
+   ],
+   "oshb_unpointed": [
+    "שום",
+    "שים",
+    "לאישי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 23,
+  "v1_pointed": "שום־שִׂים־לְאִישִׁ֛י",
+  "resolved_unpointed_v1conv": "שומ-שימ-לאישי",
+  "resolved_letters_v1conv": "שומשימלאישי"
+ },
+ "103986": {
+  "v1_unpointed": "איש",
+  "v1_letters": "איש",
+  "resolved_unpointed": "ישאל־איש",
+  "resolved_letters": "ישאלאיש",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 16,
+   "oshb_verse": 23,
+   "oshb_word_pos": [
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "יִשְׁאַל",
+    "אִ֖ישׁ"
+   ],
+   "oshb_unpointed": [
+    "ישאל",
+    "איש"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "יִשְׁאַל־אִ֖ישׁ",
+  "resolved_unpointed_v1conv": "ישאל-איש",
+  "resolved_letters_v1conv": "ישאלאיש"
+ },
+ "104753": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "כי־על",
+  "resolved_letters": "כיעל",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 18,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "כִּֽי",
+    "על"
+   ],
+   "oshb_unpointed": [
+    "כי",
+    "על"
+   ],
+   "match_method": "subsequence(len=1,offset=1)",
+   "note": "v1 pointed segment(s) do not match OSHB; span inferred from matching subsequence."
+  },
+  "confidence": "medium",
+  "v1_word_pos": 18,
+  "v1_pointed": "ככ־על",
+  "resolved_unpointed_v1conv": "כי-על",
+  "resolved_letters_v1conv": "כיעל"
+ },
+ "106069": {
+  "v1_unpointed": "ינתנ-",
+  "v1_letters": "ינתנ",
+  "resolved_unpointed": "ינתן־יתן־לנו",
+  "resolved_letters": "ינתןיתןלנו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 21,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "ינתן",
+    "יֻתַּן",
+    "לָ֜/נוּ"
+   ],
+   "oshb_unpointed": [
+    "ינתן",
+    "יתן",
+    "לנו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "ינתן־יֻתַּן־לָ֜נוּ",
+  "resolved_unpointed_v1conv": "ינתנ-יתנ-לנו",
+  "resolved_letters_v1conv": "ינתניתנלנו"
+ },
+ "106070": {
+  "v1_unpointed": "יתנ-לנו",
+  "v1_letters": "יתנלנו",
+  "resolved_unpointed": "ינתן־יתן־לנו",
+  "resolved_letters": "ינתןיתןלנו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Samuel",
+   "oshb_chapter": 21,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "ינתן",
+    "יֻתַּן",
+    "לָ֜/נוּ"
+   ],
+   "oshb_unpointed": [
+    "ינתן",
+    "יתן",
+    "לנו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "ינתן־יֻתַּן־לָ֜נוּ",
+  "resolved_unpointed_v1conv": "ינתנ-יתנ-לנו",
+  "resolved_letters_v1conv": "ינתניתנלנו"
+ },
+ "115902": {
+  "v1_unpointed": "תתנ-",
+  "v1_letters": "תתנ",
+  "resolved_unpointed": "תתן־תת־יהוה",
+  "resolved_letters": "תתןתתיהוה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Kings",
+   "oshb_chapter": 17,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "תתן",
+    "תֵּת",
+    "יְהוָ֛ה"
+   ],
+   "oshb_unpointed": [
+    "תתן",
+    "תת",
+    "יהוה"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 17,
+  "v1_pointed": "תתן־תֵּת־יְהוָ֛ה",
+  "resolved_unpointed_v1conv": "תתנ-תת-יהוה",
+  "resolved_letters_v1conv": "תתנתתיהוה"
+ },
+ "115903": {
+  "v1_unpointed": "תת-יהוה",
+  "v1_letters": "תתיהוה",
+  "resolved_unpointed": "תתן־תת־יהוה",
+  "resolved_letters": "תתןתתיהוה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Kings",
+   "oshb_chapter": 17,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "תתן",
+    "תֵּת",
+    "יְהוָ֛ה"
+   ],
+   "oshb_unpointed": [
+    "תתן",
+    "תת",
+    "יהוה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 18,
+  "v1_pointed": "תתן־תֵּת־יְהוָ֛ה",
+  "resolved_unpointed_v1conv": "תתנ-תת-יהוה",
+  "resolved_letters_v1conv": "תתנתתיהוה"
+ },
+ "119683": {
+  "v1_unpointed": "ויבו-",
+  "v1_letters": "ויבו",
+  "resolved_unpointed": "ויבו־ויכו־בה",
+  "resolved_letters": "ויבוויכובה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 3,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "ו/יבו",
+    "וַ/יַּכּוּ",
+    "בָ֔/הּ"
+   ],
+   "oshb_unpointed": [
+    "ויבו",
+    "ויכו",
+    "בה"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "ויבו־וַיַּכּוּ־בָ֔הּ",
+  "resolved_unpointed_v1conv": "ויבו-ויכו-בה",
+  "resolved_letters_v1conv": "ויבוויכובה"
+ },
+ "119684": {
+  "v1_unpointed": "ויכו-בה",
+  "v1_letters": "ויכובה",
+  "resolved_unpointed": "ויבו־ויכו־בה",
+  "resolved_letters": "ויבוויכובה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 3,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "ו/יבו",
+    "וַ/יַּכּוּ",
+    "בָ֔/הּ"
+   ],
+   "oshb_unpointed": [
+    "ויבו",
+    "ויכו",
+    "בה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "ויבו־וַיַּכּוּ־בָ֔הּ",
+  "resolved_unpointed_v1conv": "ויבו-ויכו-בה",
+  "resolved_letters_v1conv": "ויבוויכובה"
+ },
+ "120608": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "יסלח־נא",
+  "resolved_letters": "יסלחנא",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 5,
+   "oshb_verse": 18,
+   "oshb_word_pos": [
+    22,
+    23
+   ],
+   "oshb_pointed": [
+    "יִסְלַח",
+    "נא"
+   ],
+   "oshb_unpointed": [
+    "יסלח",
+    "נא"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 21,
+  "v1_pointed": "יִסְלַח־נא",
+  "resolved_unpointed_v1conv": "יסלח-נא",
+  "resolved_letters_v1conv": "יסלחנא"
+ },
+ "121620": {
+  "v1_unpointed": "זאת]צ",
+  "v1_letters": "זאתצ",
+  "resolved_unpointed": "זאת",
+  "resolved_letters": "זאת",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 8,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    27
+   ],
+   "oshb_pointed": [
+    "זֹ֚את"
+   ],
+   "oshb_unpointed": [
+    "זאת"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 20,
+  "v1_pointed": "זֹ֚את",
+  "resolved_unpointed_v1conv": "זאת",
+  "resolved_letters_v1conv": "זאת"
+ },
+ "125124": {
+  "v1_unpointed": "ואת-",
+  "v1_letters": "ואת",
+  "resolved_unpointed": "ואת־את־הכיר",
+  "resolved_letters": "ואתאתהכיר",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 16,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    9,
+    10,
+    11
+   ],
+   "oshb_pointed": [
+    "ו/את",
+    "אֶת",
+    "הַ/כִּיֹּ֔ר"
+   ],
+   "oshb_unpointed": [
+    "ואת",
+    "את",
+    "הכיר"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "ואת־אֶת־הַכִּיֹּ֔ר",
+  "resolved_unpointed_v1conv": "ואת-את-הכיר",
+  "resolved_letters_v1conv": "ואתאתהכיר"
+ },
+ "125125": {
+  "v1_unpointed": "את-הכיר",
+  "v1_letters": "אתהכיר",
+  "resolved_unpointed": "ואת־את־הכיר",
+  "resolved_letters": "ואתאתהכיר",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 16,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    9,
+    10,
+    11
+   ],
+   "oshb_pointed": [
+    "ו/את",
+    "אֶת",
+    "הַ/כִּיֹּ֔ר"
+   ],
+   "oshb_unpointed": [
+    "ואת",
+    "את",
+    "הכיר"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "ואת־אֶת־הַכִּיֹּ֔ר",
+  "resolved_unpointed_v1conv": "ואת-את-הכיר",
+  "resolved_letters_v1conv": "ואתאתהכיר"
+ },
+ "126741": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "צבאות",
+  "resolved_letters": "צבאות",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 19,
+   "oshb_verse": 31,
+   "oshb_word_pos": [
+    10
+   ],
+   "oshb_pointed": [
+    "צְבָא֖וֹת"
+   ],
+   "oshb_unpointed": [
+    "צבאות"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "צְבָא֖וֹת",
+  "resolved_unpointed_v1conv": "צבאות",
+  "resolved_letters_v1conv": "צבאות"
+ },
+ "126812": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "בניו",
+  "resolved_letters": "בניו",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 19,
+   "oshb_verse": 37,
+   "oshb_word_pos": [
+    9
+   ],
+   "oshb_pointed": [
+    "בָּנָי/ו֙"
+   ],
+   "oshb_unpointed": [
+    "בניו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "בָּנָיו֙",
+  "resolved_unpointed_v1conv": "בניו",
+  "resolved_letters_v1conv": "בניו"
+ },
+ "127959": {
+  "v1_unpointed": "בני-",
+  "v1_letters": "בני",
+  "resolved_unpointed": "בני־בן־הנם",
+  "resolved_letters": "בניבןהנם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 23,
+   "oshb_verse": 10,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "בני",
+    "בֶן",
+    "הִנֹּ֑ם"
+   ],
+   "oshb_unpointed": [
+    "בני",
+    "בן",
+    "הנם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "בני־בֶן־הִנֹּ֑ם",
+  "resolved_unpointed_v1conv": "בני-בנ-הנמ",
+  "resolved_letters_v1conv": "בניבנהנמ"
+ },
+ "127960": {
+  "v1_unpointed": "בנ-הנמ",
+  "v1_letters": "בנהנמ",
+  "resolved_unpointed": "בני־בן־הנם",
+  "resolved_letters": "בניבןהנם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Kings",
+   "oshb_chapter": 23,
+   "oshb_verse": 10,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "בני",
+    "בֶן",
+    "הִנֹּ֑ם"
+   ],
+   "oshb_unpointed": [
+    "בני",
+    "בן",
+    "הנם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "בני־בֶן־הִנֹּ֑ם",
+  "resolved_unpointed_v1conv": "בני-בנ-הנמ",
+  "resolved_letters_v1conv": "בניבנהנמ"
+ },
+ "132076": {
+  "v1_unpointed": "בנ-בנימנ-",
+  "v1_letters": "בנבנימנ",
+  "resolved_unpointed": "בן־בנימן־בני",
+  "resolved_letters": "בןבנימןבני",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 9,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "בֶן",
+    "בני/מן",
+    "בָּנִ֔י"
+   ],
+   "oshb_unpointed": [
+    "בן",
+    "בנימן",
+    "בני"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "בֶן־בנימן־בָּנִ֔י",
+  "resolved_unpointed_v1conv": "בנ-בנימנ-בני",
+  "resolved_letters_v1conv": "בנבנימנבני"
+ },
+ "132077": {
+  "v1_unpointed": "בני",
+  "v1_letters": "בני",
+  "resolved_unpointed": "בן־בנימן־בני",
+  "resolved_letters": "בןבנימןבני",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 9,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "בֶן",
+    "בני/מן",
+    "בָּנִ֔י"
+   ],
+   "oshb_unpointed": [
+    "בן",
+    "בנימן",
+    "בני"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "בֶן־בנימן־בָּנִ֔י",
+  "resolved_unpointed_v1conv": "בנ-בנימנ-בני",
+  "resolved_letters_v1conv": "בנבנימנבני"
+ },
+ "132847": {
+  "v1_unpointed": "הוא]צ",
+  "v1_letters": "הואצ",
+  "resolved_unpointed": "הוא",
+  "resolved_letters": "הוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 11,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    4
+   ],
+   "oshb_pointed": [
+    "ה֤וּא"
+   ],
+   "oshb_unpointed": [
+    "הוא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "ה֤וּא",
+  "resolved_unpointed_v1conv": "הוא",
+  "resolved_letters_v1conv": "הוא"
+ },
+ "132857": {
+  "v1_unpointed": "ולא-",
+  "v1_letters": "ולא",
+  "resolved_unpointed": "ולא־ולו־שם",
+  "resolved_letters": "ולאולושם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 11,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "ו/לא",
+    "וְ/ל/וֹ",
+    "שֵׁ֖ם"
+   ],
+   "oshb_unpointed": [
+    "ולא",
+    "ולו",
+    "שם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 13,
+  "v1_pointed": "ולא־וְלוֹ־שֵׁ֖ם",
+  "resolved_unpointed_v1conv": "ולא-ולו-שמ",
+  "resolved_letters_v1conv": "ולאולושמ"
+ },
+ "132858": {
+  "v1_unpointed": "ולו-שמ",
+  "v1_letters": "ולושמ",
+  "resolved_unpointed": "ולא־ולו־שם",
+  "resolved_letters": "ולאולושם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 11,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "ו/לא",
+    "וְ/ל/וֹ",
+    "שֵׁ֖ם"
+   ],
+   "oshb_unpointed": [
+    "ולא",
+    "ולו",
+    "שם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 14,
+  "v1_pointed": "ולא־וְלוֹ־שֵׁ֖ם",
+  "resolved_unpointed_v1conv": "ולא-ולו-שמ",
+  "resolved_letters_v1conv": "ולאולושמ"
+ },
+ "134965": {
+  "v1_unpointed": "לשאול-",
+  "v1_letters": "לשאול",
+  "resolved_unpointed": "לשאול־לשאל־לו",
+  "resolved_letters": "לשאוללשאללו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 18,
+   "oshb_verse": 10,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "ל/שאול",
+    "לִ/שְׁאָל",
+    "ל֨/וֹ"
+   ],
+   "oshb_unpointed": [
+    "לשאול",
+    "לשאל",
+    "לו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "לשאול־לִשְׁאָל־ל֨וֹ",
+  "resolved_unpointed_v1conv": "לשאול-לשאל-לו",
+  "resolved_letters_v1conv": "לשאוללשאללו"
+ },
+ "134966": {
+  "v1_unpointed": "לשאל-לו",
+  "v1_letters": "לשאללו",
+  "resolved_unpointed": "לשאול־לשאל־לו",
+  "resolved_letters": "לשאוללשאללו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "1 Chronicles",
+   "oshb_chapter": 18,
+   "oshb_verse": 10,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "ל/שאול",
+    "לִ/שְׁאָל",
+    "ל֨/וֹ"
+   ],
+   "oshb_unpointed": [
+    "לשאול",
+    "לשאל",
+    "לו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "לשאול־לִשְׁאָל־ל֨וֹ",
+  "resolved_unpointed_v1conv": "לשאול-לשאל-לו",
+  "resolved_letters_v1conv": "לשאוללשאללו"
+ },
+ "141695": {
+  "v1_unpointed": "בנ-",
+  "v1_letters": "בנ",
+  "resolved_unpointed": "בן־בת־ירימות",
+  "resolved_letters": "בןבתירימות",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Chronicles",
+   "oshb_chapter": 11,
+   "oshb_verse": 18,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "בן",
+    "בַּת",
+    "יְרִימ֖וֹת"
+   ],
+   "oshb_unpointed": [
+    "בן",
+    "בת",
+    "ירימות"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "בן־בַּת־יְרִימ֖וֹת",
+  "resolved_unpointed_v1conv": "בנ-בת-ירימות",
+  "resolved_letters_v1conv": "בנבתירימות"
+ },
+ "141696": {
+  "v1_unpointed": "בת-ירימות",
+  "v1_letters": "בתירימות",
+  "resolved_unpointed": "בן־בת־ירימות",
+  "resolved_letters": "בןבתירימות",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "2 Chronicles",
+   "oshb_chapter": 11,
+   "oshb_verse": 18,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "בן",
+    "בַּת",
+    "יְרִימ֖וֹת"
+   ],
+   "oshb_unpointed": [
+    "בן",
+    "בת",
+    "ירימות"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "בן־בַּת־יְרִימ֖וֹת",
+  "resolved_unpointed_v1conv": "בנ-בת-ירימות",
+  "resolved_letters_v1conv": "בנבתירימות"
+ },
+ "151198": {
+  "v1_unpointed": "להמ]פ]פ",
+  "v1_letters": "להמפפ",
+  "resolved_unpointed": "להם",
+  "resolved_letters": "להם",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ezra",
+   "oshb_chapter": 5,
+   "oshb_verse": 10,
+   "oshb_word_pos": [
+    4
+   ],
+   "oshb_pointed": [
+    "לְּ/הֹ֖ם"
+   ],
+   "oshb_unpointed": [
+    "להם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "לְּהֹ֖ם",
+  "resolved_unpointed_v1conv": "להמ",
+  "resolved_letters_v1conv": "להמ"
+ },
+ "153463": {
+  "v1_unpointed": "אל-פחוות]צ",
+  "v1_letters": "אלפחוותצ",
+  "resolved_unpointed": "אל־פחוות",
+  "resolved_letters": "אלפחוות",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nehemiah",
+   "oshb_chapter": 2,
+   "oshb_verse": 9,
+   "oshb_word_pos": [
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "אֶֽל",
+    "פַּֽחֲווֹת֙"
+   ],
+   "oshb_unpointed": [
+    "אל",
+    "פחוות"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "אֶֽל־פַּֽחֲווֹת֙",
+  "resolved_unpointed_v1conv": "אל-פחוות",
+  "resolved_letters_v1conv": "אלפחוות"
+ },
+ "154239": {
+  "v1_unpointed": "כי-נודע]צ",
+  "v1_letters": "כינודעצ",
+  "resolved_unpointed": "כי־נודע",
+  "resolved_letters": "כינודע",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nehemiah",
+   "oshb_chapter": 4,
+   "oshb_verse": 9,
+   "oshb_word_pos": [
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "כִּי",
+    "נ֣וֹדַֽע"
+   ],
+   "oshb_unpointed": [
+    "כי",
+    "נודע"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "כִּי־נ֣וֹדַֽע",
+  "resolved_unpointed_v1conv": "כי-נודע",
+  "resolved_letters_v1conv": "כינודע"
+ },
+ "161577": {
+  "v1_unpointed": "על-",
+  "v1_letters": "על",
+  "resolved_unpointed": "על־עלי־ארץ",
+  "resolved_letters": "עלעליארץ",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 7,
+   "oshb_verse": 1,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "על",
+    "עֲלֵי",
+    "אָ֑רֶץ"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "עלי",
+    "ארץ"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "על־עֲלֵי־אָ֑רֶץ",
+  "resolved_unpointed_v1conv": "על-עלי-ארצ",
+  "resolved_letters_v1conv": "עלעליארצ"
+ },
+ "161578": {
+  "v1_unpointed": "עלי-ארצ",
+  "v1_letters": "עליארצ",
+  "resolved_unpointed": "על־עלי־ארץ",
+  "resolved_letters": "עלעליארץ",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 7,
+   "oshb_verse": 1,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "על",
+    "עֲלֵי",
+    "אָ֑רֶץ"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "עלי",
+    "ארץ"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "על־עֲלֵי־אָ֑רֶץ",
+  "resolved_unpointed_v1conv": "על-עלי-ארצ",
+  "resolved_letters_v1conv": "עלעליארצ"
+ },
+ "162028": {
+  "v1_unpointed": "במו-",
+  "v1_letters": "במו",
+  "resolved_unpointed": "במו־במי־שלג",
+  "resolved_letters": "במובמישלג",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 9,
+   "oshb_verse": 30,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "במו",
+    "בְ/מֵי",
+    "שָׁ֑לֶג"
+   ],
+   "oshb_unpointed": [
+    "במו",
+    "במי",
+    "שלג"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "במו־בְמֵי־שָׁ֑לֶג",
+  "resolved_unpointed_v1conv": "במו-במי-שלג",
+  "resolved_letters_v1conv": "במובמישלג"
+ },
+ "162029": {
+  "v1_unpointed": "במי-שלג",
+  "v1_letters": "במישלג",
+  "resolved_unpointed": "במו־במי־שלג",
+  "resolved_letters": "במובמישלג",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 9,
+   "oshb_verse": 30,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "במו",
+    "בְ/מֵי",
+    "שָׁ֑לֶג"
+   ],
+   "oshb_unpointed": [
+    "במו",
+    "במי",
+    "שלג"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "במו־בְמֵי־שָׁ֑לֶג",
+  "resolved_unpointed_v1conv": "במו-במי-שלג",
+  "resolved_letters_v1conv": "במובמישלג"
+ },
+ "167229": {
+  "v1_unpointed": "לא-",
+  "v1_letters": "לא",
+  "resolved_unpointed": "לא־לו־אחריש",
+  "resolved_letters": "לאלואחריש",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 41,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "לא",
+    "לֽ/וֹ",
+    "אַחֲרִ֥ישׁ"
+   ],
+   "oshb_unpointed": [
+    "לא",
+    "לו",
+    "אחריש"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "לא־לֽוֹ־אַחֲרִ֥ישׁ",
+  "resolved_unpointed_v1conv": "לא-לו-אחריש",
+  "resolved_letters_v1conv": "לאלואחריש"
+ },
+ "167230": {
+  "v1_unpointed": "לו-אחריש",
+  "v1_letters": "לואחריש",
+  "resolved_unpointed": "לא־לו־אחריש",
+  "resolved_letters": "לאלואחריש",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Job",
+   "oshb_chapter": 41,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "לא",
+    "לֽ/וֹ",
+    "אַחֲרִ֥ישׁ"
+   ],
+   "oshb_unpointed": [
+    "לא",
+    "לו",
+    "אחריש"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "לא־לֽוֹ־אַחֲרִ֥ישׁ",
+  "resolved_unpointed_v1conv": "לא-לו-אחריש",
+  "resolved_letters_v1conv": "לאלואחריש"
+ },
+ "170479": {
+  "v1_unpointed": "מיורדי-",
+  "v1_letters": "מיורדי",
+  "resolved_unpointed": "מיורדי־מירדי־בור",
+  "resolved_letters": "מיורדימירדיבור",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 30,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "מ/יורדי",
+    "מִ/יָּֽרְדִ/י",
+    "בֽוֹר"
+   ],
+   "oshb_unpointed": [
+    "מיורדי",
+    "מירדי",
+    "בור"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "מיורדי־מִיָּֽרְדִי־בֽוֹר׃",
+  "resolved_unpointed_v1conv": "מיורדי-מירדי-בור",
+  "resolved_letters_v1conv": "מיורדימירדיבור"
+ },
+ "170480": {
+  "v1_unpointed": "מירדי-בור",
+  "v1_letters": "מירדיבור",
+  "resolved_unpointed": "מיורדי־מירדי־בור",
+  "resolved_letters": "מיורדימירדיבור",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 30,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "מ/יורדי",
+    "מִ/יָּֽרְדִ/י",
+    "בֽוֹר"
+   ],
+   "oshb_unpointed": [
+    "מיורדי",
+    "מירדי",
+    "בור"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 7,
+  "v1_pointed": "מיורדי־מִיָּֽרְדִי־בֽוֹר׃",
+  "resolved_unpointed_v1conv": "מיורדי-מירדי-בור",
+  "resolved_letters_v1conv": "מיורדימירדיבור"
+ },
+ "171798": {
+  "v1_unpointed": "רדופי-",
+  "v1_letters": "רדופי",
+  "resolved_unpointed": "רדופי־רדפי־טוב",
+  "resolved_letters": "רדופירדפיטוב",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 38,
+   "oshb_verse": 21,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "רדופ/י",
+    "רָֽדְפִ/י",
+    "טֽוֹב"
+   ],
+   "oshb_unpointed": [
+    "רדופי",
+    "רדפי",
+    "טוב"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 7,
+  "v1_pointed": "רדופי־רָֽדְפִי־טֽוֹב׃",
+  "resolved_unpointed_v1conv": "רדופי-רדפי-טוב",
+  "resolved_letters_v1conv": "רדופירדפיטוב"
+ },
+ "171799": {
+  "v1_unpointed": "רדפי-טוב",
+  "v1_letters": "רדפיטוב",
+  "resolved_unpointed": "רדופי־רדפי־טוב",
+  "resolved_letters": "רדופירדפיטוב",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 38,
+   "oshb_verse": 21,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "רדופ/י",
+    "רָֽדְפִ/י",
+    "טֽוֹב"
+   ],
+   "oshb_unpointed": [
+    "רדופי",
+    "רדפי",
+    "טוב"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "רדופי־רָֽדְפִי־טֽוֹב׃",
+  "resolved_unpointed_v1conv": "רדופי-רדפי-טוב",
+  "resolved_letters_v1conv": "רדופירדפיטוב"
+ },
+ "178075": {
+  "v1_unpointed": "אשמור-",
+  "v1_letters": "אשמור",
+  "resolved_unpointed": "אשמור־אשמר־לו",
+  "resolved_letters": "אשמוראשמרלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 89,
+   "oshb_verse": 29,
+   "oshb_word_pos": [
+    2,
+    3,
+    4
+   ],
+   "oshb_pointed": [
+    "אשמור",
+    "אֶשְׁמָר",
+    "ל֣/וֹ"
+   ],
+   "oshb_unpointed": [
+    "אשמור",
+    "אשמר",
+    "לו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "אשמור־אֶשְׁמָר־ל֣וֹ",
+  "resolved_unpointed_v1conv": "אשמור-אשמר-לו",
+  "resolved_letters_v1conv": "אשמוראשמרלו"
+ },
+ "178076": {
+  "v1_unpointed": "אשמר-לו",
+  "v1_letters": "אשמרלו",
+  "resolved_unpointed": "אשמור־אשמר־לו",
+  "resolved_letters": "אשמוראשמרלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 89,
+   "oshb_verse": 29,
+   "oshb_word_pos": [
+    2,
+    3,
+    4
+   ],
+   "oshb_pointed": [
+    "אשמור",
+    "אֶשְׁמָר",
+    "ל֣/וֹ"
+   ],
+   "oshb_unpointed": [
+    "אשמור",
+    "אשמר",
+    "לו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "אשמור־אֶשְׁמָר־ל֣וֹ",
+  "resolved_unpointed_v1conv": "אשמור-אשמר-לו",
+  "resolved_letters_v1conv": "אשמוראשמרלו"
+ },
+ "181035": {
+  "v1_unpointed": "אור]צ",
+  "v1_letters": "אורצ",
+  "resolved_unpointed": "אור",
+  "resolved_letters": "אור",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Psalms",
+   "oshb_chapter": 112,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    3
+   ],
+   "oshb_pointed": [
+    "א֭וֹר"
+   ],
+   "oshb_unpointed": [
+    "אור"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "א֭וֹר",
+  "resolved_unpointed_v1conv": "אור",
+  "resolved_letters_v1conv": "אור"
+ },
+ "188056": {
+  "v1_unpointed": "וקר-",
+  "v1_letters": "וקר",
+  "resolved_unpointed": "וקר־יקר־רוח",
+  "resolved_letters": "וקריקררוח",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 17,
+   "oshb_verse": 27,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "ו/קר",
+    "יְקַר",
+    "ר֝֗וּחַ"
+   ],
+   "oshb_unpointed": [
+    "וקר",
+    "יקר",
+    "רוח"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "וקר־יְקַר־ר֝֗וּחַ",
+  "resolved_unpointed_v1conv": "וקר-יקר-רוח",
+  "resolved_letters_v1conv": "וקריקררוח"
+ },
+ "188057": {
+  "v1_unpointed": "יקר-רוח",
+  "v1_letters": "יקררוח",
+  "resolved_unpointed": "וקר־יקר־רוח",
+  "resolved_letters": "וקריקררוח",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 17,
+   "oshb_verse": 27,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "ו/קר",
+    "יְקַר",
+    "ר֝֗וּחַ"
+   ],
+   "oshb_unpointed": [
+    "וקר",
+    "יקר",
+    "רוח"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "וקר־יְקַר־ר֝֗וּחַ",
+  "resolved_unpointed_v1conv": "וקר-יקר-רוח",
+  "resolved_letters_v1conv": "וקריקררוח"
+ },
+ "188172": {
+  "v1_unpointed": "יבא-",
+  "v1_letters": "יבא",
+  "resolved_unpointed": "יבא־ובא־רעהו",
+  "resolved_letters": "יבאובארעהו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 18,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "יבא",
+    "וּ/בָֽא",
+    "רֵ֝עֵ֗/הוּ"
+   ],
+   "oshb_unpointed": [
+    "יבא",
+    "ובא",
+    "רעהו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "יבא־וּבָֽא־רֵ֝עֵ֗הוּ",
+  "resolved_unpointed_v1conv": "יבא-ובא-רעהו",
+  "resolved_letters_v1conv": "יבאובארעהו"
+ },
+ "188173": {
+  "v1_unpointed": "ובא-רעהו",
+  "v1_letters": "ובארעהו",
+  "resolved_unpointed": "יבא־ובא־רעהו",
+  "resolved_letters": "יבאובארעהו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 18,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "יבא",
+    "וּ/בָֽא",
+    "רֵ֝עֵ֗/הוּ"
+   ],
+   "oshb_unpointed": [
+    "יבא",
+    "ובא",
+    "רעהו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "יבא־וּבָֽא־רֵ֝עֵ֗הוּ",
+  "resolved_unpointed_v1conv": "יבא-ובא-רעהו",
+  "resolved_letters_v1conv": "יבאובארעהו"
+ },
+ "188272": {
+  "v1_unpointed": "לא-",
+  "v1_letters": "לא",
+  "resolved_unpointed": "לא־לו־המה",
+  "resolved_letters": "לאלוהמה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 19,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "לא",
+    "ל/וֹ",
+    "הֵֽמָּה"
+   ],
+   "oshb_unpointed": [
+    "לא",
+    "לו",
+    "המה"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "לא־לוֹ־הֵֽמָּה׃",
+  "resolved_unpointed_v1conv": "לא-לו-המה",
+  "resolved_letters_v1conv": "לאלוהמה"
+ },
+ "188273": {
+  "v1_unpointed": "לו-המה",
+  "v1_letters": "לוהמה",
+  "resolved_unpointed": "לא־לו־המה",
+  "resolved_letters": "לאלוהמה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 19,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "לא",
+    "ל/וֹ",
+    "הֵֽמָּה"
+   ],
+   "oshb_unpointed": [
+    "לא",
+    "לו",
+    "המה"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 12,
+  "v1_pointed": "לא־לוֹ־הֵֽמָּה׃",
+  "resolved_unpointed_v1conv": "לא-לו-המה",
+  "resolved_letters_v1conv": "לאלוהמה"
+ },
+ "188350": {
+  "v1_unpointed": "גרל-",
+  "v1_letters": "גרל",
+  "resolved_unpointed": "גרל־גדל־חמה",
+  "resolved_letters": "גרלגדלחמה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 19,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "גרל",
+    "גְּֽדָל",
+    "חֵ֭מָה"
+   ],
+   "oshb_unpointed": [
+    "גרל",
+    "גדל",
+    "חמה"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "גרל־גְּֽדָל־חֵ֭מָה",
+  "resolved_unpointed_v1conv": "גרל-גדל-חמה",
+  "resolved_letters_v1conv": "גרלגדלחמה"
+ },
+ "188351": {
+  "v1_unpointed": "גדל-חמה",
+  "v1_letters": "גדלחמה",
+  "resolved_unpointed": "גרל־גדל־חמה",
+  "resolved_letters": "גרלגדלחמה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 19,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "גרל",
+    "גְּֽדָל",
+    "חֵ֭מָה"
+   ],
+   "oshb_unpointed": [
+    "גרל",
+    "גדל",
+    "חמה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "גרל־גְּֽדָל־חֵ֭מָה",
+  "resolved_unpointed_v1conv": "גרל-גדל-חמה",
+  "resolved_letters_v1conv": "גרלגדלחמה"
+ },
+ "188883": {
+  "v1_unpointed": "יקצור-",
+  "v1_letters": "יקצור",
+  "resolved_unpointed": "יקצור־יקצר־און",
+  "resolved_letters": "יקצוריקצראון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "יקצור",
+    "יִקְצָר",
+    "אָ֑וֶן"
+   ],
+   "oshb_unpointed": [
+    "יקצור",
+    "יקצר",
+    "און"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "יקצור־יִקְצָר־אָ֑וֶן",
+  "resolved_unpointed_v1conv": "יקצור-יקצר-אונ",
+  "resolved_letters_v1conv": "יקצוריקצראונ"
+ },
+ "188884": {
+  "v1_unpointed": "יקצר-אונ",
+  "v1_letters": "יקצראונ",
+  "resolved_unpointed": "יקצור־יקצר־און",
+  "resolved_letters": "יקצוריקצראון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "יקצור",
+    "יִקְצָר",
+    "אָ֑וֶן"
+   ],
+   "oshb_unpointed": [
+    "יקצור",
+    "יקצר",
+    "און"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "יקצור־יִקְצָר־אָ֑וֶן",
+  "resolved_unpointed_v1conv": "יקצור-יקצר-אונ",
+  "resolved_letters_v1conv": "יקצוריקצראונ"
+ },
+ "188902": {
+  "v1_unpointed": "טהור-",
+  "v1_letters": "טהור",
+  "resolved_unpointed": "טהור־טהר־לב",
+  "resolved_letters": "טהורטהרלב",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 11,
+   "oshb_word_pos": [
+    2,
+    3,
+    4
+   ],
+   "oshb_pointed": [
+    "טהור",
+    "טְהָר",
+    "לֵ֑ב"
+   ],
+   "oshb_unpointed": [
+    "טהור",
+    "טהר",
+    "לב"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "טהור־טְהָר־לֵ֑ב",
+  "resolved_unpointed_v1conv": "טהור-טהר-לב",
+  "resolved_letters_v1conv": "טהורטהרלב"
+ },
+ "188903": {
+  "v1_unpointed": "טהר-לב",
+  "v1_letters": "טהרלב",
+  "resolved_unpointed": "טהור־טהר־לב",
+  "resolved_letters": "טהורטהרלב",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 11,
+   "oshb_word_pos": [
+    2,
+    3,
+    4
+   ],
+   "oshb_pointed": [
+    "טהור",
+    "טְהָר",
+    "לֵ֑ב"
+   ],
+   "oshb_unpointed": [
+    "טהור",
+    "טהר",
+    "לב"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "טהור־טְהָר־לֵ֑ב",
+  "resolved_unpointed_v1conv": "טהור-טהר-לב",
+  "resolved_letters_v1conv": "טהורטהרלב"
+ },
+ "188928": {
+  "v1_unpointed": "יפול-",
+  "v1_letters": "יפול",
+  "resolved_unpointed": "יפול־יפל־שם",
+  "resolved_letters": "יפוליפלשם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "יפול",
+    "יִפָּל",
+    "שָֽׁם"
+   ],
+   "oshb_unpointed": [
+    "יפול",
+    "יפל",
+    "שם"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 7,
+  "v1_pointed": "יפול־יִפָּל־שָֽׁם׃",
+  "resolved_unpointed_v1conv": "יפול-יפל-שמ",
+  "resolved_letters_v1conv": "יפוליפלשמ"
+ },
+ "188929": {
+  "v1_unpointed": "יפל-שמ",
+  "v1_letters": "יפלשמ",
+  "resolved_unpointed": "יפול־יפל־שם",
+  "resolved_letters": "יפוליפלשם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 22,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    7,
+    8,
+    9
+   ],
+   "oshb_pointed": [
+    "יפול",
+    "יִפָּל",
+    "שָֽׁם"
+   ],
+   "oshb_unpointed": [
+    "יפול",
+    "יפל",
+    "שם"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "יפול־יִפָּל־שָֽׁם׃",
+  "resolved_unpointed_v1conv": "יפול-יפל-שמ",
+  "resolved_letters_v1conv": "יפוליפלשמ"
+ },
+ "189183": {
+  "v1_unpointed": "וישמח-",
+  "v1_letters": "וישמח",
+  "resolved_unpointed": "וישמח־ישמח־בו",
+  "resolved_letters": "וישמחישמחבו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 23,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    10,
+    11,
+    12
+   ],
+   "oshb_pointed": [
+    "ו/ישמח",
+    "יִשְׂמַח",
+    "בּֽ/וֹ"
+   ],
+   "oshb_unpointed": [
+    "וישמח",
+    "ישמח",
+    "בו"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "וישמח־יִשְׂמַח־בּֽוֹ׃",
+  "resolved_unpointed_v1conv": "וישמח-ישמח-בו",
+  "resolved_letters_v1conv": "וישמחישמחבו"
+ },
+ "189184": {
+  "v1_unpointed": "ישמח-בו",
+  "v1_letters": "ישמחבו",
+  "resolved_unpointed": "וישמח־ישמח־בו",
+  "resolved_letters": "וישמחישמחבו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Proverbs",
+   "oshb_chapter": 23,
+   "oshb_verse": 24,
+   "oshb_word_pos": [
+    10,
+    11,
+    12
+   ],
+   "oshb_pointed": [
+    "ו/ישמח",
+    "יִשְׂמַח",
+    "בּֽ/וֹ"
+   ],
+   "oshb_unpointed": [
+    "וישמח",
+    "ישמח",
+    "בו"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "וישמח־יִשְׂמַח־בּֽוֹ׃",
+  "resolved_unpointed_v1conv": "וישמח-ישמח-בו",
+  "resolved_letters_v1conv": "וישמחישמחבו"
+ },
+ "197169": {
+  "v1_unpointed": "בית-",
+  "v1_letters": "בית",
+  "resolved_unpointed": "בית־בת־ציון",
+  "resolved_letters": "ביתבתציון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 10,
+   "oshb_verse": 32,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "בית",
+    "בַּת",
+    "צִיּ֔וֹן"
+   ],
+   "oshb_unpointed": [
+    "בית",
+    "בת",
+    "ציון"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "בית־בַּת־צִיּ֔וֹן",
+  "resolved_unpointed_v1conv": "בית-בת-ציונ",
+  "resolved_letters_v1conv": "ביתבתציונ"
+ },
+ "197170": {
+  "v1_unpointed": "בת-ציונ",
+  "v1_letters": "בתציונ",
+  "resolved_unpointed": "בית־בת־ציון",
+  "resolved_letters": "ביתבתציון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 10,
+   "oshb_verse": 32,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "בית",
+    "בַּת",
+    "צִיּ֔וֹן"
+   ],
+   "oshb_unpointed": [
+    "בית",
+    "בת",
+    "ציון"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "בית־בַּת־צִיּ֔וֹן",
+  "resolved_unpointed_v1conv": "בית-בת-ציונ",
+  "resolved_letters_v1conv": "ביתבתציונ"
+ },
+ "199245": {
+  "v1_unpointed": "העונ]צ",
+  "v1_letters": "העונצ",
+  "resolved_unpointed": "העון",
+  "resolved_letters": "העון",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 22,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    7
+   ],
+   "oshb_pointed": [
+    "הֶ/עָוֺ֨ן"
+   ],
+   "oshb_unpointed": [
+    "העון"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "הֶעָוֺ֨ן",
+  "resolved_unpointed_v1conv": "העונ",
+  "resolved_letters_v1conv": "העונ"
+ },
+ "200138": {
+  "v1_unpointed": "עד-יעבור-",
+  "v1_letters": "עדיעבור",
+  "resolved_unpointed": "עד־יעבור־יעבר־זעם",
+  "resolved_letters": "עדיעבוריעברזעם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 26,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    12,
+    13,
+    14,
+    15
+   ],
+   "oshb_pointed": [
+    "עַד",
+    "יעבור",
+    "יַעֲבָר",
+    "זָֽעַם"
+   ],
+   "oshb_unpointed": [
+    "עד",
+    "יעבור",
+    "יעבר",
+    "זעם"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "עַד־יעבור־יַעֲבָר־זָֽעַם׃",
+  "resolved_unpointed_v1conv": "עד-יעבור-יעבר-זעמ",
+  "resolved_letters_v1conv": "עדיעבוריעברזעמ"
+ },
+ "200139": {
+  "v1_unpointed": "יעבר-זעמ",
+  "v1_letters": "יעברזעמ",
+  "resolved_unpointed": "עד־יעבור־יעבר־זעם",
+  "resolved_letters": "עדיעבוריעברזעם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 26,
+   "oshb_verse": 20,
+   "oshb_word_pos": [
+    12,
+    13,
+    14,
+    15
+   ],
+   "oshb_pointed": [
+    "עַד",
+    "יעבור",
+    "יַעֲבָר",
+    "זָֽעַם"
+   ],
+   "oshb_unpointed": [
+    "עד",
+    "יעבור",
+    "יעבר",
+    "זעם"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 12,
+  "v1_pointed": "עַד־יעבור־יַעֲבָר־זָֽעַם׃",
+  "resolved_unpointed_v1conv": "עד-יעבור-יעבר-זעמ",
+  "resolved_letters_v1conv": "עדיעבוריעברזעמ"
+ },
+ "204852": {
+  "v1_unpointed": "יסגוד-",
+  "v1_letters": "יסגוד",
+  "resolved_unpointed": "יסגוד־יסגד־לו",
+  "resolved_letters": "יסגודיסגדלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 44,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "יסגוד",
+    "יִסְגָּד",
+    "ל֤/וֹ"
+   ],
+   "oshb_unpointed": [
+    "יסגוד",
+    "יסגד",
+    "לו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "יסגוד־יִסְגָּד־ל֤וֹ",
+  "resolved_unpointed_v1conv": "יסגוד-יסגד-לו",
+  "resolved_letters_v1conv": "יסגודיסגדלו"
+ },
+ "204853": {
+  "v1_unpointed": "יסגד-לו",
+  "v1_letters": "יסגדלו",
+  "resolved_unpointed": "יסגוד־יסגד־לו",
+  "resolved_letters": "יסגודיסגדלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 44,
+   "oshb_verse": 17,
+   "oshb_word_pos": [
+    5,
+    6,
+    7
+   ],
+   "oshb_pointed": [
+    "יסגוד",
+    "יִסְגָּד",
+    "ל֤/וֹ"
+   ],
+   "oshb_unpointed": [
+    "יסגוד",
+    "יסגד",
+    "לו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "יסגוד־יִסְגָּד־ל֤וֹ",
+  "resolved_unpointed_v1conv": "יסגוד-יסגד-לו",
+  "resolved_letters_v1conv": "יסגודיסגדלו"
+ },
+ "206724": {
+  "v1_unpointed": "מי-לי-",
+  "v1_letters": "מילי",
+  "resolved_unpointed": "מי־לי־מה־לי־פה",
+  "resolved_letters": "מילימהליפה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 52,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "מי",
+    "ל/י",
+    "מַה",
+    "לִּ/י",
+    "פֹה֙"
+   ],
+   "oshb_unpointed": [
+    "מי",
+    "לי",
+    "מה",
+    "לי",
+    "פה"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "מי־לי־מַה־לִּי־פֹה֙",
+  "resolved_unpointed_v1conv": "מי-לי-מה-לי-פה",
+  "resolved_letters_v1conv": "מילימהליפה"
+ },
+ "206725": {
+  "v1_unpointed": "מה-לי-פה",
+  "v1_letters": "מהליפה",
+  "resolved_unpointed": "מי־לי־מה־לי־פה",
+  "resolved_letters": "מילימהליפה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 52,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "מי",
+    "ל/י",
+    "מַה",
+    "לִּ/י",
+    "פֹה֙"
+   ],
+   "oshb_unpointed": [
+    "מי",
+    "לי",
+    "מה",
+    "לי",
+    "פה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "מי־לי־מַה־לִּי־פֹה֙",
+  "resolved_unpointed_v1conv": "מי-לי-מה-לי-פה",
+  "resolved_letters_v1conv": "מילימהליפה"
+ },
+ "209209": {
+  "v1_unpointed": "על-",
+  "v1_letters": "על",
+  "resolved_unpointed": "על־אל־חיקם",
+  "resolved_letters": "עלאלחיקם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 65,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "על",
+    "אֶל",
+    "חֵיקָֽ/ם"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "אל",
+    "חיקם"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 15,
+  "v1_pointed": "על־אֶל־חֵיקָֽם׃",
+  "resolved_unpointed_v1conv": "על-אל-חיקמ",
+  "resolved_letters_v1conv": "עלאלחיקמ"
+ },
+ "209210": {
+  "v1_unpointed": "אל-חיקמ",
+  "v1_letters": "אלחיקמ",
+  "resolved_unpointed": "על־אל־חיקם",
+  "resolved_letters": "עלאלחיקם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Isaiah",
+   "oshb_chapter": 65,
+   "oshb_verse": 7,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "על",
+    "אֶל",
+    "חֵיקָֽ/ם"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "אל",
+    "חיקם"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 16,
+  "v1_pointed": "על־אֶל־חֵיקָֽם׃",
+  "resolved_unpointed_v1conv": "על-אל-חיקמ",
+  "resolved_letters_v1conv": "עלאלחיקמ"
+ },
+ "210753": {
+  "v1_unpointed": "תקראו-",
+  "v1_letters": "תקראו",
+  "resolved_unpointed": "תקראו־תקראי־לי",
+  "resolved_letters": "תקראותקראילי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 3,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "תקראו",
+    "תִּקְרְאִי",
+    "לִ֔/י"
+   ],
+   "oshb_unpointed": [
+    "תקראו",
+    "תקראי",
+    "לי"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 15,
+  "v1_pointed": "תקראו־תִּקְרְאִי־לִ֔י",
+  "resolved_unpointed_v1conv": "תקראו-תקראי-לי",
+  "resolved_letters_v1conv": "תקראותקראילי"
+ },
+ "210754": {
+  "v1_unpointed": "תקראי-לי",
+  "v1_letters": "תקראילי",
+  "resolved_unpointed": "תקראו־תקראי־לי",
+  "resolved_letters": "תקראותקראילי",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 3,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    16,
+    17,
+    18
+   ],
+   "oshb_pointed": [
+    "תקראו",
+    "תִּקְרְאִי",
+    "לִ֔/י"
+   ],
+   "oshb_unpointed": [
+    "תקראו",
+    "תקראי",
+    "לי"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 16,
+  "v1_pointed": "תקראו־תִּקְרְאִי־לִ֔י",
+  "resolved_unpointed_v1conv": "תקראו-תקראי-לי",
+  "resolved_letters_v1conv": "תקראותקראילי"
+ },
+ "212052": {
+  "v1_unpointed": "ונאפ]צ",
+  "v1_letters": "ונאפצ",
+  "resolved_unpointed": "ונאף",
+  "resolved_letters": "ונאף",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 7,
+   "oshb_verse": 9,
+   "oshb_word_pos": [
+    3
+   ],
+   "oshb_pointed": [
+    "וְֽ/נָאֹ֔ף"
+   ],
+   "oshb_unpointed": [
+    "ונאף"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "וְֽנָאֹ֔ף",
+  "resolved_unpointed_v1conv": "ונאפ",
+  "resolved_letters_v1conv": "ונאפ"
+ },
+ "214021": {
+  "v1_unpointed": "ואמרת]צ",
+  "v1_letters": "ואמרתצ",
+  "resolved_unpointed": "ואמרת",
+  "resolved_letters": "ואמרת",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 13,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    1
+   ],
+   "oshb_pointed": [
+    "וְ/אָמַרְתָּ֨"
+   ],
+   "oshb_unpointed": [
+    "ואמרת"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "וְאָמַרְתָּ֨",
+  "resolved_unpointed_v1conv": "ואמרת",
+  "resolved_letters_v1conv": "ואמרת"
+ },
+ "220165": {
+  "v1_unpointed": "ככ",
+  "v1_letters": "ככ",
+  "resolved_unpointed": "באים",
+  "resolved_letters": "באים",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 31,
+   "oshb_verse": 38,
+   "oshb_word_pos": [
+    3
+   ],
+   "oshb_pointed": [
+    "בָּאִ֖ים"
+   ],
+   "oshb_unpointed": [
+    "באים"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "בָּאִ֖ים",
+  "resolved_unpointed_v1conv": "באימ",
+  "resolved_letters_v1conv": "באימ"
+ },
+ "220925": {
+  "v1_unpointed": "לכול-",
+  "v1_letters": "לכול",
+  "resolved_unpointed": "לכול־לכל־עונותיהם",
+  "resolved_letters": "לכוללכלעונותיהם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 33,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "ל/כול",
+    "לְ/כָל",
+    "עֲוֺנֽוֹתֵי/הֶם֙"
+   ],
+   "oshb_unpointed": [
+    "לכול",
+    "לכל",
+    "עונותיהם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "לכול־לְכָל־עֲוֺנֽוֹתֵיהֶם֙",
+  "resolved_unpointed_v1conv": "לכול-לכל-עונותיהמ",
+  "resolved_letters_v1conv": "לכוללכלעונותיהמ"
+ },
+ "220926": {
+  "v1_unpointed": "לכל-עונותיהמ",
+  "v1_letters": "לכלעונותיהמ",
+  "resolved_unpointed": "לכול־לכל־עונותיהם",
+  "resolved_letters": "לכוללכלעונותיהם",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 33,
+   "oshb_verse": 8,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "ל/כול",
+    "לְ/כָל",
+    "עֲוֺנֽוֹתֵי/הֶם֙"
+   ],
+   "oshb_unpointed": [
+    "לכול",
+    "לכל",
+    "עונותיהם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 7,
+  "v1_pointed": "לכול־לְכָל־עֲוֺנֽוֹתֵיהֶם֙",
+  "resolved_unpointed_v1conv": "לכול-לכל-עונותיהמ",
+  "resolved_letters_v1conv": "לכוללכלעונותיהמ"
+ },
+ "222877": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "את",
+  "resolved_letters": "את",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 38,
+   "oshb_verse": 16,
+   "oshb_word_pos": [
+    10
+   ],
+   "oshb_pointed": [
+    "את"
+   ],
+   "oshb_unpointed": [
+    "את"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "את",
+  "resolved_unpointed_v1conv": "את",
+  "resolved_letters_v1conv": "את"
+ },
+ "223231": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "אם",
+  "resolved_letters": "אם",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 39,
+   "oshb_verse": 12,
+   "oshb_word_pos": [
+    11
+   ],
+   "oshb_pointed": [
+    "אם"
+   ],
+   "oshb_unpointed": [
+    "אם"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "אם",
+  "resolved_unpointed_v1conv": "אמ",
+  "resolved_letters_v1conv": "אמ"
+ },
+ "226846": {
+  "v1_unpointed": "אל-יהי-ככ",
+  "v1_letters": "אליהיככ",
+  "resolved_unpointed": "אל־יהי־לה",
+  "resolved_letters": "אליהילה",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 50,
+   "oshb_verse": 29,
+   "oshb_word_pos": [
+    11,
+    12,
+    13
+   ],
+   "oshb_pointed": [
+    "אַל",
+    "יְהִי",
+    "לָ/הּ֙"
+   ],
+   "oshb_unpointed": [
+    "אל",
+    "יהי",
+    "לה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "אַל־יְהִי־לָהּ֙",
+  "resolved_unpointed_v1conv": "אל-יהי-לה",
+  "resolved_letters_v1conv": "אליהילה"
+ },
+ "226847": {
+  "v1_unpointed": "לה",
+  "v1_letters": "לה",
+  "resolved_unpointed": "אל־יהי־לה",
+  "resolved_letters": "אליהילה",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 50,
+   "oshb_verse": 29,
+   "oshb_word_pos": [
+    11,
+    12,
+    13
+   ],
+   "oshb_pointed": [
+    "אַל",
+    "יְהִי",
+    "לָ/הּ֙"
+   ],
+   "oshb_unpointed": [
+    "אל",
+    "יהי",
+    "לה"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "אַל־יְהִי־לָהּ֙",
+  "resolved_unpointed_v1conv": "אל-יהי-לה",
+  "resolved_letters_v1conv": "אליהילה"
+ },
+ "227091": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "ידרך",
+  "resolved_letters": "ידרך",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 51,
+   "oshb_verse": 3,
+   "oshb_word_pos": [
+    3
+   ],
+   "oshb_pointed": [
+    "ידרך"
+   ],
+   "oshb_unpointed": [
+    "ידרך"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "ידרך",
+  "resolved_unpointed_v1conv": "ידרכ",
+  "resolved_letters_v1conv": "ידרכ"
+ },
+ "227964": {
+  "v1_unpointed": "בבית-",
+  "v1_letters": "בבית",
+  "resolved_unpointed": "בבית־בית־הפקדת",
+  "resolved_letters": "בביתביתהפקדת",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 52,
+   "oshb_verse": 11,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "ב/בית",
+    "בֵֽית",
+    "הַ/פְּקֻדֹּ֖ת"
+   ],
+   "oshb_unpointed": [
+    "בבית",
+    "בית",
+    "הפקדת"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "בבית־בֵֽית־הַפְּקֻדֹּ֖ת",
+  "resolved_unpointed_v1conv": "בבית-בית-הפקדת",
+  "resolved_letters_v1conv": "בביתביתהפקדת"
+ },
+ "227965": {
+  "v1_unpointed": "בית-הפקדת",
+  "v1_letters": "ביתהפקדת",
+  "resolved_unpointed": "בבית־בית־הפקדת",
+  "resolved_letters": "בביתביתהפקדת",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Jeremiah",
+   "oshb_chapter": 52,
+   "oshb_verse": 11,
+   "oshb_word_pos": [
+    12,
+    13,
+    14
+   ],
+   "oshb_pointed": [
+    "ב/בית",
+    "בֵֽית",
+    "הַ/פְּקֻדֹּ֖ת"
+   ],
+   "oshb_unpointed": [
+    "בבית",
+    "בית",
+    "הפקדת"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "בבית־בֵֽית־הַפְּקֻדֹּ֖ת",
+  "resolved_unpointed_v1conv": "בבית-בית-הפקדת",
+  "resolved_letters_v1conv": "בביתביתהפקדת"
+ },
+ "228366": {
+  "v1_unpointed": "מנ-בת-",
+  "v1_letters": "מנבת",
+  "resolved_unpointed": "מן־בת־מבת־ציון",
+  "resolved_letters": "מןבתמבתציון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Lamentations",
+   "oshb_chapter": 1,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "מן",
+    "בת",
+    "מִ/בַּת",
+    "צִיּ֖וֹן"
+   ],
+   "oshb_unpointed": [
+    "מן",
+    "בת",
+    "מבת",
+    "ציון"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "מן־בת־מִבַּת־צִיּ֖וֹן",
+  "resolved_unpointed_v1conv": "מנ-בת-מבת-ציונ",
+  "resolved_letters_v1conv": "מנבתמבתציונ"
+ },
+ "228367": {
+  "v1_unpointed": "מבת-ציונ",
+  "v1_letters": "מבתציונ",
+  "resolved_unpointed": "מן־בת־מבת־ציון",
+  "resolved_letters": "מןבתמבתציון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Lamentations",
+   "oshb_chapter": 1,
+   "oshb_verse": 6,
+   "oshb_word_pos": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "מן",
+    "בת",
+    "מִ/בַּת",
+    "צִיּ֖וֹן"
+   ],
+   "oshb_unpointed": [
+    "מן",
+    "בת",
+    "מבת",
+    "ציון"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "מן־בת־מִבַּת־צִיּ֖וֹן",
+  "resolved_unpointed_v1conv": "מנ-בת-מבת-ציונ",
+  "resolved_letters_v1conv": "מנבתמבתציונ"
+ },
+ "231856": {
+  "v1_unpointed": "על-",
+  "v1_letters": "על",
+  "resolved_unpointed": "על־אל־תחס",
+  "resolved_letters": "עלאלתחס",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 9,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    8,
+    9,
+    10
+   ],
+   "oshb_pointed": [
+    "על",
+    "אַל",
+    "תָּחֹ֥ס"
+   ],
+   "oshb_unpointed": [
+    "על",
+    "אל",
+    "תחס"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "על־אַל־תָּחֹ֥ס",
+  "resolved_unpointed_v1conv": "על-אל-תחס",
+  "resolved_letters_v1conv": "עלאלתחס"
+ },
+ "231857": {
+  "v1_unpointed": "אל-תחס",
+  "v1_letters": "אלתחס",
+  "resolved_unpointed": "עיניכם",
+  "resolved_letters": "עיניכם",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 9,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    11
+   ],
+   "oshb_pointed": [
+    "עיני/כם"
+   ],
+   "oshb_unpointed": [
+    "עיניכם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "Row-shift: stored value matches the PRECEDING word 231856 (על־אַל־תָּחֹס → אל-תחס); the word's own OSHB reading is עיניכם → עיניכמ."
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "עיניכם",
+  "resolved_unpointed_v1conv": "עיניכמ",
+  "resolved_letters_v1conv": "עיניכמ"
+ },
+ "231858": {
+  "v1_unpointed": "עיניכמ",
+  "v1_letters": "עיניכמ",
+  "resolved_unpointed": "עינכם",
+  "resolved_letters": "עינכם",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 9,
+   "oshb_verse": 5,
+   "oshb_word_pos": [
+    12
+   ],
+   "oshb_pointed": [
+    "עֵינְ/כֶ֖ם"
+   ],
+   "oshb_unpointed": [
+    "עינכם"
+   ],
+   "match_method": "exact-pointed",
+   "note": "Row-shift: stored value matches the PRECEDING word 231857 (עיניכם → עיניכמ); the word's own OSHB reading is עֵינְכֶם → עינכמ."
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "עֵינְכֶ֖ם",
+  "resolved_unpointed_v1conv": "עינכמ",
+  "resolved_letters_v1conv": "עינכמ"
+ },
+ "236215": {
+  "v1_unpointed": "כקסומ-",
+  "v1_letters": "כקסומ",
+  "resolved_unpointed": "כקסום־כקסם־שוא",
+  "resolved_letters": "כקסוםכקסםשוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 21,
+   "oshb_verse": 28,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "כ/קסום",
+    "כִּ/קְסָם",
+    "שָׁוְא֙"
+   ],
+   "oshb_unpointed": [
+    "כקסום",
+    "כקסם",
+    "שוא"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "כקסום־כִּקְסָם־שָׁוְא֙",
+  "resolved_unpointed_v1conv": "כקסומ-כקסמ-שוא",
+  "resolved_letters_v1conv": "כקסומכקסמשוא"
+ },
+ "236216": {
+  "v1_unpointed": "כקסמ-שוא",
+  "v1_letters": "כקסמשוא",
+  "resolved_unpointed": "כקסום־כקסם־שוא",
+  "resolved_letters": "כקסוםכקסםשוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 21,
+   "oshb_verse": 28,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "כ/קסום",
+    "כִּ/קְסָם",
+    "שָׁוְא֙"
+   ],
+   "oshb_unpointed": [
+    "כקסום",
+    "כקסם",
+    "שוא"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "כקסום־כִּקְסָם־שָׁוְא֙",
+  "resolved_unpointed_v1conv": "כקסומ-כקסמ-שוא",
+  "resolved_letters_v1conv": "כקסומכקסמשוא"
+ },
+ "237271": {
+  "v1_unpointed": "כתוב-",
+  "v1_letters": "כתוב",
+  "resolved_unpointed": "כתוב־כתב־לך",
+  "resolved_letters": "כתובכתבלך",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 24,
+   "oshb_verse": 2,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "כתוב",
+    "כְּתָב",
+    "לְ/ךָ֙"
+   ],
+   "oshb_unpointed": [
+    "כתוב",
+    "כתב",
+    "לך"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "כתוב־כְּתָב־לְךָ֙",
+  "resolved_unpointed_v1conv": "כתוב-כתב-לכ",
+  "resolved_letters_v1conv": "כתובכתבלכ"
+ },
+ "237272": {
+  "v1_unpointed": "כתב-לכ",
+  "v1_letters": "כתבלכ",
+  "resolved_unpointed": "כתוב־כתב־לך",
+  "resolved_letters": "כתובכתבלך",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 24,
+   "oshb_verse": 2,
+   "oshb_word_pos": [
+    3,
+    4,
+    5
+   ],
+   "oshb_pointed": [
+    "כתוב",
+    "כְּתָב",
+    "לְ/ךָ֙"
+   ],
+   "oshb_unpointed": [
+    "כתוב",
+    "כתב",
+    "לך"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 3,
+  "v1_pointed": "כתוב־כְּתָב־לְךָ֙",
+  "resolved_unpointed_v1conv": "כתוב-כתב-לכ",
+  "resolved_letters_v1conv": "כתובכתבלכ"
+ },
+ "241255": {
+  "v1_unpointed": "תכשלי-",
+  "v1_letters": "תכשלי",
+  "resolved_unpointed": "תכשלי־תשכלי־עוד",
+  "resolved_letters": "תכשליתשכליעוד",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 36,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    9,
+    10,
+    11
+   ],
+   "oshb_pointed": [
+    "תכשלי",
+    "תְשַׁכְּלִי",
+    "ע֑וֹד"
+   ],
+   "oshb_unpointed": [
+    "תכשלי",
+    "תשכלי",
+    "עוד"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 8,
+  "v1_pointed": "תכשלי־תְשַׁכְּלִי־ע֑וֹד",
+  "resolved_unpointed_v1conv": "תכשלי-תשכלי-עוד",
+  "resolved_letters_v1conv": "תכשליתשכליעוד"
+ },
+ "241256": {
+  "v1_unpointed": "תשכלי-עוד",
+  "v1_letters": "תשכליעוד",
+  "resolved_unpointed": "תכשלי־תשכלי־עוד",
+  "resolved_letters": "תכשליתשכליעוד",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 36,
+   "oshb_verse": 14,
+   "oshb_word_pos": [
+    9,
+    10,
+    11
+   ],
+   "oshb_pointed": [
+    "תכשלי",
+    "תְשַׁכְּלִי",
+    "ע֑וֹד"
+   ],
+   "oshb_unpointed": [
+    "תכשלי",
+    "תשכלי",
+    "עוד"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 9,
+  "v1_pointed": "תכשלי־תְשַׁכְּלִי־ע֑וֹד",
+  "resolved_unpointed_v1conv": "תכשלי-תשכלי-עוד",
+  "resolved_letters_v1conv": "תכשליתשכליעוד"
+ },
+ "241854": {
+  "v1_unpointed": "יהיה-",
+  "v1_letters": "יהיה",
+  "resolved_unpointed": "יהיה־יהיו־עוד",
+  "resolved_letters": "יהיהיהיועוד",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 37,
+   "oshb_verse": 22,
+   "oshb_word_pos": [
+    14,
+    15,
+    16
+   ],
+   "oshb_pointed": [
+    "יהיה",
+    "יִֽהְיוּ",
+    "עוֹד֙"
+   ],
+   "oshb_unpointed": [
+    "יהיה",
+    "יהיו",
+    "עוד"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 14,
+  "v1_pointed": "יהיה־יִֽהְיוּ־עוֹד֙",
+  "resolved_unpointed_v1conv": "יהיה-יהיו-עוד",
+  "resolved_letters_v1conv": "יהיהיהיועוד"
+ },
+ "241855": {
+  "v1_unpointed": "יהיו-עוד",
+  "v1_letters": "יהיועוד",
+  "resolved_unpointed": "יהיה־יהיו־עוד",
+  "resolved_letters": "יהיהיהיועוד",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 37,
+   "oshb_verse": 22,
+   "oshb_word_pos": [
+    14,
+    15,
+    16
+   ],
+   "oshb_pointed": [
+    "יהיה",
+    "יִֽהְיוּ",
+    "עוֹד֙"
+   ],
+   "oshb_unpointed": [
+    "יהיה",
+    "יהיו",
+    "עוד"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 15,
+  "v1_pointed": "יהיה־יִֽהְיוּ־עוֹד֙",
+  "resolved_unpointed_v1conv": "יהיה-יהיו-עוד",
+  "resolved_letters_v1conv": "יהיהיהיועוד"
+ },
+ "245945": {
+  "v1_unpointed": "קק",
+  "v1_letters": "קק",
+  "resolved_unpointed": "חמש",
+  "resolved_letters": "חמש",
+  "anomaly_class": "wrong-row-data",
+  "evidence": {
+   "oshb_book": "Ezekiel",
+   "oshb_chapter": 48,
+   "oshb_verse": 16,
+   "oshb_word_pos": [
+    12
+   ],
+   "oshb_pointed": [
+    "חמש"
+   ],
+   "oshb_unpointed": [
+    "חמש"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 12,
+  "v1_pointed": "חמש",
+  "resolved_unpointed_v1conv": "חמש",
+  "resolved_letters_v1conv": "חמש"
+ },
+ "248108": {
+  "v1_unpointed": "אנתה-",
+  "v1_letters": "אנתה",
+  "resolved_unpointed": "אנתה־אנת־הוא",
+  "resolved_letters": "אנתהאנתהוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Daniel",
+   "oshb_chapter": 4,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "אנתה",
+    "אַנְתְּ",
+    "ה֣וּא"
+   ],
+   "oshb_unpointed": [
+    "אנתה",
+    "אנת",
+    "הוא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "אנתה־אַנְתְּ־ה֣וּא",
+  "resolved_unpointed_v1conv": "אנתה-אנת-הוא",
+  "resolved_letters_v1conv": "אנתהאנתהוא"
+ },
+ "248109": {
+  "v1_unpointed": "אנת-הוא",
+  "v1_letters": "אנתהוא",
+  "resolved_unpointed": "אנתה־אנת־הוא",
+  "resolved_letters": "אנתהאנתהוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Daniel",
+   "oshb_chapter": 4,
+   "oshb_verse": 19,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "אנתה",
+    "אַנְתְּ",
+    "ה֣וּא"
+   ],
+   "oshb_unpointed": [
+    "אנתה",
+    "אנת",
+    "הוא"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "אנתה־אַנְתְּ־ה֣וּא",
+  "resolved_unpointed_v1conv": "אנתה-אנת-הוא",
+  "resolved_letters_v1conv": "אנתהאנתהוא"
+ },
+ "248616": {
+  "v1_unpointed": "אנתה-",
+  "v1_letters": "אנתה",
+  "resolved_unpointed": "אנתה־אנת־הוא",
+  "resolved_letters": "אנתהאנתהוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Daniel",
+   "oshb_chapter": 5,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    10,
+    11,
+    12
+   ],
+   "oshb_pointed": [
+    "אנתה",
+    "אַנְתְּ",
+    "ה֤וּא"
+   ],
+   "oshb_unpointed": [
+    "אנתה",
+    "אנת",
+    "הוא"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 10,
+  "v1_pointed": "אנתה־אַנְתְּ־ה֤וּא",
+  "resolved_unpointed_v1conv": "אנתה-אנת-הוא",
+  "resolved_letters_v1conv": "אנתהאנתהוא"
+ },
+ "248617": {
+  "v1_unpointed": "אנת-הוא",
+  "v1_letters": "אנתהוא",
+  "resolved_unpointed": "אנתה־אנת־הוא",
+  "resolved_letters": "אנתהאנתהוא",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Daniel",
+   "oshb_chapter": 5,
+   "oshb_verse": 13,
+   "oshb_word_pos": [
+    10,
+    11,
+    12
+   ],
+   "oshb_pointed": [
+    "אנתה",
+    "אַנְתְּ",
+    "ה֤וּא"
+   ],
+   "oshb_unpointed": [
+    "אנתה",
+    "אנת",
+    "הוא"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 11,
+  "v1_pointed": "אנתה־אַנְתְּ־ה֤וּא",
+  "resolved_unpointed_v1conv": "אנתה-אנת-הוא",
+  "resolved_letters_v1conv": "אנתהאנתהוא"
+ },
+ "252796": {
+  "v1_unpointed": "אכתב-לו",
+  "v1_letters": "אכתבלו",
+  "resolved_unpointed": "אכתוב־אכתב־לו",
+  "resolved_letters": "אכתובאכתבלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Hosea",
+   "oshb_chapter": 8,
+   "oshb_verse": 12,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "אכתוב",
+    "אֶ֨כְתָּב",
+    "ל֔/וֹ"
+   ],
+   "oshb_unpointed": [
+    "אכתוב",
+    "אכתב",
+    "לו"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 1,
+  "v1_pointed": "אכתוב־אֶ֨כְתָּב־ל֔וֹ",
+  "resolved_unpointed_v1conv": "אכתוב-אכתב-לו",
+  "resolved_letters_v1conv": "אכתובאכתבלו"
+ },
+ "252797": {
+  "v1_unpointed": "אכתוב-",
+  "v1_letters": "אכתוב",
+  "resolved_unpointed": "אכתוב־אכתב־לו",
+  "resolved_letters": "אכתובאכתבלו",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Hosea",
+   "oshb_chapter": 8,
+   "oshb_verse": 12,
+   "oshb_word_pos": [
+    1,
+    2,
+    3
+   ],
+   "oshb_pointed": [
+    "אכתוב",
+    "אֶ֨כְתָּב",
+    "ל֔/וֹ"
+   ],
+   "oshb_unpointed": [
+    "אכתוב",
+    "אכתב",
+    "לו"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 2,
+  "v1_pointed": "אכתוב־אֶ֨כְתָּב־ל֔וֹ",
+  "resolved_unpointed_v1conv": "אכתוב-אכתב-לו",
+  "resolved_letters_v1conv": "אכתובאכתבלו"
+ },
+ "253001": {
+  "v1_unpointed": "בלי-",
+  "v1_letters": "בלי",
+  "resolved_unpointed": "בלי־בל־יעשון",
+  "resolved_letters": "בליבליעשון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Hosea",
+   "oshb_chapter": 9,
+   "oshb_verse": 16,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "בלי",
+    "בַֽל",
+    "יַעֲשׂ֑וּ/ן"
+   ],
+   "oshb_unpointed": [
+    "בלי",
+    "בל",
+    "יעשון"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "בלי־בַֽל־יַעֲשׂ֑וּן",
+  "resolved_unpointed_v1conv": "בלי-בל-יעשונ",
+  "resolved_letters_v1conv": "בליבליעשונ"
+ },
+ "253002": {
+  "v1_unpointed": "בל-יעשונ",
+  "v1_letters": "בליעשונ",
+  "resolved_unpointed": "בלי־בל־יעשון",
+  "resolved_letters": "בליבליעשון",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Hosea",
+   "oshb_chapter": 9,
+   "oshb_verse": 16,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "בלי",
+    "בַֽל",
+    "יַעֲשׂ֑וּ/ן"
+   ],
+   "oshb_unpointed": [
+    "בלי",
+    "בל",
+    "יעשון"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 7,
+  "v1_pointed": "בלי־בַֽל־יַעֲשׂ֑וּן",
+  "resolved_unpointed_v1conv": "בלי-בל-יעשונ",
+  "resolved_letters_v1conv": "בליבליעשונ"
+ },
+ "255996": {
+  "v1_unpointed": "ענוי-",
+  "v1_letters": "ענוי",
+  "resolved_unpointed": "ענוי־עניי־ארץ",
+  "resolved_letters": "ענויענייארץ",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Amos",
+   "oshb_chapter": 8,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "ענוי",
+    "עֲנִיֵּי",
+    "אָֽרֶץ"
+   ],
+   "oshb_unpointed": [
+    "ענוי",
+    "עניי",
+    "ארץ"
+   ],
+   "match_method": "consonantal",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "ענוי־עֲנִיֵּי־אָֽרֶץ׃",
+  "resolved_unpointed_v1conv": "ענוי-עניי-ארצ",
+  "resolved_letters_v1conv": "ענויענייארצ"
+ },
+ "255997": {
+  "v1_unpointed": "עניי-ארצ",
+  "v1_letters": "ענייארצ",
+  "resolved_unpointed": "ענוי־עניי־ארץ",
+  "resolved_letters": "ענויענייארץ",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Amos",
+   "oshb_chapter": 8,
+   "oshb_verse": 4,
+   "oshb_word_pos": [
+    6,
+    7,
+    8
+   ],
+   "oshb_pointed": [
+    "ענוי",
+    "עֲנִיֵּי",
+    "אָֽרֶץ"
+   ],
+   "oshb_unpointed": [
+    "ענוי",
+    "עניי",
+    "ארץ"
+   ],
+   "match_method": "consonantal"
+  },
+  "confidence": "high",
+  "v1_word_pos": 6,
+  "v1_pointed": "ענוי־עֲנִיֵּי־אָֽרֶץ׃",
+  "resolved_unpointed_v1conv": "ענוי-עניי-ארצ",
+  "resolved_letters_v1conv": "ענויענייארצ"
+ },
+ "258442": {
+  "v1_unpointed": "וגדול-",
+  "v1_letters": "וגדול",
+  "resolved_unpointed": "וגדול־וגדל־כח",
+  "resolved_letters": "וגדולוגדלכח",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nahum",
+   "oshb_chapter": 1,
+   "oshb_verse": 3,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "ו/גדול",
+    "וּ/גְדָל",
+    "כֹּ֔חַ"
+   ],
+   "oshb_unpointed": [
+    "וגדול",
+    "וגדל",
+    "כח"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 4,
+  "v1_pointed": "וגדול־וּגְדָל־כֹּ֔חַ",
+  "resolved_unpointed_v1conv": "וגדול-וגדל-כח",
+  "resolved_letters_v1conv": "וגדולוגדלכח"
+ },
+ "258443": {
+  "v1_unpointed": "וגדל-כח",
+  "v1_letters": "וגדלכח",
+  "resolved_unpointed": "וגדול־וגדל־כח",
+  "resolved_letters": "וגדולוגדלכח",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nahum",
+   "oshb_chapter": 1,
+   "oshb_verse": 3,
+   "oshb_word_pos": [
+    4,
+    5,
+    6
+   ],
+   "oshb_pointed": [
+    "ו/גדול",
+    "וּ/גְדָל",
+    "כֹּ֔חַ"
+   ],
+   "oshb_unpointed": [
+    "וגדול",
+    "וגדל",
+    "כח"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 5,
+  "v1_pointed": "וגדול־וּגְדָל־כֹּ֔חַ",
+  "resolved_unpointed_v1conv": "וגדול-וגדל-כח",
+  "resolved_letters_v1conv": "וגדולוגדלכח"
+ },
+ "258578": {
+  "v1_unpointed": "לעבור-",
+  "v1_letters": "לעבור",
+  "resolved_unpointed": "לעבור־לעבר־בך",
+  "resolved_letters": "לעבורלעברבך",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nahum",
+   "oshb_chapter": 2,
+   "oshb_verse": 1,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "ל/עבור",
+    "לַֽ/עֲבָר",
+    "בָּ֥/ךְ"
+   ],
+   "oshb_unpointed": [
+    "לעבור",
+    "לעבר",
+    "בך"
+   ],
+   "match_method": "exact-pointed",
+   "note": "stored segments partially match resolved span with minor corruption"
+  },
+  "confidence": "high",
+  "v1_word_pos": 16,
+  "v1_pointed": "לעבור־לַֽעֲבָר־בָּ֥ךְ",
+  "resolved_unpointed_v1conv": "לעבור-לעבר-בכ",
+  "resolved_letters_v1conv": "לעבורלעברבכ"
+ },
+ "258579": {
+  "v1_unpointed": "לעבר-בכ",
+  "v1_letters": "לעברבכ",
+  "resolved_unpointed": "לעבור־לעבר־בך",
+  "resolved_letters": "לעבורלעברבך",
+  "anomaly_class": "truncation-at-maqaf",
+  "evidence": {
+   "oshb_book": "Nahum",
+   "oshb_chapter": 2,
+   "oshb_verse": 1,
+   "oshb_word_pos": [
+    17,
+    18,
+    19
+   ],
+   "oshb_pointed": [
+    "ל/עבור",
+    "לַֽ/עֲבָר",
+    "בָּ֥/ךְ"
+   ],
+   "oshb_unpointed": [
+    "לעבור",
+    "לעבר",
+    "בך"
+   ],
+   "match_method": "exact-pointed"
+  },
+  "confidence": "high",
+  "v1_word_pos": 17,
+  "v1_pointed": "לעבור־לַֽעֲבָר־בָּ֥ךְ",
+  "resolved_unpointed_v1conv": "לעבור-לעבר-בכ",
+  "resolved_letters_v1conv": "לעבורלעברבכ"
+ },
+ "_meta": {
+  "convention_note": "resolved_unpointed/resolved_letters follow the task spec: OSHB unpointed verbatim (final forms ךםןףץ) joined with U+05BE MAQAF. v1's unpointed/letters columns instead use desofit medial forms (13,530 rows end כ vs 0 ך; 38,865 end מ vs 0 ם) and hyphen-minus U+002D. resolved_*_v1conv gives the same resolutions in v1 column convention. Applying the task-literal values directly would break column convention; applying _v1conv preserves it.",
+  "source": "OSHB oshb_words.tsv, commit 3d15126fb1ef74867fc1434be1942e837932691f (WLC-based)",
+  "n": 129,
+  "resolved": 129,
+  "unresolved": 0
+ }
+}

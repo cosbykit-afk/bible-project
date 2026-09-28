@@ -79,6 +79,58 @@ see `oshb_crosswalk_report.json` and NOTATION_LEDGER.md U-8.
 Database built; website built and tested locally (2026-09-22). Open items are tracked as `U-`
 items in `NOTATION_LEDGER.md`.
 
+### v2 normalization (2026-09-28, implementation draft under Kit's authorization)
+
+`schema_v2.md` (design) + `schema_v2.sql` (DDL) + `migrate_v2.py` (migration, 66.9 s)
+rebuild the corpus as a normalized database: every multi-value TEXT blob is
+decomposed into ordered child tables, every lookup list is its own entity.
+
+| Change | Before (v1) | After (v2) |
+|---|---|---|
+| Lexicon blobs | `lexicon` held 4 multi-value TEXT columns (`kjv_renderings`, `ylt_renderings`, `ylt_contexts`, `found_verses`) | `lexicon` header + `lexicon_kjv_rendering`, `lexicon_ylt_rendering`, `lexicon_ylt_context`, `lexicon_found_verse` (all `seq`-ordered; exact round-trip verified, 0 mismatches on 126,869 rows) |
+| Morphology | one opaque `morphology` string per word (3,437 distinct patterns) | `morph_patterns` + `morph_segments` (7,552 parsed segment rows; OSHB morphhb code rules; `AT` on Aramaic די left `unparsed` — bare `T` has no documented type) |
+| Strong's | comma-joined composites like `H01,H015` inside one column | `strongs` entity keeps the exact raw string; `strongs_components` stores the ordered verbatim components (3,783 rows from 1,865 composites) |
+| Strong's source | free-text column (`oshb`, `oshb-split`, `kit`, blank) | `strongs_sources` entity, FK-checked (`CHECK (strongs IS NULL) = (strongs_source_id IS NULL)`) |
+| Affix display | `*_disp` columns on `words` (transitively dependent on the form) | moved to `root_form` (FD-verified against the build) |
+| Verse identity | `(book_num, chapter, verse)` repeated everywhere | `verses(verse_id)` entity; `words.verse_id` FK |
+| `orig_word_id` | assumed unique | NOT unique in v1 (3 source ids each map to 2 rows: split/merged tokens 51399, 252785, 227963); kept as a plain import key with an index |
+
+`word_id` is stable (required by the one-byte choice files). `unpointed`/`letters`
+are preserved verbatim from v1; 129 candidate derivations are logged for review
+only in `unpointed_letters_anomalies.json`, never applied. `migration_report.json`
+holds the full verification record: 264,217 words, `v_words` 0 differing rows,
+0 FK violations, 0 lexicon round-trip mismatches. `migrate_v2.py` also asserts
+that re-joining each composite Strong's `strongs_components` rows in `seq`
+order reproduces the raw `strongs` string exactly (1,865/1,865 pass).
+
+Attribution: the WLC Hebrew text is public domain; the OSHB
+lemma/morphology annotations (used for Strong's fill and morphology parsing,
+pinned at `3d15126fb1ef74867fc1434be1942e837932691f`) are CC BY 4.0.
+
+Diagrams: `er_diagram_v2.png/.svg` (from `er_v2.py`), `dfd_v2.png/.svg` (from
+`dfd_v2.py`, level-0 DFD incl. deployment), `context_v2.png/.svg` (from
+`context_v2.py`, level-0 context). The v1 diagrams are kept for the record.
+Semantic review 2026-09-28 verified every relationship against `schema_v2.sql`
+and corrected two ER errors (inverted WORDS→STRONGS_SOURCES markers;
+LEXICON_YLT_CONTEXT wrongly targeting YLT_VERSES) — see NOTATION_LEDGER §11.
+
+Staging: `website/app_v2.py` (env-configured: `APP_DB`, `BIBLE_DB`, `USER_DIR`,
+`PORT`, `SCRIPT_NAME`) serves `bible_v2.db` byte-identically to v1 on 13
+representative routes. On the laptop (`/opt/bible`): `bible_v2.db` is
+bit-identical to the local build (SHA-256 `4cacd562…e579e282`); supervisord
+program `bible-v2` serves it on 127.0.0.1:5058 behind Apache `/bible-v2`
+(inserted before `/bible`), with a separate app DB and choice directory and
+`SCRIPT_NAME=/bible-v2`, while live `/bible` → 127.0.0.1:5057 (`app.py` +
+v1 `bible.db`) stays untouched. Verified 2026-09-28: 13/13 routes 200 on the
+internal port, 7/7 through the in-distro Apache proxy, live `/bible`
+regression 200s, and the full write path (translation create, choice POST,
+264,217-byte choice file, reading view, 69,647-line export — test data
+removed afterward). The distro rebooted ~1 h after setup and both programs
+self-recovered; post-reboot health re-verified. Direct external access from
+this VM to the laptop was not reachable (curl 000/52), so no external claim
+is made — the complete Apache proxy path was verified from inside the WSL
+distro. No live cutover; v1 stays the production corpus.
+
 YLT word alignment (U-1, re-measured 2026-09-24): anchored-bridge method scores
 precision 0.7941 / recall 0.4506 on a 30-verse hand-aligned gold set
 (`eval/ylt_gold.tsv`, 770 pairs); corpus coverage 325,284/575,877 YLT tokens
