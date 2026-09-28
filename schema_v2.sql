@@ -255,3 +255,19 @@ CREATE TABLE word_variants(
   PRIMARY KEY(word_id, variant_seq)
 );
 CREATE INDEX idx_variants_word ON word_variants(word_id);
+
+-- Morphology variance apparatus (built by apply_morph_corrections.py).
+-- Established corrections re-point words.morph_pattern_id; probable and
+-- secondary readings are staged here, never assigned to words.
+CREATE TABLE morph_variants(
+  word_id     INTEGER NOT NULL REFERENCES words(word_id),
+  variant_seq INTEGER NOT NULL,
+  morph_code  TEXT NOT NULL,
+  pattern_id  INTEGER REFERENCES morph_patterns(pattern_id),  -- NULL when the
+                               -- code has no pattern row (secondary readings)
+  confidence  TEXT NOT NULL,   -- legacy | established | probable | secondary
+  source      TEXT NOT NULL,   -- v1-stored | morphology-research-2026-09-28
+  basis       TEXT,
+  PRIMARY KEY(word_id, variant_seq)
+);
+CREATE INDEX idx_morph_variants_word ON morph_variants(word_id);
