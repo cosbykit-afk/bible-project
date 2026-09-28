@@ -1,9 +1,10 @@
 # Bible database — normalization design (v2)
 
-**Status:** implementation draft under Kit's 2026-09-28 authorization to
-normalize the Bible database ("the Bible project database is nowhere near
-normalized — it is glorified spreadsheet at this point"). Kit authorized the
-normalization work; he has not reviewed or approved this specific schema.
+**Status:** approved by Kit 2026-09-28 ("the schema looks great"). Prior status was
+implementation draft under Kit's 2026-09-28 authorization to normalize the Bible
+database ("the Bible project database is nowhere near normalized — it is glorified
+spreadsheet at this point"). Live cutover of `/bible` is NOT authorized; the laptop
+staging copy (`bible-v2`) is behind the local build pending re-shipping.
 **Source DB:** `bible.db` v1 (198,459,392 bytes, 2026-09-27 build; 264,217 words).
 **Migration:** `migrate_v2.py` builds `bible_v2.db` from `bible.db`.
 **Proving ground:** the laptop deploy (`/opt/bible`, supervisord `bible`,
