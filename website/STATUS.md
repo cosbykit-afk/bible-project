@@ -172,3 +172,20 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   unrepaired by design.
 - `bible.db` stays read-only for the website (contract unchanged); backup
   `bible.db.bak-20260927-u9-pre` kept.
+
+## 2026-09-28 — U-7 follow-up: affix display row on word-detail page
+- The website `/word/<wid>` page had no affix display; it now shows an
+  "Affixes" row reading the normalized U-7 `*_disp` columns on `words`
+  (`prefix1_disp`..`prefix3_disp`, `suffix1_disp`..`suffix2_disp`).
+- Format: `prefix: <hebrew letters> / suffix: <hebrew letters>`, empty
+  slots omitted, `(none)` when all five disp columns are empty. Raw
+  affix columns (`prefix1` holding "and, but" etc.) are untouched and
+  never displayed.
+- Website impact: `website/app.py` `word_detail` only; no DB schema
+  change, no writes — `bible.db` stays read-only for the website
+  (contract unchanged).
+- Verified live (port 5057): word 6 (raw prefix1='and, but') shows
+  `prefix: ו` with no English gloss leak; word 2 (all disp empty) shows
+  `(none)`; /word/6, /word/2, /verse/1/1/1, / all return 200.
+  `bible.db` byte-identical afterward (md5
+  9570752fc6f83b44dc5865923207fa73).

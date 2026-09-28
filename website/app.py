@@ -375,10 +375,20 @@ def word_detail(wid):
                     (w['root_id'], w['root_form_seq'], w['root_vowel_seq'])).fetchone()
     letters = (w['letters'] or '').strip()
     letter_list = ' \u00b7 '.join(letters.split()) if letters else '(no letter data)'
+    # U-7 follow-up: surface the normalized *_disp affix columns (read-only)
+    affix_prefix = ' '.join((w[f'prefix{i}_disp'] or '').strip() for i in (1, 2, 3)).strip()
+    affix_suffix = ' '.join((w[f'suffix{i}_disp'] or '').strip() for i in (1, 2)).strip()
+    affix_parts = []
+    if affix_prefix:
+        affix_parts.append(f'prefix: {affix_prefix}')
+    if affix_suffix:
+        affix_parts.append(f'suffix: {affix_suffix}')
+    affix_disp = f'<span class="heb">{" / ".join(affix_parts)}</span>' if affix_parts else '(none)'
     rows = [
         ('Pointed', w['word_pointed']),
         ('Unpointed', w['word_unpointed']),
         ('Letters', f'<span class="heb">{letter_list}</span>'),
+        ('Affixes', affix_disp),
         ('Root code', w['root_code']),
         ('Strong\u2019s', f"{w['strongs'] or '(none)'} <span style='color:#666'>source: {w['strongs_source'] or '?'}</span>"),
         ('Morphology', w['morph'] or '(none)'),

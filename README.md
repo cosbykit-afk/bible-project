@@ -101,7 +101,8 @@ rows (75.6426%). Computed best-effort, NOT authoritative.
 - Browse: `/` books → `/book/<n>` chapters → `/chapter/<n>/<c>` verses →
   `/verse/<n>/<c>/<v>` words. Reading view `/reading/<tid>/<n>/<c>/<v>`;
   export `/export/<tid>`; word detail `/word/<wid>` (pointed/unpointed, letters,
-  root code, Strong's, renderings, contexts, verses).
+  affixes (normalized U-7 `*_disp` display columns), root code, Strong's,
+  renderings, contexts, verses).
 - `bible.db` is opened read-only; all user data lives in `website/app.db`
   (`app_user`, `translation`, `other_option` tables — `website/schema.sql`) plus
   the per-translation byte files in `website/user_data/` (one byte per word;
