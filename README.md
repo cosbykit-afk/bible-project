@@ -129,7 +129,11 @@ removed afterward). The distro rebooted ~1 h after setup and both programs
 self-recovered; post-reboot health re-verified. Direct external access from
 this VM to the laptop was not reachable (curl 000/52), so no external claim
 is made — the complete Apache proxy path was verified from inside the WSL
-distro. No live cutover; v1 stays the production corpus.
+distro. **Live cutover DONE 2026-09-28 ~17:15 PDT** (Kit: "go live with it both
+on github and on the laptop"): supervisord `bible` runs `app_v2.py` on
+127.0.0.1:5057 with `BIBLE_DB=/opt/bible/bible_v2.db`; `/bible` + direct 5057
+return 200; word/book/verse pages 200; the normalized corpus is now the
+production corpus.
 
 YLT word alignment (U-1, re-measured 2026-09-24): anchored-bridge method scores
 precision 0.7941 / recall 0.4506 on a 30-verse hand-aligned gold set
