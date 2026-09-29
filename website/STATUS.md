@@ -203,3 +203,23 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
 - Laptop (`/opt/bible`): fresh pre-change backups in `backups/pre-cutover-2026-09-28/` (`bible.db` hash-verified, `app.db`, `app.py`, supervisor + Apache confs) + `ROLLBACK.txt`. Final `bible_v2.db` (384 MB) shipped gzipped (124 MB), unpacked and hash-verified bit-identical, moved in atomically; `app_v2.py` was already bit-identical.
 - Supervisor `[program:bible]` now runs `app_v2.py` on port 5057 with `BIBLE_DB=/opt/bible/bible_v2.db`, `APP_DB=/opt/bible/website/app.db` (live user data; 0 translations at cutover), `SCRIPT_NAME=/bible`; Apache `/bible`→5057 unchanged.
 - Verified: `/bible` + direct 5057 return 200; word/book/verse pages 200; live DB counts match local (words 264,217; alignment 836,290; word_variants 528,565; morph_variants 28; ATr words 171); corrected word page 150820 renders ATr. Both services RUNNING.
+
+## 2026-09-29 — anomaly resolutions applied to words.unpointed/letters
+
+- The 129 OSHB-verified anomaly resolutions (`anomaly_resolutions.json`) are now
+  applied to the primary `words` columns in `bible_v2.db`: 128/128 high-confidence
+  words carry their resolved `unpointed`/`letters` (e.g. word 51400 `לכ-` →
+  `לכ-לכה-נא`; word 84702 `ככ` → `בני`); the 1 medium-confidence record (word
+  104753) stays variants-only by design.
+- Root numbering re-derived for the 127 affected words (62 new roots appended,
+  e.g. `לכ-לכה-נא`; wrong-row-data words merged into existing roots like `בני`,
+  `אלי`, `צבאות`); lexicon cells rebuilt for the 235 touched root_vowel groups.
+  77 corrupt old roots (incl. `קק`) now sit at word_count 0, kept for numbering
+  stability. All other tables byte-identical to the pre-change backup
+  (`bible_v2.db.bak-20260929-anom`, kept).
+- Website impact: none code-wise — `/word/<wid>` pages now display the corrected
+  forms (verified 200 + corrected render on 6 sampled pages, incl. 51400 and
+  84702); `bible_v2.db` still opened read-only (`mode=ro`, contract unchanged).
+  YLT 'computed' honesty labels unchanged.
+- New `bible_v2.db` SHA-256 `172fc313…6eb98bad` (was `0eaaf38f…b03ff`). Laptop
+  ship (gzipped, hash-verified, supervisord restart) left to the deploy stage.
