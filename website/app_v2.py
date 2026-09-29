@@ -431,7 +431,15 @@ def export(tid):
     choices = read_choices(tid)
     others = other_options(tid)
     b = bible()
-    lines = [f'# {trans["name"]}', f'# {trans["description"]}', '']
+    lines = [f'# {trans["name"]}', f'# {trans["description"]}']
+    fmt = request.args.get('format')
+    if fmt:
+        # Kit 2026-09-28: an unrecognized format is not invalid (possibly a
+        # highly archaic vowel structure) — never reject it. Flag it for
+        # further research and keep rendering the full text, special
+        # characters as-is.
+        lines.append(f"# flagged for research: unrecognized export format {fmt!r}")
+    lines.append('')
     verses = b.execute('''SELECT v.book_id, v.chapter, v.verse FROM verses v
         WHERE EXISTS (SELECT 1 FROM words w WHERE w.verse_id=v.verse_id)
         ORDER BY v.book_id, v.chapter, v.verse''').fetchall()
