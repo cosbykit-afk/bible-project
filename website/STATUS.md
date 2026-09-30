@@ -221,5 +221,13 @@ Corpus `bible.db` stays READ-ONLY. Website storage:
   forms (verified 200 + corrected render on 6 sampled pages, incl. 51400 and
   84702); `bible_v2.db` still opened read-only (`mode=ro`, contract unchanged).
   YLT 'computed' honesty labels unchanged.
-- New `bible_v2.db` SHA-256 `172fc313…6eb98bad` (was `0eaaf38f…b03ff`). Laptop
-  ship (gzipped, hash-verified, supervisord restart) left to the deploy stage.
+- New `bible_v2.db` SHA-256 `172fc313…6eb98bad` (was `0eaaf38f…b03ff`).
+
+## 2026-09-30 — anomaly-fix DB shipped to laptop (deploy, ~06:00 PDT)
+
+- Kit authorized shipping the anomaly-corrected `bible_v2.db` to the live laptop.
+- Pre-change backup: `/opt/bible/backups/pre-anomaly-ship-2026-09-30/bible_v2.db.pre-anomaly-0eaaf38f` (hash-verified `0eaaf38f…b03ff`).
+- Shipped gzipped (124,408,055 bytes, byte count verified), unpacked on the laptop, SHA-256 verified `172fc313…6eb98bad` (bit-identical to the repo copy), moved into `/opt/bible/bible_v2.db` atomically.
+- Supervisor `bible` + `bible-v2` stopped before the move, restarted after (restart also clears the app's process-global lexicon cache, which is keyed by DB path).
+- Verified live: both programs RUNNING; 127.0.0.1:5057 and :5058 return 200; 264,217 words; `/word/51400` renders corrected `לכ-לכה-נא`; 0 FK violations.
+- Rollback: copy the pre-anomaly backup back to `/opt/bible/bible_v2.db` + restart both programs.
