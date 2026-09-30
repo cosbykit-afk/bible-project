@@ -121,7 +121,8 @@ bit-identical to the local build (SHA-256 `4cacd562…e579e282`); supervisord
 program `bible-v2` serves it on 127.0.0.1:5058 behind Apache `/bible-v2`
 (inserted before `/bible`), with a separate app DB and choice directory and
 `SCRIPT_NAME=/bible-v2`, while live `/bible` → 127.0.0.1:5057 (`app.py` +
-v1 `bible.db`) stays untouched. Verified 2026-09-28: 13/13 routes 200 on the
+v1 `bible.db`) stayed untouched at that point (pre-cutover state — see the
+live-cutover note below). Verified 2026-09-28: 13/13 routes 200 on the
 internal port, 7/7 through the in-distro Apache proxy, live `/bible`
 regression 200s, and the full write path (translation create, choice POST,
 264,217-byte choice file, reading view, 69,647-line export — test data

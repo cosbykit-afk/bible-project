@@ -99,4 +99,4 @@ in `basis`; the table does not silently correct the audit.
 Local `bible_v2.db` now contains `word_alignment` (prior task) and
 `word_variants`, plus indexes — it differs from the laptop staging copy
 (`/opt/bible/bible_v2.db`, bit-identical as of the earlier SHA-256 check).
-Re-shipping belongs with the other pending corrections; no live cutover.
+Re-shipping belongs with the other pending corrections; live cutover has since occurred (2026-09-28 ~17:15 PDT), so re-shipping now updates the live laptop copy.

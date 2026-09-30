@@ -224,6 +224,6 @@ Built 2026-09-28 from the local `~/workspace/bible-project/bible_v2.db`.
 **This local database now diverges from the laptop staging copy**: it
 contains the additive `word_alignment` table (plus its two indexes) that
 staging lacks. Re-shipping the database belongs with the other pending
-corrections already queued — no live cutover has occurred. The builder is
+corrections already queued — live cutover has since occurred (2026-09-28 ~17:15 PDT), so re-shipping now updates the live laptop copy. The builder is
 idempotent: re-running `python3 build_alignment.py` drops and rebuilds
 only `word_alignment`.
