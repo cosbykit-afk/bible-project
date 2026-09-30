@@ -76,8 +76,16 @@ see `oshb_crosswalk_report.json` and NOTATION_LEDGER.md U-8.
 
 ## Status
 
-Database built; website built and tested locally (2026-09-22). Open items are tracked as `U-`
-items in `NOTATION_LEDGER.md`.
+**Deployed (2026-09-29).** The v2 normalized database is live on Toetop:
+`/opt/bible/bible_v2.db` (byte-identical to this repo). Two supervisor
+programs serve it — `bible` (port 5057, `/bible`) and `bible-v2` (port 5058,
+`/bible-v2`) — both RUNNING, both HTTP 200, both on `BIBLE_DB=/opt/bible/bible_v2.db`.
+(Verified 2026-09-29: deployed `app_v2.py` differs from repo HEAD only by the
+unpushed export flag-for-research commit.)
+
+**Work paused (2026-09-30)** pending Kit's word. Open items are tracked as `U-`
+items in `NOTATION_LEDGER.md`; the deployment-verification gap is tracked in
+[issue #4](https://github.com/cosbykit-afk/bible-project/issues/4).
 
 ### v2 normalization (2026-09-28, implementation draft under Kit's authorization)
 
