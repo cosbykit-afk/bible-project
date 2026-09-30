@@ -244,17 +244,24 @@ CREATE INDEX idx_alignment_hebrew ON word_alignment(hebrew_word_id);
 CREATE INDEX idx_alignment_verse ON word_alignment(verse_id, seq);
 
 CREATE TABLE word_variants(
-  word_id     INTEGER NOT NULL REFERENCES words(word_id),
-  variant_seq INTEGER NOT NULL,
-  unpointed   TEXT NOT NULL,
-  letters     TEXT NOT NULL,
-  convention  TEXT NOT NULL,   -- 'v1-medial' | 'academic-final'
-  source      TEXT NOT NULL,   -- 'v1-stored' | 'oshb-verbatim' |
-                               -- 'transduced-from-v1' | 'conjectural'
-  basis       TEXT,            -- evidence note / rule citation
+  word_id      INTEGER NOT NULL REFERENCES words(word_id),
+  variant_seq  INTEGER NOT NULL,
+  variant_kind TEXT NOT NULL CHECK (variant_kind IN ('spelling','textual')),
+  unpointed    TEXT NOT NULL,
+  letters      TEXT NOT NULL,
+  variant_text TEXT,         -- textual kind: pointed variant reading (NULL for spelling)
+  convention   TEXT,          -- spelling kind: 'v1-medial' | 'academic-final'
+  source       TEXT,          -- spelling kind: 'v1-stored' | 'oshb-verbatim' |
+                              --   'transduced-from-v1' | 'conjectural'
+                              --   (NULL for textual: provenance is witness)
+  witness      TEXT,          -- textual kind: manuscript siglum ('LXX','DSS','SP',...)
+  variant_type TEXT,          -- textual kind: 'orthographic' | 'substantive' | ...
+  basis        TEXT,          -- evidence note / rule citation
+  created_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY(word_id, variant_seq)
 );
 CREATE INDEX idx_variants_word ON word_variants(word_id);
+CREATE INDEX idx_variants_kind ON word_variants(variant_kind);
 
 -- Morphology variance apparatus (built by apply_morph_corrections.py).
 -- Established corrections re-point words.morph_pattern_id; probable and

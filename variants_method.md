@@ -94,6 +94,31 @@ in `basis`; the table does not silently correct the audit.
   file has `אכרתלכ`, strip of `אכרת־לך` gives `אכרתלך`) is flagged in-row
   rather than silently corrected.
 
+## Merge with textual variants (2026-09-30, Kit's decision)
+
+`schema_var_notes.sql` (2026-09-29) defined a second, incompatible
+`word_variants` for manuscript textual variants (variant_id PK; witness,
+variant_type columns). Kit merged the two: ONE table, tagged by
+`variant_kind` (`'spelling'` | `'textual'`, CHECK-enforced).
+
+Column discipline by kind:
+
+| column | `spelling` rows | `textual` rows |
+|---|---|---|
+| `unpointed` / `letters` | the spelling in a convention | unpointed form of the variant reading (for matching) |
+| `variant_text` | NULL | the variant reading (Hebrew, may be pointed) |
+| `convention` / `source` | NOT NULL (`v1-medial`/`academic-final`; `v1-stored`/`oshb-verbatim`/`transduced-from-v1`/`conjectural`) | NULL — provenance is `witness` |
+| `witness` / `variant_type` | NULL | manuscript siglum (`LXX`, `DSS`, `SP`, …) / `orthographic`, `substantive`, … |
+| `basis` | evidence note / rule citation | evidence note |
+
+`variant_seq` continues per word across kinds: spelling rows occupy the low
+seqs (1–2 bulk; 1–4 for the 129 anomaly words), textual rows append after.
+`build_variants.py` emits the merged schema (`variant_kind='spelling'`) and is
+the table's builder; `migrate_variants_merge.py` upgraded existing databases
+in place (all 528,565 rows backfilled `'spelling'`, old-column values verified
+byte-identical via EXCEPT both ways, 0 FK violations). No textual rows exist
+yet — the apparatus is populated separately.
+
 ## Divergence
 
 Local `bible_v2.db` now contains `word_alignment` (prior task) and

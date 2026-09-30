@@ -19,11 +19,12 @@ Sources:
 
 Rerunnable/idempotent: drops and rebuilds ONLY word_variants.
 """
+import argparse
 import json
 import sqlite3
 import sys
 
-DB = "/home/hatch/workspace/bible-project/bible_v2.db"
+DEFAULT_DB = "/home/hatch/workspace/bible-project/bible_v2.db"
 RES = "/home/hatch/workspace/bible-project/anomaly_resolutions.json"
 
 # NOTE: task spec listed k/m/n/p only; tsade->final tsade added because
@@ -64,6 +65,10 @@ def evidence_basis(r):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--db", default=DEFAULT_DB)
+    args = ap.parse_args()
+    DB = args.db
     res = json.load(open(RES))
     anom = {int(k): v for k, v in res.items() if k != "_meta"}
     print("anomaly records: %d" % len(anom), flush=True)
@@ -95,14 +100,20 @@ def main():
     cur.execute("""CREATE TABLE word_variants(
       word_id INTEGER NOT NULL REFERENCES words(word_id),
       variant_seq INTEGER NOT NULL,
+      variant_kind TEXT NOT NULL CHECK (variant_kind IN ('spelling','textual')),
       unpointed TEXT NOT NULL,
       letters TEXT NOT NULL,
-      convention TEXT NOT NULL,
-      source TEXT NOT NULL,
+      variant_text TEXT,
+      convention TEXT,
+      source TEXT,
+      witness TEXT,
+      variant_type TEXT,
       basis TEXT,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY(word_id, variant_seq)
     )""")
     cur.execute("CREATE INDEX idx_variants_word ON word_variants(word_id)")
+    cur.execute("CREATE INDEX idx_variants_kind ON word_variants(variant_kind)")
 
     # ---- Step 2: populate ----
     rows = []
@@ -162,8 +173,10 @@ def main():
     print("normal words: %d; unexpected chars in bulk input: %s"
           % (n_normal, sorted(weird_chars) if weird_chars else "none"), flush=True)
     cur.executemany(
-        "INSERT INTO word_variants(word_id, variant_seq, unpointed, letters,"
-        " convention, source, basis) VALUES (?,?,?,?,?,?,?)", rows)
+        "INSERT INTO word_variants(word_id, variant_seq, variant_kind, unpointed, letters,"
+        " convention, source, basis) VALUES (?,?,?,?,?,?,?,?)",
+        [(wid, seq, "spelling", u, l, c, s, b)
+         for (wid, seq, u, l, c, s, b) in rows])
     con.commit()
     print("inserted rows: %d" % len(rows), flush=True)
 
