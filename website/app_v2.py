@@ -255,7 +255,8 @@ def index():
         f'<li><a href="{u("/book/" + str(b["book_id"]))}">{html.escape(b["name_en"])}</a> '
         f'<span class="heb">{b["name_he"]}</span></li>'
         for b in books)
-    body = f'<ul>{items}</ul><p><a href="{u("/translations")}">My translations</a></p>'
+    body = (f'<ul>{items}</ul><p><a href="{u("/variants")}">Word variants</a> | '
+            f'<a href="{u("/translations")}">My translations</a></p>')
     return render('Hebrew Bible — build your translation', body, current_translation())
 
 @app.route('/book/<int:n>')
@@ -508,6 +509,83 @@ def word_detail(wid):
     body = '<table>' + ''.join(f'<tr><th>{k}</th><td>{v or "(none)"}</td></tr>' for k, v in rows) + '</table>'
     body += f'<p><a href="{u("/verse/" + str(w["book_id"]) + "/" + str(w["chapter"]) + "/" + str(w["verse"]) + tqs(trans))}">back to verse</a></p>'
     return render(f'Word {wid} — {w["pointed"] or w["unpointed"]}', body, trans)
+
+@app.route('/variants')
+def variants():
+    """Hebrew word variants explorer: pick a word from the drop-down (optionally
+    filtered by a Hebrew text search) and see all its variant readings."""
+    trans = current_translation()
+    b = bible()
+    q = request.args.get('q', '').strip()
+    sel = request.args.get('word_id', '').strip()
+    sel_wid = int(sel) if sel.isdigit() else None
+    # word list for the drop-down (too many for one list — filter by search)
+    if q:
+        qq = q.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_')
+        words = b.execute('''SELECT word_id, pointed, unpointed FROM words
+            WHERE pointed LIKE ? ESCAPE '\\' OR unpointed LIKE ? ESCAPE '\\'
+            ORDER BY word_id LIMIT 500''', (f'%{qq}%', f'%{qq}%')).fetchall()
+    else:
+        words = b.execute('SELECT word_id, pointed, unpointed FROM words '
+                          'ORDER BY word_id LIMIT 200').fetchall()
+    # make sure the currently selected word is in the list even when it falls
+    # outside the default first-200 / search window
+    if sel_wid and not any(w['word_id'] == sel_wid for w in words):
+        w0 = b.execute('SELECT word_id, pointed, unpointed FROM words WHERE word_id=?',
+                       (sel_wid,)).fetchone()
+        if w0:
+            words = [w0] + list(words)
+    opts = []
+    for w in words:
+        s = ' selected' if sel_wid == w['word_id'] else ''
+        disp = w['pointed'] or w['unpointed'] or f'word {w["word_id"]}'
+        opts.append(f'<option value="{w["word_id"]}"{s}>'
+                    f'{w["word_id"]}: {html.escape(disp)}</option>')
+    search_form = f'''<form method="get" action="{u("/variants")}">
+<input type="text" name="q" value="{html.escape(q)}" placeholder="search Hebrew text…"
+       class="heb" style="font-size:1.1em">
+<button type="submit">search</button>
+</form>'''
+    pick_form = f'''<form method="get" action="{u("/variants")}">
+<label>Hebrew word:
+<select name="word_id" class="heb" style="font-size:1.2em;max-width:340px">
+{"".join(opts)}</select>
+</label>
+<button type="submit">show variants</button>
+</form>'''
+    body = search_form + pick_form
+    if sel_wid:
+        w = b.execute('SELECT word_id, pointed, unpointed FROM words WHERE word_id=?',
+                      (sel_wid,)).fetchone()
+        if not w:
+            body += f'<p>Unknown word id {sel_wid}.</p>'
+        else:
+            rows = b.execute('''SELECT variant_seq, variant_kind, unpointed, letters,
+                variant_text, convention, source, witness, variant_type, basis
+                FROM word_variants WHERE word_id=? ORDER BY variant_seq''',
+                (sel_wid,)).fetchall()
+            heb = w['pointed'] or w['unpointed'] or ''
+            body += (f'<h2><span class="heb">{html.escape(heb)}</span> '
+                     f'(word {sel_wid}) — {len(rows)} variant(s)</h2>')
+            if rows:
+                hdr = ['seq', 'kind', 'unpointed', 'letters', 'variant text',
+                       'convention', 'source', 'witness', 'variant type', 'basis']
+                body += '<table><tr>' + ''.join(f'<th>{h}</th>' for h in hdr) + '</tr>'
+                for r in rows:
+                    cells = [r['variant_seq'], r['variant_kind'], r['unpointed'],
+                             r['letters'], r['variant_text'], r['convention'],
+                             r['source'], r['witness'], r['variant_type'], r['basis']]
+                    tds = []
+                    for i, c in enumerate(cells):
+                        val = (html.escape(str(c)) if c is not None else '<i>—</i>')
+                        if i in (2, 3, 4) and c is not None:
+                            val = f'<span class="heb">{val}</span>'
+                        tds.append(f'<td>{val}</td>')
+                    body += '<tr>' + ''.join(tds) + '</tr>'
+                body += '</table>'
+            else:
+                body += '<p>No variants recorded for this word.</p>'
+    return render('Word variants', body, trans)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', '5057'))
