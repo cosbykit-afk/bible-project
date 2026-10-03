@@ -6,6 +6,8 @@ Living document — update these diagrams when adding features.
 
 **v2 status (2026-09-28):** the corpus has been normalized to the v2 schema (`schema_v2.sql`, design rationale in `schema_v2.md`). `bible_v2.db` is built and verified, and the live website now serves it via `app_v2.py` — **live cutover DONE 2026-09-28 ~17:15 PDT** on Kit's authorization ("go live with it both on github and on the laptop"; schema approved by Kit: "the schema looks great"). The diagrams below describe v2, which is now the production schema.
 
+**2026-09-30 changes (this revision):** `word_variants` merged into one table tagged by `variant_kind` (`'spelling'` | `'textual'`, CHECK-enforced — Kit's decision); new `word_notes` table (one-to-many word notes, Kit 2026-09-29); `/variants` explorer route added to `app_v2.py`; `database/` now carries a 4-part pg_dump of the live `bible_v2.db`; the 129 OSHB anomaly resolutions applied to `bible_v2`. The level-1 DFD below was also corrected: the previous revision still showed the website reading the v1 `bible.db` live, which the 9/28 cutover superseded — the live site reads `bible_v2.db` via `app_v2.py`.
+
 ## 1. Context diagram (level 0)
 
 ```mermaid
@@ -25,8 +27,8 @@ flowchart LR
     E5 -->|"KJV words with Strongs tags"| P0
     E6 -->|"verse-level translation (USFM)"| P0
     E7 -->|"dictionary glosses (BDB, Strongs Hebrew)"| P0
-    P0 -->|"built corpora and verification reports"| E1
-    P0 -->|"verse reader with word dropdowns"| E2
+    P0 -->|"built corpora, DB dump parts (database/), and verification reports"| E1
+    P0 -->|"verse reader with word dropdowns, /variants explorer"| E2
 ```
 
 ## 2. Level-1 data flow diagram
@@ -49,6 +51,7 @@ flowchart LR
     D3[("D3 bible_v2.db - normalized corpus")]
     D4[("D4 app.db - website user data")]
     D5[("D5 choice byte files")]
+    D6[("D6 database/ DB dump parts")]
     E1 -->|"runs scripts"| P1
     E3 -->|"spreadsheets, OSHB, KJV, YLT, lexicons"| P1
     P1 -->|"canonical words"| D1
@@ -66,15 +69,16 @@ flowchart LR
     P7 -->|"normalized corpus"| D3
     P7 -->|"migration verification report"| E1
     D3 -->|"derived tables (alignment, variants)"| P7
+    D3 -->|"pg_dump snapshot published in repo (4 parts)"| D6
+    D6 -->|"distributable corpus snapshot"| E1
     E2 -->|"HTTP requests"| P8
-    P8 -->|"reads v1 corpus (live)"| D2
-    P8 -->|"reads v2 corpus (staged /bible-v2)"| D3
+    P8 -->|"reads v2 corpus (live)"| D3
     P8 -->|"reads and writes"| D4
     P8 -->|"reads and writes choice bytes"| D5
-    P8 -->|"reader pages"| E2
+    P8 -->|"reader pages, /variants explorer"| E2
 ```
 
-Process grounding: 1.0 `ingest_canonical.py`; 4.0 `build_roots*.py` + `build_lexicon.py`; 5.0 `build_ylt_align.py`, `repair_u8_maqqef_kjv.py`, `repair_u8_lexicon.py`, `repair_u9_verse_remap_kjv.py`, `repair_u9_lexicon.py`; 6.0 `assemble_bible.py`; 7.0 `migrate_v2.py` then the derived-data stage `build_alignment.py`, `build_variants.py`, `apply_morph_corrections.py`; 8.0 `website/app.py` (live, port 5057) and `website/app_v2.py` (staged, port 5058, pending Kit's schema review).
+Process grounding: 1.0 `ingest_canonical.py`; 4.0 `build_roots*.py` + `build_lexicon.py`; 5.0 `build_ylt_align.py`, `repair_u8_maqqef_kjv.py`, `repair_u8_lexicon.py`, `repair_u9_verse_remap_kjv.py`, `repair_u9_lexicon.py`; 6.0 `assemble_bible.py`; 7.0 `migrate_v2.py`, then the derived-data stage `build_alignment.py`, `build_variants.py`, `apply_morph_corrections.py`, the post-normalization fixes `apply_anomaly_resolutions.py` (129 OSHB-verified fixes, 2026-09-29) and `migrate_variants_merge.py` (word_variants variant_kind merge, 2026-09-30); 8.0 `website/app_v2.py` — the LIVE server since the 2026-09-28 ~17:15 PDT cutover (supervisord `bible`, port 5057, `BIBLE_DB=/opt/bible/bible_v2.db`, Apache `/bible`→5057). `website/app.py` (the v1 server) is retained in the repo but superseded; the pre-cutover `/bible-v2` staging copy on port 5058 was observed 2026-09-28 — its post-cutover role was not re-verified. Routes: book/chapter/verse/word/choice/translations/reading/export, plus `/variants` (added 2026-09-30, commit 3635422d).
 
 ## 3. Entity–relationship diagram (v2 schema)
 
@@ -235,11 +239,24 @@ erDiagram
     WORD_VARIANTS {
         int word_id FK
         int variant_seq
+        string variant_kind
         string unpointed
         string letters
+        string variant_text
         string convention
         string source
+        string witness
+        string variant_type
         string basis
+        string created_at
+    }
+    WORD_NOTES {
+        int note_id PK
+        int word_id FK
+        string note_text
+        string note_type
+        string source
+        string created_at
     }
     MORPH_VARIANTS {
         int word_id FK
@@ -303,6 +320,7 @@ erDiagram
     WORD_ALIGNMENT }o--|o KJV_WORDS : kjv_side
     WORD_ALIGNMENT }o--|o YLT_RENDERINGS : ylt_side
     WORDS ||--o{ WORD_VARIANTS : varies_as
+    WORDS ||--o{ WORD_NOTES : noted_in
     WORDS ||--o{ MORPH_VARIANTS : morph_readings
     MORPH_VARIANTS }o--|o MORPH_PATTERNS : staged_as
     APP_USER ||--o{ TRANSLATION : owns
@@ -320,8 +338,15 @@ Notes on the ERD: composite primary keys (`ROOT_FORM`, `ROOT_VOWEL`, `LEXICON` a
 - OBSERVED: 1,865 composite Strong's values decomposed into 3,783 `strongs_components` rows (reconstruction assertion 1,865/1,865); 155 components (e.g. `H010`) have no row of their own, so components are NOT a hard FK to `strongs`.
 - OBSERVED: `verses` = UNION of (book,chapter,verse) from words, ylt_verses, kjv_words — the 139 English-versification orphans (e.g. Genesis 31:55) resolve; 209 word-derived verses lack YLT.
 - OBSERVED: 7,552 `morph_patterns`; `parse_status` parsed/unparsed per the OSHB Hebrew Morphology Codes document (openscriptures.github.io/morphhb/parsing/HebrewMorphologyCodes.html, fetched 2026-09-28, CC BY 4.0); `morph_variants` holds 28 staged readings over 12 words (confidence legacy/established/probable/secondary), never assigned to `words` until adjudicated.
-- OBSERVED (`website/schema.sql`): `app_user`, `translation`, `other_option` verbatim; `website/app.py` (Flask, port 5057) opens `bible.db` read-only, `app.db` read-write, `user_data/translation_<id>.choices` byte files; routes for book/chapter/verse/word/choice/translations/reading/export.
-- OBSERVED: `website/app_v2.py` (v2-aware port) written 2026-09-28; staged on the laptop behind `/bible-v2` (port 5058), 13/13 internal + 7/7 proxy 200s — then **live cutover DONE 2026-09-28 ~17:15 PDT** on Kit's authorization: supervisord `bible` runs `app_v2.py` on 5057 with `BIBLE_DB=/opt/bible/bible_v2.db`; Apache `/bible`→5057 unchanged; `/bible` + direct 5057 verified 200; word/book/verse pages 200.
+- OBSERVED (`schema_v2.sql` diff, 2026-09-30): `word_variants` MERGED per Kit's decision — ONE table tagged by `variant_kind` CHECK (`'spelling'` | `'textual'`), gaining `variant_text`, `witness`, `variant_type`, `created_at`; `convention`/`source` now nullable (used only for spelling rows). Column discipline per `variants_method.md`: spelling rows use `unpointed`/`letters` + `convention` (`v1-medial` | `academic-final`) + `source` (`v1-stored` | `oshb-verbatim` | `transduced-from-v1` | `conjectural`); textual rows use `variant_text` (pointed reading) + `witness` (manuscript siglum: `LXX`, `DSS`, `SP`, …) + `variant_type` (`orthographic` | `substantive` | …). `variant_seq` continues per word across kinds (spelling rows first, textual appended).
+- OBSERVED (`migrate_variants_merge.py`, 2026-09-30): upgraded existing databases in place — all 528,565 rows backfilled `'spelling'`, old-column values verified byte-identical via EXCEPT both ways, 0 FK violations. No textual rows populated yet; the textual apparatus is populated separately.
+- OBSERVED (`schema_var_notes.sql`, 2026-09-29): defines the `word_notes` table (note_id PK, word_id FK, note_text, note_type, source, created_at) — one word, many notes, per Kit ("definitely a one to many relationship"); resolves U-4. The file's earlier standalone `word_variants` definition is marked superseded (kept as the column-origin record for the textual kind); the merged table in `schema_v2.sql` is authoritative.
+- OBSERVED (`apply_anomaly_resolutions.py`, 2026-09-29): applies 129 OSHB-verified unpointed/letters fixes to `bible_v2`.
+- OBSERVED (`website/app_v2.py` diff, commit 3635422d, 2026-09-30): new `/variants` explorer route serving variant readings; routes are now book/chapter/verse/word/choice/translations/reading/export plus `/variants`.
+- OBSERVED (`database/bible_dump.sql.gz.part-aa`…`.part-ad`, merged 2026-09-30): pg_dump of the live `bible_v2.db`, 4 parts, published in the repo as a distributable corpus snapshot (commit 02032780).
+- OBSERVED (`website/schema.sql`): `app_user`, `translation`, `other_option` verbatim; `website/app.py` (Flask) opens `bible.db` read-only, `app.db` read-write, `user_data/translation_<id>.choices` byte files.
+- OBSERVED: **live cutover DONE 2026-09-28 ~17:15 PDT** on Kit's authorization ("go live with it both on github and on the laptop"): supervisord `bible` runs `app_v2.py` on 5057 with `BIBLE_DB=/opt/bible/bible_v2.db`; Apache `/bible`→5057 unchanged; `/bible` + direct 5057 verified 200; word/book/verse pages 200. The 2026-09-30 laptop re-ship (anomaly-corrected `bible_v2.db`) was verified live. The previous diagram revision still showed the website reading the v1 `bible.db` live — that contradiction is corrected in this revision (8.0 reads D3 only; D2 remains the migration input).
+- PENDING (Kit 2026-10-01, not yet implemented in the repo): the website's variant readings should be the academic (textual) variants, not his manuscript variance — the manuscript variance (`v1-medial` convention rows in `word_variants`) falls to the wayside. When implemented, this changes which rows `/variants` serves, not the schema.
 - OBSERVED: v1 row counts from README — words 264,217; kjv_words 610,324; kjv_renderings 631,950; ylt_renderings 337,601; ylt_verses 23,145; glosses 17,347; books 39; root_entry 30,087; root_form 57,724; root_vowel 126,869; lexicon 126,869.
 - OBSERVED: `worker-out/` subdirectories (canon, kjv, lexicons, oshb, ylt) — the basis for D1; repair scripts named in 5.0; U-8 maqqef-component and U-9 verse-remap repairs with before/after coverage figures in README.
 - INFERRED: the numbered process boundaries 1.0–8.0 group scripts by their documented purpose; the repo documents each script's role but no explicit pipeline wiring, so boundaries are inferred.
